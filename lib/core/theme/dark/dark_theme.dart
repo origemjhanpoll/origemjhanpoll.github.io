@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:origemjhanpoll_github_io/core/theme/dark/dark_colors.dart';
 import 'package:origemjhanpoll_github_io/core/theme/extension/color_extension.dart';
 
@@ -10,57 +11,57 @@ class DarkTheme {
       elevation: 8.0,
     ),
     scaffoldBackgroundColor: DarkColors.surfaceBackground,
-    // textTheme: TextTheme(
-    //   titleLarge: GoogleFonts.kalam(color: DarkColors.textPrimary),
-    //   bodyMedium: GoogleFonts.heebo(
-    //     color: DarkColors.textSecondary,
-    //     fontSize: 18,
-    //   ),
-    //   bodyLarge: GoogleFonts.heebo(
-    //     color: DarkColors.textPrimary,
-    //     fontWeight: FontWeight.w500,
-    //   ),
-    //   displayMedium: GoogleFonts.kalam(
-    //     color: DarkColors.textPrimary,
-    //     fontWeight: FontWeight.w500,
-    //   ),
-    //   headlineLarge: GoogleFonts.heebo(
-    //     color: DarkColors.textPrimary,
-    //     fontWeight: FontWeight.w500,
-    //   ),
-    //   bodySmall: GoogleFonts.heebo(
-    //     color: DarkColors.textSecondary,
-    //   ),
-    //   labelLarge: GoogleFonts.heebo(
-    //     color: DarkColors.textPrimary,
-    //     fontWeight: FontWeight.w500,
-    //     fontSize: 15,
-    //   ),
-    // ),
-    // primaryTextTheme: GoogleFonts.heeboTextTheme(),
-    // inputDecorationTheme: InputDecorationTheme(
-    //   fillColor: DarkColors.surfaceBackground,
-    //   hintStyle: GoogleFonts.heebo(
-    //     color: DarkColors.textSecondary,
-    //   ),
-    //   labelStyle: GoogleFonts.heebo(
-    //     color: DarkColors.textSecondary,
-    //   ),
-    //   border: const OutlineInputBorder(
-    //     borderRadius: BorderRadius.all(
-    //       Radius.circular(10.0),
-    //     ),
-    //   ),
-    //   focusedBorder: const OutlineInputBorder(
-    //     borderRadius: BorderRadius.all(
-    //       Radius.circular(10.0),
-    //     ),
-    //     borderSide: BorderSide(
-    //       color: DarkColors.secondaryColor,
-    //     ),
-    //   ),
-    //   filled: true,
-    // ),
+    textTheme: TextTheme(
+      titleLarge: GoogleFonts.lato(color: DarkColors.textPrimary),
+      bodyMedium: GoogleFonts.lato(
+        color: DarkColors.textSecondary,
+        fontSize: 18,
+      ),
+      bodyLarge: GoogleFonts.lato(
+        color: DarkColors.textPrimary,
+        fontWeight: FontWeight.w500,
+      ),
+      displayMedium: GoogleFonts.lato(
+        color: DarkColors.textPrimary,
+        fontWeight: FontWeight.w500,
+      ),
+      headlineLarge: GoogleFonts.lato(
+        color: DarkColors.textPrimary,
+        fontWeight: FontWeight.w500,
+      ),
+      bodySmall: GoogleFonts.lato(
+        color: DarkColors.textSecondary,
+      ),
+      labelLarge: GoogleFonts.lato(
+        color: DarkColors.textPrimary,
+        fontWeight: FontWeight.w500,
+        fontSize: 15,
+      ),
+    ),
+    primaryTextTheme: GoogleFonts.latoTextTheme(),
+    inputDecorationTheme: InputDecorationTheme(
+      fillColor: DarkColors.surfaceBackground,
+      hintStyle: GoogleFonts.lato(
+        color: DarkColors.textSecondary,
+      ),
+      labelStyle: GoogleFonts.lato(
+        color: DarkColors.textSecondary,
+      ),
+      border: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(10.0),
+        ),
+      ),
+      focusedBorder: const OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(10.0),
+        ),
+        borderSide: BorderSide(
+          color: DarkColors.secondaryColor,
+        ),
+      ),
+      filled: true,
+    ),
     scrollbarTheme: ScrollbarThemeData(
       thumbColor: WidgetStatePropertyAll(DarkColors.secondaryColor),
       radius: const Radius.circular(16.0),
