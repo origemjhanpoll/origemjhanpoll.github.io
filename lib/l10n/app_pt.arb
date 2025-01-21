@@ -1,0 +1,9 @@
+{
+  "@@locale": "pt",
+  "helloWorld": "Olá Mundo!",
+  "menuHome": "Início",
+  "menuAbout": "Sobre",
+  "menuProject": "Projetos",
+  "menuArticle": "Artigos",
+  "menuContact": "Contato"
+}

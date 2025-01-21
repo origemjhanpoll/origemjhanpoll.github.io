@@ -1,0 +1,27 @@
+{
+  "@@locale": "en",
+  "helloWorld": "Hello World!",
+  "@helloWorld": {
+    "description": "The conventional newborn programmer greeting"
+  },
+  "menuHome": "Home",
+  "@menuHome": {
+    "description": "Home"
+  },
+  "menuAbout": "About",
+  "@menuAbout": {
+    "description": "About"
+  },
+  "menuProject": "Projects",
+  "@menuProject": {
+    "description": "Projects"
+  },
+  "menuArticle": "Articles",
+  "@menuArticle": {
+    "description": "Articles"
+  },
+  "menuContact": "Contact",
+  "@menuContact": {
+    "description": "Contact"
+  }
+}
