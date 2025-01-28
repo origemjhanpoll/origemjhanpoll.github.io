@@ -1,17 +1,16 @@
 import 'dart:ui';
 
 class LightColors {
-  static const primaryColor = Color(0xFF8A42DB);
-  static const primaryVariantColor = Color(0xFF9955E8);
-  static const secondaryColor = Color.fromARGB(255, 25, 221, 100);
+  static const primaryColor = Color(0xFF1E88E5); // Azul forte
+  static const primaryVariantColor = Color(0xFF1565C0); // Azul mais escuro
+  static const secondaryColor = Color(0xFF64B5F6); // Azul claro
 
-  static const surfaceBackground = Color.fromARGB(255, 233, 216, 255);
-  static const surfaceBackgroundPrimary = Color(0xFFa26cfc);
-  static const surfacePrimary = Color.fromARGB(255, 158, 103, 252);
-  static const surfaceSecondary = Color.fromARGB(255, 131, 100, 184);
-  static const surfaceTertiary = Color.fromARGB(255, 120, 43, 253);
+  static const surfaceBackground = Color(0xFFE3F2FD); // Fundo claro
+  static const surfacePrimary = Color(0xFFBBDEFB); // Superfície primária
+  static const surfaceSecondary = Color(0xFF90CAF9); // Superfície secundária
+  static const surfaceTertiary = Color(0xFF64B5F6); // Superfície terciária
 
-  static const textPrimary = Color.fromARGB(255, 0, 0, 0);
-  static const textSecondary = Color.fromARGB(255, 65, 65, 65);
-  static const textTertiary = Color(0xFFF5F6F6);
+  static const textPrimary = Color(0xFF000000); // Texto primário
+  static const textSecondary = Color(0xFF424242); // Texto secundário
+  static const textTertiary = Color(0xFF757575); // Texto terciário
 }

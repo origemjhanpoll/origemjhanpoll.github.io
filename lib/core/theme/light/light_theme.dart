@@ -10,10 +10,9 @@ class LightTheme {
       backgroundColor: LightColors.primaryColor,
       elevation: 12.0,
     ),
-    scaffoldBackgroundColor:
-        LightColors.surfaceBackground.withValues(alpha: 0.6),
+    scaffoldBackgroundColor: LightColors.surfaceBackground,
     textTheme: TextTheme(
-      titleLarge: GoogleFonts.lato(color: LightColors.textTertiary),
+      titleLarge: GoogleFonts.lato(color: LightColors.textPrimary),
       bodyMedium: GoogleFonts.lato(
         color: LightColors.textSecondary,
         fontSize: 18,
@@ -34,7 +33,7 @@ class LightTheme {
         color: LightColors.textSecondary,
       ),
       labelLarge: GoogleFonts.lato(
-        color: LightColors.textTertiary,
+        color: LightColors.textPrimary,
         fontWeight: FontWeight.w500,
         fontSize: 15,
       ),

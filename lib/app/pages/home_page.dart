@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
               child: FilledButton(
                   style: ButtonStyle(
                       backgroundColor:
-                          WidgetStatePropertyAll(Colors.blueAccent)),
+                          WidgetStatePropertyAll(theme.primaryColor)),
                   onPressed: () {
                     js.context.callMethod('open',
                         ['https://www.linkedin.com/in/origemjhanpoll/']);
