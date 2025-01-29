@@ -32,14 +32,7 @@ class MenuMobileWidget extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            // SizedBox(
-            //   height: 100,
-            //   child: Image.asset('assets/images/contact-me.png'),
-            // ),
-            const SizedBox(height: 20),
+
             Center(
               child: RichText(
                 text: TextSpan(
@@ -128,7 +121,6 @@ class MenuMobileWidget extends StatelessWidget {
                 Navigator.pop(context);
               },
             ),
-            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.only(left: 20.0, top: 30),
               child: Text(

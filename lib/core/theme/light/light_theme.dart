@@ -81,12 +81,6 @@ class LightTheme {
         borderRadius: BorderRadius.circular(10.0),
       ),
     ),
-    filledButtonTheme: FilledButtonThemeData(
-        style: ButtonStyle(
-      shape: WidgetStatePropertyAll(
-        RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-      ),
-    )),
     extensions: [
       ColorExtension(
         stackIconsColor: LightColors.primaryColor,

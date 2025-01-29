@@ -30,40 +30,25 @@ class MenuWebWidget extends StatelessWidget implements PreferredSizeWidget {
           onPressed: () => onMenuClick(1),
           child: Text(localization.menuHome, style: theme.textTheme.labelLarge),
         ),
-        SizedBox(
-          width: size.width * 0.01,
-        ),
         TextButton(
           onPressed: () => onMenuClick(2),
           child:
               Text(localization.menuAbout, style: theme.textTheme.labelLarge),
-        ),
-        SizedBox(
-          width: size.width * 0.01,
         ),
         TextButton(
           onPressed: () => onMenuClick(3),
           child:
               Text(localization.menuProject, style: theme.textTheme.labelLarge),
         ),
-        SizedBox(
-          width: size.width * 0.01,
-        ),
         TextButton(
           onPressed: () => onMenuClick(4),
           child:
               Text(localization.menuArticle, style: theme.textTheme.labelLarge),
         ),
-        SizedBox(
-          width: size.width * 0.01,
-        ),
         TextButton(
           onPressed: () => onMenuClick(5),
           child:
               Text(localization.menuContact, style: theme.textTheme.labelLarge),
-        ),
-        SizedBox(
-          width: size.width * 0.01,
         ),
         // IconButton(
         //   onPressed: () {
@@ -76,9 +61,7 @@ class MenuWebWidget extends StatelessWidget implements PreferredSizeWidget {
         //     height: size.height * 0.012,
         //   ),
         // ),
-        SizedBox(
-          width: size.width * 0.01,
-        ),
+
         // IconButton(
         //   onPressed: () {
         //     themeController.toggleTheme();
@@ -90,9 +73,6 @@ class MenuWebWidget extends StatelessWidget implements PreferredSizeWidget {
         //     height: size.height * 0.025,
         //   ),
         // ),
-        SizedBox(
-          width: size.width * 0.01,
-        ),
       ],
     );
   }
