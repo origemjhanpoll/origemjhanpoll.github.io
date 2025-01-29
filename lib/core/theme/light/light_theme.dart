@@ -5,46 +5,53 @@ import 'package:origemjhanpoll_github_io/core/theme/light/light_colors.dart';
 
 class LightTheme {
   static final theme = ThemeData(
+    useMaterial3: true,
     primaryColor: LightColors.primaryColor,
+    colorScheme: ColorScheme.fromSeed(
+      primary: LightColors.primaryColor,
+      seedColor: LightColors.primaryColor,
+    ),
     appBarTheme: const AppBarTheme(
       backgroundColor: LightColors.primaryColor,
       elevation: 12.0,
     ),
     scaffoldBackgroundColor: LightColors.surfaceBackground,
     textTheme: TextTheme(
-      titleLarge: GoogleFonts.lato(color: LightColors.textPrimary),
-      bodyMedium: GoogleFonts.lato(
+      displayMedium: GoogleFonts.poppins(
+        color: LightColors.textPrimary,
+        fontWeight: FontWeight.w500,
+      ),
+      titleSmall: GoogleFonts.poppins(color: LightColors.textPrimary),
+      titleMedium: GoogleFonts.poppins(color: LightColors.textPrimary),
+      titleLarge: GoogleFonts.poppins(color: LightColors.textPrimary),
+      bodyMedium: GoogleFonts.poppins(
         color: LightColors.textSecondary,
         fontSize: 18,
       ),
-      bodyLarge: GoogleFonts.lato(
+      bodyLarge: GoogleFonts.poppins(
         color: LightColors.textPrimary,
         fontWeight: FontWeight.w500,
       ),
-      displayMedium: GoogleFonts.kalam(
+      headlineLarge: GoogleFonts.poppins(
         color: LightColors.textPrimary,
         fontWeight: FontWeight.w500,
       ),
-      headlineLarge: GoogleFonts.lato(
-        color: LightColors.textPrimary,
-        fontWeight: FontWeight.w500,
-      ),
-      bodySmall: GoogleFonts.lato(
+      bodySmall: GoogleFonts.poppins(
         color: LightColors.textSecondary,
       ),
-      labelLarge: GoogleFonts.lato(
+      labelLarge: GoogleFonts.poppins(
         color: LightColors.textPrimary,
         fontWeight: FontWeight.w500,
         fontSize: 15,
       ),
     ),
-    primaryTextTheme: GoogleFonts.latoTextTheme(),
+    primaryTextTheme: GoogleFonts.poppinsTextTheme(),
     inputDecorationTheme: InputDecorationTheme(
       fillColor: LightColors.surfaceBackground,
-      hintStyle: GoogleFonts.lato(
+      hintStyle: GoogleFonts.poppins(
         color: LightColors.textSecondary,
       ),
-      labelStyle: GoogleFonts.lato(
+      labelStyle: GoogleFonts.poppins(
         color: LightColors.textSecondary,
       ),
       border: const OutlineInputBorder(
@@ -74,6 +81,12 @@ class LightTheme {
         borderRadius: BorderRadius.circular(10.0),
       ),
     ),
+    filledButtonTheme: FilledButtonThemeData(
+        style: ButtonStyle(
+      shape: WidgetStatePropertyAll(
+        RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+      ),
+    )),
     extensions: [
       ColorExtension(
         stackIconsColor: LightColors.primaryColor,

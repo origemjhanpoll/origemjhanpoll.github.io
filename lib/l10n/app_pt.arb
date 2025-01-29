@@ -1,9 +1,12 @@
 {
   "@@locale": "pt",
-  "helloWorld": "Olá Mundo!",
   "menuHome": "Início",
   "menuAbout": "Sobre",
   "menuProject": "Projetos",
   "menuArticle": "Artigos",
-  "menuContact": "Contato"
+  "menuContact": "Contato",
+  "hello": "Olá, eu sou Jean Paul",
+  "occupation": "Desenvolvedor de Software",
+  "introduction": "Sou engenheiro de software, focado em criar aplicativos móveis de alta performance com código limpo e design excelente. Vamos transformar ideias em realidade!",
+  "myresume": "Meu CV"
 }

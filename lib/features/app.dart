@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:origemjhanpoll_github_io/app/pages/home_page.dart';
+import 'package:origemjhanpoll_github_io/features/portfolio/presentation/pages/home_page.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:origemjhanpoll_github_io/core/theme/theme.dart';
 
@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
         Locale('en'), // English
         Locale('pt', 'BR'), // Portuguese (Brazil)
       ],
+      locale: const Locale('pt', 'BR'),
       home: const HomePage(),
     );
   }

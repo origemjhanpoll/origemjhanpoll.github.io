@@ -1,9 +1,5 @@
 {
   "@@locale": "en",
-  "helloWorld": "Hello World!",
-  "@helloWorld": {
-    "description": "The conventional newborn programmer greeting"
-  },
   "menuHome": "Home",
   "@menuHome": {
     "description": "Home"
@@ -23,5 +19,21 @@
   "menuContact": "Contact",
   "@menuContact": {
     "description": "Contact"
+  },
+  "hello": "Hi, I'm Jean Paul",
+  "@hello": {
+    "description": "Hi, I'm Jean Kelly"
+  },
+  "occupation": "Software Developer",
+  "@occupation": {
+    "description": "Software Developer"
+  },
+  "introduction": "I’m a software engineer focused on building high-performance mobile apps with clean code and great design. Let’s turn ideas into reality!",
+  "@introduction": {
+    "description": "I’m a software engineer focused on building high-performance mobile apps with clean code and great design. Let’s turn ideas into reality!"
+  },
+  "myresume": "My resume",
+  "@myresume": {
+    "description": "My resume"
   }
 }
