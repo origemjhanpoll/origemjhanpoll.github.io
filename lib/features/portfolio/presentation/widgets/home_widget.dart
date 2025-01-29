@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/url_utils.dart';
@@ -47,15 +48,34 @@ class HomeWidget extends StatelessWidget {
                     localization.introduction,
                     style: theme.textTheme.bodyMedium,
                   ),
-                  Row(
-                    children: [
-                      FilledButton.icon(
-                        onPressed: () =>
-                            urlLauncherController.launchURL(UrlUtils.resume),
-                        icon: Icon(Icons.file_present_rounded),
-                        label: Text(localization.myresume),
-                      ),
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.only(top: SpacingSize.small),
+                    child: Row(
+                      spacing: SpacingSize.small,
+                      children: [
+                        FilledButton.icon(
+                          onPressed: () =>
+                              urlLauncherController.launchURL(UrlUtils.resume),
+                          icon: Icon(Icons.attach_file),
+                          style: ButtonStyle(
+                              visualDensity: VisualDensity.standard),
+                          label: Text(localization.myresume),
+                        ),
+                        OutlinedButton.icon(
+                          onPressed: () =>
+                              urlLauncherController.launchURL(UrlUtils.resume),
+                          icon: SvgPicture.asset(
+                            'assets/svg/icon_whatsapp.svg',
+                            width: 18.0,
+                            colorFilter: ColorFilter.mode(
+                                colors.contactSocialCardColor, BlendMode.srcIn),
+                          ),
+                          style: ButtonStyle(
+                              visualDensity: VisualDensity.standard),
+                          label: Text(localization.menuContact),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

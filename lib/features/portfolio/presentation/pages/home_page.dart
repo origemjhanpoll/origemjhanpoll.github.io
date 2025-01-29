@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:origemjhanpoll_github_io/core/widgets/menu_mobile_widget.dart';
-import 'package:origemjhanpoll_github_io/core/widgets/menu_web_widget.dart';
+import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
+import 'package:origemjhanpoll_github_io/core/widgets/drawer_widget.dart';
+import 'package:origemjhanpoll_github_io/core/widgets/app_bar_widget.dart';
 import 'package:origemjhanpoll_github_io/features/portfolio/presentation/widgets/home_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,11 +18,21 @@ class _HomePageState extends State<HomePage> {
     final size = MediaQuery.of(context).size;
     final theme = Theme.of(context);
     return Scaffold(
-      endDrawer:
-          size.width <= 900 ? MenuMobileWidget(onMenuClick: (value) {}) : null,
-      appBar: size.width <= 900
+      drawer: size.width <= ScreenSize.medium
+          ? DrawerWidget(onMenuClick: (value) {})
+          : null,
+      appBar: size.width <= ScreenSize.medium
           ? AppBar(
-              iconTheme: const IconThemeData(color: Colors.white),
+              leading: Builder(builder: (context) {
+                return IconButton(
+                  icon: const Icon(Icons.drag_handle),
+                  onPressed: () {
+                    Scaffold.of(context).openDrawer();
+                  },
+                  tooltip:
+                      MaterialLocalizations.of(context).openAppDrawerTooltip,
+                );
+              }),
               title: RichText(
                 text: TextSpan(
                   text: 'Jean',
@@ -33,7 +44,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             )
-          : MenuWebWidget(
+          : AppBarWidget(
               onMenuClick: (value) {},
             ),
       body: SingleChildScrollView(

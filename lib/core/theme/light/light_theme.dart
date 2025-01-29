@@ -6,15 +6,17 @@ import 'package:origemjhanpoll_github_io/core/theme/light/light_colors.dart';
 class LightTheme {
   static final theme = ThemeData(
     useMaterial3: true,
-    primaryColor: LightColors.primaryColor,
     colorScheme: ColorScheme.fromSeed(
+      brightness: Brightness.light,
       primary: LightColors.primaryColor,
       seedColor: LightColors.primaryColor,
     ),
     appBarTheme: const AppBarTheme(
-      backgroundColor: LightColors.primaryColor,
-      elevation: 12.0,
+      backgroundColor: LightColors.surfaceBackground,
+      elevation: 8.0,
     ),
+    drawerTheme:
+        DrawerThemeData(backgroundColor: LightColors.surfaceBackground),
     scaffoldBackgroundColor: LightColors.surfaceBackground,
     textTheme: TextTheme(
       displayMedium: GoogleFonts.poppins(
@@ -32,22 +34,9 @@ class LightTheme {
         color: LightColors.textPrimary,
         fontWeight: FontWeight.w500,
       ),
-      headlineLarge: GoogleFonts.poppins(
-        color: LightColors.textPrimary,
-        fontWeight: FontWeight.w500,
-      ),
-      bodySmall: GoogleFonts.poppins(
-        color: LightColors.textSecondary,
-      ),
-      labelLarge: GoogleFonts.poppins(
-        color: LightColors.textPrimary,
-        fontWeight: FontWeight.w500,
-        fontSize: 15,
-      ),
     ),
-    primaryTextTheme: GoogleFonts.poppinsTextTheme(),
     inputDecorationTheme: InputDecorationTheme(
-      fillColor: LightColors.surfaceBackground,
+      fillColor: LightColors.surfacePrimary,
       hintStyle: GoogleFonts.poppins(
         color: LightColors.textSecondary,
       ),
@@ -88,12 +77,12 @@ class LightTheme {
         secondaryStartIconButtonColor: LightColors.primaryColor,
         endIconButtonColor: LightColors.primaryColor,
         secondaryEndIconButtonColor: LightColors.surfaceSecondary,
-        titleSessionColor: LightColors.secondaryColor,
-        contactSocialCardColor: LightColors.surfaceTertiary,
-        primaryGradientTitleColor: LightColors.primaryColor,
-        secondaryGradientTitleColor: LightColors.secondaryColor,
+        titleSessionColor: LightColors.secondaryColor, // Adicionado
+        contactSocialCardColor: LightColors.surfaceTertiary, // Adicionado
+        primaryGradientTitleColor: LightColors.primaryColor, // Adicionado
+        secondaryGradientTitleColor: LightColors.secondaryColor, // Adicionado
         toggleThemeIconColor: LightColors.secondaryColor,
-        menuBackgroundColor: LightColors.primaryColor,
+        menuBackgroundColor: LightColors.surfaceBackground,
         drawerMenuIconColor: LightColors.secondaryColor,
       ),
     ],

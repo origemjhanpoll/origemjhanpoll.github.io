@@ -3,10 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:origemjhanpoll_github_io/core/controllers/theme_controller.dart';
 
-class MenuWebWidget extends StatelessWidget implements PreferredSizeWidget {
+class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final ValueChanged<int> onMenuClick;
 
-  const MenuWebWidget({super.key, required this.onMenuClick});
+  const AppBarWidget({super.key, required this.onMenuClick});
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
@@ -51,9 +51,6 @@ class MenuWebWidget extends StatelessWidget implements PreferredSizeWidget {
         ),
         IconButton(
           onPressed: context.read<ThemeCubit>().toggleTheme,
-          color: isDarkMode
-              ? theme.colorScheme.primary
-              : theme.colorScheme.primaryFixed,
           icon: Icon(
             isDarkMode ? Icons.dark_mode : Icons.light_mode,
           ),

@@ -1,16 +1,16 @@
 import 'dart:ui';
 
 class LightColors {
-  static const primaryColor = Color(0xFF1E88E5); // Azul forte
-  static const primaryVariantColor = Color(0xFF1565C0); // Azul mais escuro
-  static const secondaryColor = Color(0xFF64B5F6); // Azul claro
+  static const primaryColor = Color(0xFF333333); // Cinza escuro (neutro)
+  static const primaryVariantColor = Color(0xFF4F4F4F); // Cinza médio
+  static const secondaryColor = Color(0xFF666666); // Cinza mais claro
 
-  static const surfaceBackground = Color(0xFFE3F2FD); // Fundo claro
-  static const surfacePrimary = Color(0xFFBBDEFB); // Superfície primária
-  static const surfaceSecondary = Color(0xFF90CAF9); // Superfície secundária
-  static const surfaceTertiary = Color(0xFF64B5F6); // Superfície terciária
+  static const surfaceBackground = Color(0xFFF5F5F5); // Fundo bem claro
+  static const surfacePrimary = Color(0xFFE0E0E0); // Superfície primária
+  static const surfaceSecondary = Color(0xFFCCCCCC); // Superfície secundária
+  static const surfaceTertiary = Color(0xFFB3B3B3); // Superfície terciária
 
-  static const textPrimary = Color(0xFF000000); // Texto primário
-  static const textSecondary = Color(0xFF424242); // Texto secundário
-  static const textTertiary = Color(0xFF757575); // Texto terciário
+  static const textPrimary = Color(0xFF111111); // Preto quase puro
+  static const textSecondary = Color(0xFF444444); // Cinza escuro
+  static const textTertiary = Color(0xFF777777); // Cinza médio
 }

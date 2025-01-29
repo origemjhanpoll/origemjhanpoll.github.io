@@ -6,8 +6,8 @@ import 'package:origemjhanpoll_github_io/core/theme/extension/color_extension.da
 class DarkTheme {
   static final theme = ThemeData(
     useMaterial3: true,
-    primaryColor: DarkColors.primaryColor,
     colorScheme: ColorScheme.fromSeed(
+      brightness: Brightness.dark,
       primary: DarkColors.primaryColor,
       seedColor: DarkColors.primaryColor,
     ),
@@ -15,6 +15,7 @@ class DarkTheme {
       backgroundColor: DarkColors.surfaceBackground,
       elevation: 8.0,
     ),
+    drawerTheme: DrawerThemeData(backgroundColor: DarkColors.surfaceBackground),
     scaffoldBackgroundColor: DarkColors.surfaceBackground,
     textTheme: TextTheme(
       displayMedium: GoogleFonts.poppins(
@@ -32,22 +33,9 @@ class DarkTheme {
         color: DarkColors.textPrimary,
         fontWeight: FontWeight.w500,
       ),
-      headlineLarge: GoogleFonts.poppins(
-        color: DarkColors.textPrimary,
-        fontWeight: FontWeight.w500,
-      ),
-      bodySmall: GoogleFonts.poppins(
-        color: DarkColors.textSecondary,
-      ),
-      labelLarge: GoogleFonts.poppins(
-        color: DarkColors.textPrimary,
-        fontWeight: FontWeight.w500,
-        fontSize: 15,
-      ),
     ),
-    primaryTextTheme: GoogleFonts.poppinsTextTheme(),
     inputDecorationTheme: InputDecorationTheme(
-      fillColor: DarkColors.surfaceBackground,
+      fillColor: DarkColors.surfacePrimary,
       hintStyle: GoogleFonts.poppins(
         color: DarkColors.textSecondary,
       ),
@@ -87,10 +75,10 @@ class DarkTheme {
         secondaryStartIconButtonColor: DarkColors.primaryColor,
         endIconButtonColor: DarkColors.primaryColor,
         secondaryEndIconButtonColor: DarkColors.surfaceSecondary,
-        titleSessionColor: DarkColors.secondaryColor,
-        contactSocialCardColor: DarkColors.surfaceTertiary,
-        primaryGradientTitleColor: DarkColors.primaryColor,
-        secondaryGradientTitleColor: DarkColors.secondaryColor,
+        titleSessionColor: DarkColors.secondaryColor, // Adicionado
+        contactSocialCardColor: DarkColors.surfaceTertiary, // Adicionado
+        primaryGradientTitleColor: DarkColors.primaryColor, // Adicionado
+        secondaryGradientTitleColor: DarkColors.secondaryColor, // Adicionado
         toggleThemeIconColor: DarkColors.secondaryColor,
         menuBackgroundColor: DarkColors.surfaceBackground,
         drawerMenuIconColor: DarkColors.secondaryColor,

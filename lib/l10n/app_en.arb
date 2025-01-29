@@ -35,5 +35,9 @@
   "myresume": "My resume",
   "@myresume": {
     "description": "My resume"
+  },
+  "getInTouch": "Get in touch",
+  "@getInTouch": {
+    "description": "Get in touch"
   }
 }
