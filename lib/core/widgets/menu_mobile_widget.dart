@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:origemjhanpoll_github_io/core/controllers/theme_controller.dart';
 import 'package:origemjhanpoll_github_io/core/theme/extension/color_extension.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -11,6 +13,8 @@ class MenuMobileWidget extends StatelessWidget {
     final theme = Theme.of(context);
     final colors = theme.extension<ColorExtension>()!;
     final localization = AppLocalizations.of(context)!;
+
+    final isDarkMode = context.watch<ThemeCubit>().state;
 
     return Drawer(
       backgroundColor: colors.menuBackgroundColor,
@@ -32,7 +36,6 @@ class MenuMobileWidget extends StatelessWidget {
                 ),
               ],
             ),
-
             Center(
               child: RichText(
                 text: TextSpan(
@@ -45,33 +48,12 @@ class MenuMobileWidget extends StatelessWidget {
                 ),
               ),
             ),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: [
-            //     IconButton(
-            //       onPressed: () {
-            //         themeController.toggleTheme();
-            //       },
-            //       icon: Image.asset(
-            //         themeController.isLight
-            //             ? 'assets/icons/sun.png'
-            //             : 'assets/icons/moon.png',
-            //         height: 32,
-            //       ),
-            //     ),
-            //     IconButton(
-            //       onPressed: () {
-            //         languageController.toggleLanguage();
-            //       },
-            //       icon: Image.asset(
-            //         languageController.isPortuguese
-            //             ? 'assets/icons/pt_lula.png'
-            //             : 'assets/icons/en.png',
-            //         height: 14,
-            //       ),
-            //     ),
-            //   ],
-            // ),
+            IconButton(
+              onPressed: context.read<ThemeCubit>().toggleTheme,
+              icon: Icon(
+                isDarkMode ? Icons.dark_mode : Icons.light_mode,
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Divider(color: Colors.white.withValues(alpha: 0.5)),

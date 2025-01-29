@@ -18,6 +18,14 @@ class MenuWebWidget extends StatelessWidget implements PreferredSizeWidget {
 
     final isDarkMode = context.watch<ThemeCubit>().state;
 
+    final localizationTabs = [
+      localization.menuHome,
+      localization.menuAbout,
+      localization.menuProject,
+      localization.menuArticle,
+      localization.menuContact,
+    ];
+
     return AppBar(
       titleSpacing: size.width * 0.02,
       title: RichText(
@@ -31,36 +39,35 @@ class MenuWebWidget extends StatelessWidget implements PreferredSizeWidget {
         ),
       ),
       actions: [
-        TextButton(
-          onPressed: () => onMenuClick(1),
-          child: Text(localization.menuHome, style: theme.textTheme.labelLarge),
-        ),
-        TextButton(
-          onPressed: () => onMenuClick(2),
-          child:
-              Text(localization.menuAbout, style: theme.textTheme.labelLarge),
-        ),
-        TextButton(
-          onPressed: () => onMenuClick(3),
-          child:
-              Text(localization.menuProject, style: theme.textTheme.labelLarge),
-        ),
-        TextButton(
-          onPressed: () => onMenuClick(4),
-          child:
-              Text(localization.menuArticle, style: theme.textTheme.labelLarge),
-        ),
-        TextButton(
-          onPressed: () => onMenuClick(5),
-          child:
-              Text(localization.menuContact, style: theme.textTheme.labelLarge),
+        ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: localizationTabs.length,
+          shrinkWrap: true,
+          itemBuilder: (_, index) => TextButton(
+            onPressed: () => onMenuClick(index),
+            child: Text(localizationTabs[index],
+                style: theme.textTheme.labelLarge),
+          ),
         ),
         IconButton(
           onPressed: context.read<ThemeCubit>().toggleTheme,
+          color: isDarkMode
+              ? theme.colorScheme.primary
+              : theme.colorScheme.primaryFixed,
           icon: Icon(
             isDarkMode ? Icons.dark_mode : Icons.light_mode,
           ),
         ),
+        // TextButton(
+        //   onPressed: () {},
+        //   style: ButtonStyle(
+        //     padding: WidgetStatePropertyAll(EdgeInsets.zero),
+        //     minimumSize: WidgetStatePropertyAll(Size(40.0, 40.0)),
+        //     maximumSize: WidgetStatePropertyAll(Size(40.0, 40.0)),
+        //     fixedSize: WidgetStatePropertyAll(Size(40.0, 40.0)),
+        //   ),
+        //   child: Text('PT', style: theme.textTheme.labelLarge),
+        // ),
       ],
     );
   }
