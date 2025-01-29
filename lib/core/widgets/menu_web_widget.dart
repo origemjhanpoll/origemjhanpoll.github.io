@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:origemjhanpoll_github_io/core/controllers/theme_controller.dart';
 
 class MenuWebWidget extends StatelessWidget implements PreferredSizeWidget {
   final ValueChanged<int> onMenuClick;
@@ -13,6 +15,9 @@ class MenuWebWidget extends StatelessWidget implements PreferredSizeWidget {
     final size = MediaQuery.of(context).size;
     final theme = Theme.of(context);
     final localization = AppLocalizations.of(context)!;
+
+    final isDarkMode = context.watch<ThemeCubit>().state;
+
     return AppBar(
       titleSpacing: size.width * 0.02,
       title: RichText(
@@ -50,29 +55,12 @@ class MenuWebWidget extends StatelessWidget implements PreferredSizeWidget {
           child:
               Text(localization.menuContact, style: theme.textTheme.labelLarge),
         ),
-        // IconButton(
-        //   onPressed: () {
-        //     languageController.toggleLanguage();
-        //   },
-        //   icon: Image.asset(
-        //     languageController.isPortuguese
-        //         ? 'assets/icons/pt_lula.png'
-        //         : 'assets/icons/en.png',
-        //     height: size.height * 0.012,
-        //   ),
-        // ),
-
-        // IconButton(
-        //   onPressed: () {
-        //     themeController.toggleTheme();
-        //   },
-        //   icon: Image.asset(
-        //     themeController.isLight
-        //         ? 'assets/icons/sun.png'
-        //         : 'assets/icons/moon.png',
-        //     height: size.height * 0.025,
-        //   ),
-        // ),
+        IconButton(
+          onPressed: context.read<ThemeCubit>().toggleTheme,
+          icon: Icon(
+            isDarkMode ? Icons.dark_mode : Icons.light_mode,
+          ),
+        ),
       ],
     );
   }

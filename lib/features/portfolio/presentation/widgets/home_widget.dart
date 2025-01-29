@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:origemjhanpoll_github_io/config/constants/screen_size.dart';
-import 'package:origemjhanpoll_github_io/config/constants/url_utils.dart';
+import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
+import 'package:origemjhanpoll_github_io/core/constants/url_utils.dart';
 import 'package:origemjhanpoll_github_io/core/theme/extension/color_extension.dart';
 import 'package:origemjhanpoll_github_io/core/utils/url_launcher_controller.dart';
 
