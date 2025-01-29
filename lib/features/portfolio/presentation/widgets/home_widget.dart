@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
+import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/url_utils.dart';
 import 'package:origemjhanpoll_github_io/core/theme/extension/color_extension.dart';
 import 'package:origemjhanpoll_github_io/core/utils/url_launcher_controller.dart';
@@ -20,32 +21,24 @@ class HomeWidget extends StatelessWidget {
     return SizedBox(
       height: size.height - kToolbarHeight,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 32.0),
+        padding: EdgeInsets.symmetric(
+            horizontal: SpacingSize.getPadding(size.width)),
         child: Flex(
           direction: isScreenMedium ? Axis.horizontal : Axis.vertical,
           verticalDirection: VerticalDirection.up,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          spacing: size.width * 0.1,
           children: [
             Flexible(
               child: Column(
-                spacing: 8.0,
+                spacing: SpacingSize.small,
                 mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: isScreenMedium
-                    ? CrossAxisAlignment.start
-                    : CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ShaderMask(
-                    shaderCallback: (bounds) => LinearGradient(
-                      colors: [
-                        colors.primaryGradientTitleColor,
-                        colors.secondaryGradientTitleColor
-                      ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ).createShader(bounds),
-                    child: SelectableText(localization.hello,
-                        style: theme.textTheme.displayMedium!
-                            .copyWith(color: Colors.white)),
-                  ),
+                  SelectableText(localization.hello,
+                      style: theme.textTheme.displayMedium!
+                          .copyWith(fontWeight: FontWeight.bold)),
                   SelectableText(
                     localization.occupation,
                     style: theme.textTheme.headlineLarge,
