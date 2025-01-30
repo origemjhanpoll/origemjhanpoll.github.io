@@ -23,6 +23,7 @@ class AboutWidget extends StatelessWidget {
     return Flex(
       direction: isScreenMedium ? Axis.horizontal : Axis.vertical,
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
       children: [
         Flexible(
           child: Padding(

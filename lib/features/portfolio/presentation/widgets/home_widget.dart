@@ -17,91 +17,89 @@ class HomeWidget extends StatelessWidget {
     final localization = AppLocalizations.of(context)!;
     final urlLauncherController = UrlLauncherController();
 
-    return ConstrainedBox(
-      constraints: BoxConstraints(maxHeight: size.height - kToolbarHeight),
-      child: Flex(
-        direction: isScreenMedium ? Axis.horizontal : Axis.vertical,
-        verticalDirection: VerticalDirection.up,
-        children: [
-          Flexible(
-            child: Padding(
-              padding: EdgeInsets.all(SpacingSize.getPadding(size.width)),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SelectableText(localization.hello,
-                      style: theme.textTheme.displayMedium!.copyWith(
-                          fontWeight: FontWeight.bold,
-                          fontSize: !isScreenMedium ? 38.0 : null)),
-                  SelectableText(
-                    localization.occupation,
-                    style: theme.textTheme.headlineLarge!
-                        .copyWith(fontSize: !isScreenMedium ? 22.0 : null),
+    return Flex(
+      direction: isScreenMedium ? Axis.horizontal : Axis.vertical,
+      verticalDirection: VerticalDirection.up,
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisSize: isScreenMedium ? MainAxisSize.max : MainAxisSize.min,
+      children: [
+        Flexible(
+          child: Padding(
+            padding: EdgeInsets.all(SpacingSize.getPadding(size.width)),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SelectableText(localization.hello,
+                    style: theme.textTheme.displayMedium!.copyWith(
+                        fontWeight: FontWeight.bold,
+                        fontSize: !isScreenMedium ? 38.0 : null)),
+                SelectableText(
+                  localization.occupation,
+                  style: theme.textTheme.headlineLarge!
+                      .copyWith(fontSize: !isScreenMedium ? 22.0 : null),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: SpacingSize.large),
+                  child: SelectableText(
+                    localization.introduction,
+                    style: theme.textTheme.bodyLarge,
                   ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(vertical: SpacingSize.large),
-                    child: SelectableText(
-                      localization.introduction,
-                      style: theme.textTheme.bodyLarge,
+                ),
+                Wrap(
+                  spacing: SpacingSize.small,
+                  runSpacing: SpacingSize.small,
+                  children: [
+                    FilledButton.icon(
+                      onPressed: () =>
+                          urlLauncherController.launchURL(UrlUtils.resume),
+                      icon: Icon(Icons.attach_file),
+                      style: ButtonStyle(visualDensity: VisualDensity.standard),
+                      label: Text(
+                        localization.myresume,
+                        // style: theme.textTheme.bodyMedium,
+                      ),
                     ),
-                  ),
-                  Wrap(
-                    spacing: SpacingSize.small,
-                    runSpacing: SpacingSize.small,
-                    children: [
-                      FilledButton.icon(
-                        onPressed: () =>
-                            urlLauncherController.launchURL(UrlUtils.resume),
-                        icon: Icon(Icons.attach_file),
-                        style:
-                            ButtonStyle(visualDensity: VisualDensity.standard),
-                        label: Text(
-                          localization.myresume,
-                          // style: theme.textTheme.bodyMedium,
-                        ),
+                    OutlinedButton.icon(
+                      onPressed: () =>
+                          urlLauncherController.launchURL(UrlUtils.whatsapp),
+                      icon: SvgPicture.asset(
+                        'assets/svg/icon_whatsapp.svg',
+                        width: 20.0,
+                        colorFilter: ColorFilter.mode(
+                            theme.colorScheme.secondary, BlendMode.srcIn),
                       ),
-                      OutlinedButton.icon(
-                        onPressed: () =>
-                            urlLauncherController.launchURL(UrlUtils.whatsapp),
-                        icon: SvgPicture.asset(
-                          'assets/svg/icon_whatsapp.svg',
-                          width: 20.0,
-                          colorFilter: ColorFilter.mode(
-                              theme.colorScheme.secondary, BlendMode.srcIn),
-                        ),
-                        style:
-                            ButtonStyle(visualDensity: VisualDensity.standard),
-                        label: Text(
-                          overflow: TextOverflow.clip,
-                          localization.getInTouch,
-                          style: theme.textTheme.bodyMedium,
-                        ),
+                      style: ButtonStyle(visualDensity: VisualDensity.standard),
+                      label: Text(
+                        overflow: TextOverflow.clip,
+                        localization.getInTouch,
+                        style: theme.textTheme.bodyMedium,
                       ),
-                    ],
-                  ),
-                ],
-              ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
-          Flexible(
-            child: Padding(
-              padding: EdgeInsets.all(SpacingSize.getPadding(size.width)),
-              child: Center(
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(maxWidth: 400, minWidth: 200),
-                  child: ClipOval(
-                    child: Image.asset(
-                      'assets/images/origemjhanpoll.png',
-                      fit: BoxFit.contain,
-                    ),
+        ),
+        Flexible(
+          child: Padding(
+            padding: EdgeInsets.all(SpacingSize.getPadding(size.width)),
+            child: Center(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(maxWidth: 400, minWidth: 200),
+                child: ClipOval(
+                  child: Image.asset(
+                    'assets/images/origemjhanpoll.png',
+                    fit: BoxFit.contain,
                   ),
                 ),
               ),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

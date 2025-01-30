@@ -84,7 +84,6 @@ class _HomePageState extends State<HomePage> {
             ),
       body: SingleChildScrollView(
         child: Column(
-          mainAxisSize: MainAxisSize.min,
           children: [
             HomeWidget(key: homeKey),
             AboutWidget(key: aboutKey),
