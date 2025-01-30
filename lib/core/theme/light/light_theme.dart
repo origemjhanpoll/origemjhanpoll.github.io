@@ -8,6 +8,7 @@ class LightTheme {
     colorScheme: ColorScheme.fromSeed(
       brightness: Brightness.light,
       primary: LightColors.primaryColor,
+      secondary: LightColors.secondaryColor,
       seedColor: LightColors.primaryColor,
     ),
     appBarTheme: const AppBarTheme(

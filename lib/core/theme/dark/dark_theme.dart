@@ -5,9 +5,11 @@ import 'package:origemjhanpoll_github_io/core/theme/dark/dark_colors.dart';
 class DarkTheme {
   static final theme = ThemeData(
     useMaterial3: true,
+    primaryColor: DarkColors.primaryColor,
     colorScheme: ColorScheme.fromSeed(
       brightness: Brightness.dark,
       primary: DarkColors.primaryColor,
+      secondary: DarkColors.secondaryColor,
       seedColor: DarkColors.primaryColor,
     ),
     appBarTheme: const AppBarTheme(
@@ -30,6 +32,15 @@ class DarkTheme {
         fontWeight: FontWeight.w500,
       ),
     ),
+    filledButtonTheme: FilledButtonThemeData(
+        style: ButtonStyle(
+      textStyle: WidgetStatePropertyAll(
+          GoogleFonts.poppins(color: DarkColors.textSecondary)),
+    )),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+        style: ButtonStyle(
+      iconColor: WidgetStatePropertyAll(DarkColors.primaryColor),
+    )),
     inputDecorationTheme: InputDecorationTheme(
       fillColor: DarkColors.surfacePrimary,
       hintStyle: GoogleFonts.poppins(

@@ -36,11 +36,13 @@ class HomeWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SelectableText(localization.hello,
-                      style: theme.textTheme.displayMedium!
-                          .copyWith(fontWeight: FontWeight.bold)),
+                      style: theme.textTheme.displayMedium!.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: !isScreenMedium ? 38.0 : null)),
                   SelectableText(
                     localization.occupation,
-                    style: theme.textTheme.headlineLarge,
+                    style: theme.textTheme.headlineLarge!
+                        .copyWith(fontSize: !isScreenMedium ? 22.0 : null),
                   ),
                   SelectableText(
                     localization.introduction,
@@ -70,7 +72,7 @@ class HomeWidget extends StatelessWidget {
                             'assets/svg/icon_whatsapp.svg',
                             width: 20.0,
                             colorFilter: ColorFilter.mode(
-                                theme.primaryColor, BlendMode.srcIn),
+                                theme.colorScheme.secondary, BlendMode.srcIn),
                           ),
                           style: ButtonStyle(
                               visualDensity: VisualDensity.standard),
