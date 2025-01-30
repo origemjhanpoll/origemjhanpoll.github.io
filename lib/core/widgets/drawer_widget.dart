@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:origemjhanpoll_github_io/core/controllers/theme_controller.dart';
-import 'package:origemjhanpoll_github_io/core/theme/extension/color_extension.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DrawerWidget extends StatelessWidget {
@@ -11,7 +10,6 @@ class DrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final colors = theme.extension<ColorExtension>()!;
     final localization = AppLocalizations.of(context)!;
 
     final isDarkMode = context.watch<ThemeCubit>().state;
@@ -31,7 +29,7 @@ class DrawerWidget extends StatelessWidget {
                     },
                     icon: Icon(
                       Icons.close,
-                      color: colors.drawerMenuIconColor,
+                      color: theme.primaryColor,
                     ),
                   ),
                 ),
@@ -62,7 +60,7 @@ class DrawerWidget extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.home, color: colors.drawerMenuIconColor),
+            leading: Icon(Icons.home, color: theme.primaryColor),
             title:
                 Text(localization.menuHome, style: theme.textTheme.labelLarge),
             onTap: () {
@@ -71,7 +69,7 @@ class DrawerWidget extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.person, color: colors.drawerMenuIconColor),
+            leading: Icon(Icons.person, color: theme.primaryColor),
             title:
                 Text(localization.menuAbout, style: theme.textTheme.labelLarge),
             onTap: () {
@@ -80,7 +78,7 @@ class DrawerWidget extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.work, color: colors.drawerMenuIconColor),
+            leading: Icon(Icons.work, color: theme.primaryColor),
             title: Text(localization.menuProject,
                 style: theme.textTheme.labelLarge),
             onTap: () {
@@ -89,7 +87,7 @@ class DrawerWidget extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.article, color: colors.drawerMenuIconColor),
+            leading: Icon(Icons.article, color: theme.primaryColor),
             title: Text(localization.menuArticle,
                 style: theme.textTheme.labelLarge),
             onTap: () {
@@ -98,7 +96,7 @@ class DrawerWidget extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.mail, color: colors.drawerMenuIconColor),
+            leading: Icon(Icons.mail, color: theme.primaryColor),
             title: Text(localization.menuContact,
                 style: theme.textTheme.labelLarge),
             onTap: () {

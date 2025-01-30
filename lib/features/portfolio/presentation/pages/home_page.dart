@@ -16,12 +16,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final isScreenMedium = size.width >= ScreenSize.small;
     final theme = Theme.of(context);
     return Scaffold(
-      drawer: size.width <= ScreenSize.medium
-          ? DrawerWidget(onMenuClick: (value) {})
-          : null,
-      appBar: size.width <= ScreenSize.medium
+      drawer: !isScreenMedium ? DrawerWidget(onMenuClick: (value) {}) : null,
+      appBar: !isScreenMedium
           ? AppBar(
               leading: Builder(builder: (context) {
                 return IconButton(

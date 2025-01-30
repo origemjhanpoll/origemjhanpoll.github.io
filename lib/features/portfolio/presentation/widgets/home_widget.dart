@@ -4,7 +4,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/url_utils.dart';
-import 'package:origemjhanpoll_github_io/core/theme/extension/color_extension.dart';
 import 'package:origemjhanpoll_github_io/core/utils/url_launcher_controller.dart';
 
 class HomeWidget extends StatelessWidget {
@@ -15,7 +14,6 @@ class HomeWidget extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     final isScreenMedium = size.width >= ScreenSize.small;
     final theme = Theme.of(context);
-    final colors = theme.extension<ColorExtension>()!;
     final localization = AppLocalizations.of(context)!;
     final urlLauncherController = UrlLauncherController();
 
@@ -50,8 +48,9 @@ class HomeWidget extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: SpacingSize.small),
-                    child: Row(
+                    child: Wrap(
                       spacing: SpacingSize.small,
+                      runSpacing: SpacingSize.small,
                       children: [
                         FilledButton.icon(
                           onPressed: () =>
@@ -59,20 +58,27 @@ class HomeWidget extends StatelessWidget {
                           icon: Icon(Icons.attach_file),
                           style: ButtonStyle(
                               visualDensity: VisualDensity.standard),
-                          label: Text(localization.myresume),
+                          label: Text(
+                            localization.myresume,
+                            // style: theme.textTheme.bodyMedium,
+                          ),
                         ),
                         OutlinedButton.icon(
-                          onPressed: () =>
-                              urlLauncherController.launchURL(UrlUtils.resume),
+                          onPressed: () => urlLauncherController
+                              .launchURL(UrlUtils.whatsapp),
                           icon: SvgPicture.asset(
                             'assets/svg/icon_whatsapp.svg',
-                            width: 18.0,
+                            width: 20.0,
                             colorFilter: ColorFilter.mode(
-                                colors.contactSocialCardColor, BlendMode.srcIn),
+                                theme.primaryColor, BlendMode.srcIn),
                           ),
                           style: ButtonStyle(
                               visualDensity: VisualDensity.standard),
-                          label: Text(localization.menuContact),
+                          label: Text(
+                            overflow: TextOverflow.clip,
+                            localization.getInTouch,
+                            style: theme.textTheme.bodyMedium,
+                          ),
                         ),
                       ],
                     ),

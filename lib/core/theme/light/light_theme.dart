@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:origemjhanpoll_github_io/core/theme/extension/color_extension.dart';
 import 'package:origemjhanpoll_github_io/core/theme/light/light_colors.dart';
 
 class LightTheme {
@@ -26,19 +25,21 @@ class LightTheme {
       titleSmall: GoogleFonts.poppins(color: LightColors.textPrimary),
       titleMedium: GoogleFonts.poppins(color: LightColors.textPrimary),
       titleLarge: GoogleFonts.poppins(color: LightColors.textPrimary),
-      bodyMedium: GoogleFonts.poppins(
-        color: LightColors.textSecondary,
-        fontSize: 18,
-      ),
+      bodyMedium: GoogleFonts.poppins(color: LightColors.textSecondary),
       bodyLarge: GoogleFonts.poppins(
         color: LightColors.textPrimary,
         fontWeight: FontWeight.w500,
       ),
     ),
+    filledButtonTheme: FilledButtonThemeData(
+        style: ButtonStyle(
+      textStyle: WidgetStatePropertyAll(
+          GoogleFonts.poppins(color: LightColors.surfacePrimary)),
+    )),
     inputDecorationTheme: InputDecorationTheme(
       fillColor: LightColors.surfacePrimary,
       hintStyle: GoogleFonts.poppins(
-        color: LightColors.textSecondary,
+        color: const Color.fromARGB(255, 3, 2, 2),
       ),
       labelStyle: GoogleFonts.poppins(
         color: LightColors.textSecondary,
@@ -70,21 +71,6 @@ class LightTheme {
         borderRadius: BorderRadius.circular(10.0),
       ),
     ),
-    extensions: [
-      ColorExtension(
-        stackIconsColor: LightColors.primaryColor,
-        startIconButttonColor: LightColors.surfaceSecondary,
-        secondaryStartIconButtonColor: LightColors.primaryColor,
-        endIconButtonColor: LightColors.primaryColor,
-        secondaryEndIconButtonColor: LightColors.surfaceSecondary,
-        titleSessionColor: LightColors.secondaryColor, // Adicionado
-        contactSocialCardColor: LightColors.surfaceTertiary, // Adicionado
-        primaryGradientTitleColor: LightColors.primaryColor, // Adicionado
-        secondaryGradientTitleColor: LightColors.secondaryColor, // Adicionado
-        toggleThemeIconColor: LightColors.secondaryColor,
-        menuBackgroundColor: LightColors.surfaceBackground,
-        drawerMenuIconColor: LightColors.secondaryColor,
-      ),
-    ],
+    extensions: [],
   );
 }

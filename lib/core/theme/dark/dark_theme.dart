@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:origemjhanpoll_github_io/core/theme/dark/dark_colors.dart';
-import 'package:origemjhanpoll_github_io/core/theme/extension/color_extension.dart';
 
 class DarkTheme {
   static final theme = ThemeData(
@@ -25,10 +24,7 @@ class DarkTheme {
       titleSmall: GoogleFonts.poppins(color: DarkColors.textPrimary),
       titleMedium: GoogleFonts.poppins(color: DarkColors.textPrimary),
       titleLarge: GoogleFonts.poppins(color: DarkColors.textPrimary),
-      bodyMedium: GoogleFonts.poppins(
-        color: DarkColors.textSecondary,
-        fontSize: 18,
-      ),
+      bodyMedium: GoogleFonts.poppins(color: DarkColors.textSecondary),
       bodyLarge: GoogleFonts.poppins(
         color: DarkColors.textPrimary,
         fontWeight: FontWeight.w500,
@@ -68,21 +64,6 @@ class DarkTheme {
         borderRadius: BorderRadius.circular(10.0),
       ),
     ),
-    extensions: [
-      ColorExtension(
-        stackIconsColor: DarkColors.primaryColor,
-        startIconButttonColor: DarkColors.surfaceSecondary,
-        secondaryStartIconButtonColor: DarkColors.primaryColor,
-        endIconButtonColor: DarkColors.primaryColor,
-        secondaryEndIconButtonColor: DarkColors.surfaceSecondary,
-        titleSessionColor: DarkColors.secondaryColor, // Adicionado
-        contactSocialCardColor: DarkColors.surfaceTertiary, // Adicionado
-        primaryGradientTitleColor: DarkColors.primaryColor, // Adicionado
-        secondaryGradientTitleColor: DarkColors.secondaryColor, // Adicionado
-        toggleThemeIconColor: DarkColors.secondaryColor,
-        menuBackgroundColor: DarkColors.surfaceBackground,
-        drawerMenuIconColor: DarkColors.secondaryColor,
-      ),
-    ],
+    extensions: [],
   );
 }
