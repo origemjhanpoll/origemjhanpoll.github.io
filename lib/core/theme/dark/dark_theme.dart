@@ -24,13 +24,12 @@ class DarkTheme {
         fontWeight: FontWeight.w600,
       ),
       titleSmall: GoogleFonts.poppins(color: DarkColors.textPrimary),
-      titleMedium: GoogleFonts.poppins(color: DarkColors.textPrimary),
+      titleMedium: GoogleFonts.poppins(color: DarkColors.textSecondary),
       titleLarge: GoogleFonts.poppins(color: DarkColors.textPrimary),
-      bodyMedium: GoogleFonts.poppins(color: DarkColors.textSecondary),
-      bodyLarge: GoogleFonts.poppins(
-        color: DarkColors.textPrimary,
-        fontWeight: FontWeight.w500,
-      ),
+      bodySmall: GoogleFonts.dmSans(color: DarkColors.textSecondary),
+      bodyMedium: GoogleFonts.dmSans(color: DarkColors.textSecondary),
+      bodyLarge: GoogleFonts.dmSans(color: DarkColors.textSecondary),
+      labelMedium: GoogleFonts.poppins(color: DarkColors.textTertiary),
     ),
     filledButtonTheme: FilledButtonThemeData(
         style: ButtonStyle(

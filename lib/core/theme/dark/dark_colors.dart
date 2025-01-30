@@ -12,4 +12,5 @@ class DarkColors {
 
   static const textPrimary = Color(0xFFF5F5F5); // Branco quase puro
   static const textSecondary = Color(0xFFCCCCCC); // Cinza claro
+  static const textTertiary = Color(0xFF9B9B9B); //  Cinza escuro
 }

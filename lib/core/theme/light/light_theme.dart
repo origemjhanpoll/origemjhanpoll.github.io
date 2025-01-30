@@ -26,11 +26,10 @@ class LightTheme {
       titleSmall: GoogleFonts.poppins(color: LightColors.textPrimary),
       titleMedium: GoogleFonts.poppins(color: LightColors.textPrimary),
       titleLarge: GoogleFonts.poppins(color: LightColors.textPrimary),
-      bodyMedium: GoogleFonts.poppins(color: LightColors.textSecondary),
-      bodyLarge: GoogleFonts.poppins(
-        color: LightColors.textPrimary,
-        fontWeight: FontWeight.w500,
-      ),
+      bodySmall: GoogleFonts.dmSans(color: LightColors.textSecondary),
+      bodyMedium: GoogleFonts.dmSans(color: LightColors.textSecondary),
+      bodyLarge: GoogleFonts.dmSans(color: LightColors.textSecondary),
+      labelMedium: GoogleFonts.poppins(color: LightColors.textTertiary),
     ),
     filledButtonTheme: FilledButtonThemeData(
         style: ButtonStyle(

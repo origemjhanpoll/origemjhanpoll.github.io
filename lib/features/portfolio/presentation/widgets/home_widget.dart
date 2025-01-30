@@ -11,27 +11,22 @@ class HomeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     final size = MediaQuery.of(context).size;
     final isScreenMedium = size.width >= ScreenSize.small;
-    final theme = Theme.of(context);
     final localization = AppLocalizations.of(context)!;
     final urlLauncherController = UrlLauncherController();
 
-    return SizedBox(
-      height: size.height - kToolbarHeight,
-      child: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: SpacingSize.getPadding(size.width)),
-        child: Flex(
-          direction: isScreenMedium ? Axis.horizontal : Axis.vertical,
-          verticalDirection: VerticalDirection.up,
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          spacing: size.width * 0.1,
-          children: [
-            Flexible(
+    return ConstrainedBox(
+      constraints: BoxConstraints(maxHeight: size.height - kToolbarHeight),
+      child: Flex(
+        direction: isScreenMedium ? Axis.horizontal : Axis.vertical,
+        verticalDirection: VerticalDirection.up,
+        children: [
+          Flexible(
+            child: Padding(
+              padding: EdgeInsets.all(SpacingSize.getPadding(size.width)),
               child: Column(
-                spacing: SpacingSize.small,
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -44,64 +39,68 @@ class HomeWidget extends StatelessWidget {
                     style: theme.textTheme.headlineLarge!
                         .copyWith(fontSize: !isScreenMedium ? 22.0 : null),
                   ),
-                  SelectableText(
-                    localization.introduction,
-                    style: theme.textTheme.bodyMedium,
-                  ),
                   Padding(
-                    padding: const EdgeInsets.only(top: SpacingSize.small),
-                    child: Wrap(
-                      spacing: SpacingSize.small,
-                      runSpacing: SpacingSize.small,
-                      children: [
-                        FilledButton.icon(
-                          onPressed: () =>
-                              urlLauncherController.launchURL(UrlUtils.resume),
-                          icon: Icon(Icons.attach_file),
-                          style: ButtonStyle(
-                              visualDensity: VisualDensity.standard),
-                          label: Text(
-                            localization.myresume,
-                            // style: theme.textTheme.bodyMedium,
-                          ),
-                        ),
-                        OutlinedButton.icon(
-                          onPressed: () => urlLauncherController
-                              .launchURL(UrlUtils.whatsapp),
-                          icon: SvgPicture.asset(
-                            'assets/svg/icon_whatsapp.svg',
-                            width: 20.0,
-                            colorFilter: ColorFilter.mode(
-                                theme.colorScheme.secondary, BlendMode.srcIn),
-                          ),
-                          style: ButtonStyle(
-                              visualDensity: VisualDensity.standard),
-                          label: Text(
-                            overflow: TextOverflow.clip,
-                            localization.getInTouch,
-                            style: theme.textTheme.bodyMedium,
-                          ),
-                        ),
-                      ],
+                    padding: EdgeInsets.symmetric(vertical: SpacingSize.large),
+                    child: SelectableText(
+                      localization.introduction,
+                      style: theme.textTheme.bodyLarge,
                     ),
+                  ),
+                  Wrap(
+                    spacing: SpacingSize.small,
+                    runSpacing: SpacingSize.small,
+                    children: [
+                      FilledButton.icon(
+                        onPressed: () =>
+                            urlLauncherController.launchURL(UrlUtils.resume),
+                        icon: Icon(Icons.attach_file),
+                        style:
+                            ButtonStyle(visualDensity: VisualDensity.standard),
+                        label: Text(
+                          localization.myresume,
+                          // style: theme.textTheme.bodyMedium,
+                        ),
+                      ),
+                      OutlinedButton.icon(
+                        onPressed: () =>
+                            urlLauncherController.launchURL(UrlUtils.whatsapp),
+                        icon: SvgPicture.asset(
+                          'assets/svg/icon_whatsapp.svg',
+                          width: 20.0,
+                          colorFilter: ColorFilter.mode(
+                              theme.colorScheme.secondary, BlendMode.srcIn),
+                        ),
+                        style:
+                            ButtonStyle(visualDensity: VisualDensity.standard),
+                        label: Text(
+                          overflow: TextOverflow.clip,
+                          localization.getInTouch,
+                          style: theme.textTheme.bodyMedium,
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
             ),
-            Flexible(
-              child: ConstrainedBox(
-                constraints: BoxConstraints(
-                    maxWidth: isScreenMedium ? 400.0 : 250.0, minWidth: 200.0),
-                child: ClipOval(
-                  child: Image.asset(
-                    'assets/images/origemjhanpoll.png',
-                    fit: BoxFit.contain,
+          ),
+          Flexible(
+            child: Padding(
+              padding: EdgeInsets.all(SpacingSize.getPadding(size.width)),
+              child: Center(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(maxWidth: 400, minWidth: 200),
+                  child: ClipOval(
+                    child: Image.asset(
+                      'assets/images/origemjhanpoll.png',
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

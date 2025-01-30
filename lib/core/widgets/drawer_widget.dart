@@ -64,7 +64,7 @@ class DrawerWidget extends StatelessWidget {
             title:
                 Text(localization.menuHome, style: theme.textTheme.labelLarge),
             onTap: () {
-              onMenuClick(1);
+              onMenuClick(0);
               Navigator.pop(context);
             },
           ),
@@ -73,7 +73,7 @@ class DrawerWidget extends StatelessWidget {
             title:
                 Text(localization.menuAbout, style: theme.textTheme.labelLarge),
             onTap: () {
-              onMenuClick(2);
+              onMenuClick(1);
               Navigator.pop(context);
             },
           ),
@@ -82,7 +82,7 @@ class DrawerWidget extends StatelessWidget {
             title: Text(localization.menuProject,
                 style: theme.textTheme.labelLarge),
             onTap: () {
-              onMenuClick(3);
+              onMenuClick(2);
               Navigator.pop(context);
             },
           ),
@@ -91,7 +91,7 @@ class DrawerWidget extends StatelessWidget {
             title: Text(localization.menuArticle,
                 style: theme.textTheme.labelLarge),
             onTap: () {
-              onMenuClick(4);
+              onMenuClick(3);
               Navigator.pop(context);
             },
           ),
@@ -100,7 +100,7 @@ class DrawerWidget extends StatelessWidget {
             title: Text(localization.menuContact,
                 style: theme.textTheme.labelLarge),
             onTap: () {
-              onMenuClick(5);
+              onMenuClick(4);
               Navigator.pop(context);
             },
           ),

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
 import 'package:origemjhanpoll_github_io/core/widgets/drawer_widget.dart';
 import 'package:origemjhanpoll_github_io/core/widgets/app_bar_widget.dart';
+import 'package:origemjhanpoll_github_io/features/portfolio/presentation/widgets/about_widget.dart';
 import 'package:origemjhanpoll_github_io/features/portfolio/presentation/widgets/home_widget.dart';
+import 'package:origemjhanpoll_github_io/features/portfolio/presentation/widgets/projects_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,13 +15,47 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final homeKey = GlobalKey();
+  final aboutKey = GlobalKey();
+  final projectsKey = GlobalKey();
+
+  void _onMenuClick(int value) {
+    switch (value) {
+      case 0:
+        Scrollable.ensureVisible(
+          homeKey.currentContext!,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.easeInOut,
+        );
+        break;
+      case 1:
+        Scrollable.ensureVisible(
+          aboutKey.currentContext!,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.easeInOut,
+        );
+        break;
+      case 2:
+        Scrollable.ensureVisible(
+          projectsKey.currentContext!,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.easeInOut,
+        );
+        break;
+
+      default:
+        throw Exception('Invalid menu value');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final isScreenMedium = size.width >= ScreenSize.small;
     final theme = Theme.of(context);
     return Scaffold(
-      drawer: !isScreenMedium ? DrawerWidget(onMenuClick: (value) {}) : null,
+      drawer: !isScreenMedium
+          ? DrawerWidget(onMenuClick: (value) => _onMenuClick(value))
+          : null,
       appBar: !isScreenMedium
           ? AppBar(
               leading: Builder(builder: (context) {
@@ -44,12 +80,15 @@ class _HomePageState extends State<HomePage> {
               ),
             )
           : AppBarWidget(
-              onMenuClick: (value) {},
+              onMenuClick: (value) => _onMenuClick(value),
             ),
       body: SingleChildScrollView(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             HomeWidget(key: homeKey),
+            AboutWidget(key: aboutKey),
+            ProjectsWidget(key: projectsKey),
           ],
         ),
       ),
