@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/url_utils.dart';
-import 'package:origemjhanpoll_github_io/core/utils/url_launcher_controller.dart';
+import 'package:origemjhanpoll_github_io/core/utils/url_launcher_util.dart';
 
 class HomeWidget extends StatelessWidget {
   const HomeWidget({super.key});
@@ -15,91 +15,98 @@ class HomeWidget extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     final isScreenMedium = size.width >= ScreenSize.small;
     final localization = AppLocalizations.of(context)!;
-    final urlLauncherController = UrlLauncherController();
+    final urlLauncherUtil = UrlLauncherUtil();
 
-    return Flex(
-      direction: isScreenMedium ? Axis.horizontal : Axis.vertical,
-      verticalDirection: VerticalDirection.up,
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisSize: isScreenMedium ? MainAxisSize.max : MainAxisSize.min,
-      children: [
-        Flexible(
-          child: Padding(
-            padding: EdgeInsets.all(SpacingSize.getPadding(size.width)),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SelectableText(localization.hello,
-                    style: theme.textTheme.displayMedium!.copyWith(
-                        fontWeight: FontWeight.bold,
-                        fontSize: !isScreenMedium ? 38.0 : null)),
-                SelectableText(
-                  localization.occupation,
-                  style: theme.textTheme.headlineLarge!
-                      .copyWith(fontSize: !isScreenMedium ? 22.0 : null),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: SpacingSize.large),
-                  child: SelectableText(
-                    localization.introduction,
-                    style: theme.textTheme.bodyLarge,
+    return SizedBox(
+      height: size.height - kToolbarHeight,
+      child: Flex(
+        direction: isScreenMedium ? Axis.horizontal : Axis.vertical,
+        mainAxisSize: isScreenMedium ? MainAxisSize.max : MainAxisSize.min,
+        verticalDirection: VerticalDirection.up,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Flexible(
+            child: Padding(
+              padding: EdgeInsets.all(SpacingSize.getPadding(size.width)),
+              child: Column(
+                mainAxisAlignment: isScreenMedium
+                    ? MainAxisAlignment.center
+                    : MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SelectableText(localization.hello,
+                      style: theme.textTheme.displayMedium!.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: !isScreenMedium ? 28.0 : null)),
+                  SelectableText(
+                    localization.occupation,
+                    style: theme.textTheme.headlineLarge!
+                        .copyWith(fontSize: !isScreenMedium ? 20.0 : null),
                   ),
-                ),
-                Wrap(
-                  spacing: SpacingSize.small,
-                  runSpacing: SpacingSize.small,
-                  children: [
-                    FilledButton.icon(
-                      onPressed: () =>
-                          urlLauncherController.launchURL(UrlUtils.resume),
-                      icon: Icon(Icons.attach_file),
-                      style: ButtonStyle(visualDensity: VisualDensity.standard),
-                      label: Text(
-                        localization.myresume,
-                        // style: theme.textTheme.bodyMedium,
-                      ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: SpacingSize.large),
+                    child: SelectableText(
+                      localization.introduction,
+                      style: theme.textTheme.bodyLarge!
+                          .copyWith(overflow: TextOverflow.ellipsis),
                     ),
-                    OutlinedButton.icon(
-                      onPressed: () =>
-                          urlLauncherController.launchURL(UrlUtils.whatsapp),
-                      icon: SvgPicture.asset(
-                        'assets/svg/icon_whatsapp.svg',
-                        width: 20.0,
-                        colorFilter: ColorFilter.mode(
-                            theme.colorScheme.secondary, BlendMode.srcIn),
+                  ),
+                  Wrap(
+                    spacing: SpacingSize.small,
+                    runSpacing: SpacingSize.small,
+                    children: [
+                      FilledButton.icon(
+                        onPressed: () =>
+                            urlLauncherUtil.launchURL(UrlUtils.resume),
+                        icon: Icon(Icons.attach_file),
+                        style:
+                            ButtonStyle(visualDensity: VisualDensity.standard),
+                        label: Text(
+                          localization.myresume,
+                          softWrap: true,
+                        ),
                       ),
-                      style: ButtonStyle(visualDensity: VisualDensity.standard),
-                      label: Text(
-                        overflow: TextOverflow.clip,
-                        localization.getInTouch,
-                        style: theme.textTheme.bodyMedium,
+                      OutlinedButton.icon(
+                        onPressed: () =>
+                            urlLauncherUtil.launchURL(UrlUtils.whatsapp),
+                        icon: SvgPicture.asset(
+                          'assets/svg/icon_whatsapp.svg',
+                          width: 20.0,
+                          colorFilter: ColorFilter.mode(
+                              theme.colorScheme.secondary, BlendMode.srcIn),
+                        ),
+                        style:
+                            ButtonStyle(visualDensity: VisualDensity.standard),
+                        label: Text(
+                          overflow: TextOverflow.clip,
+                          localization.getInTouch,
+                          style: theme.textTheme.bodyMedium,
+                          softWrap: true,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-        Flexible(
-          child: Padding(
-            padding: EdgeInsets.all(SpacingSize.getPadding(size.width)),
-            child: Center(
-              child: ConstrainedBox(
-                constraints: BoxConstraints(maxWidth: 400, minWidth: 200),
+          Flexible(
+            child: Padding(
+              padding: EdgeInsets.all(
+                  SpacingSize.getPadding(size.width) * (size.width * 0.002)),
+              child: Center(
                 child: ClipOval(
                   child: Image.asset(
                     'assets/images/origemjhanpoll.png',
-                    fit: BoxFit.contain,
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

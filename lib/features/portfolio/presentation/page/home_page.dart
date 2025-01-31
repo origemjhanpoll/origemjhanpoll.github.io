@@ -82,13 +82,16 @@ class _HomePageState extends State<HomePage> {
           : AppBarWidget(
               onMenuClick: (value) => _onMenuClick(value),
             ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            HomeWidget(key: homeKey),
-            AboutWidget(key: aboutKey),
-            ProjectsWidget(key: projectsKey),
-          ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          primary: true,
+          child: Column(
+            children: [
+              HomeWidget(key: homeKey),
+              AboutWidget(key: aboutKey),
+              ProjectsWidget(key: projectsKey),
+            ],
+          ),
         ),
       ),
     );
