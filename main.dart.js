@@ -80748,7 +80748,7 @@ o=A.j0(A.a([n,l,new A.cQ(new A.aO(0,24,0,24),j,g),A.aCD(A.a([h,A.aMD(new A.QT(20
 e=A.tR(e)*(e*0.002)
 return A.azN(A.a([new A.eQ(1,B.bp,new A.cQ(new A.aO(p,p,p,p),o,g),g),new A.KM(1,B.ol,new A.cQ(new A.aO(e,e,e,e),A.qV(new A.HN(new A.y9(A.aNB(g,g,new A.wb("assets/images/origemjhanpoll.png",g,g)),B.HN,g),g),g,g),g),g)],i),B.bf,r,g,B.is,q,0,g,g,B.abI)}}
 A.a8j.prototype={
-$0(){return this.a.pS("https://drive.google.com/file/d/1OemAUp-y0MeplfcQHuMBd6ovddnjeWtP/view?usp=sharing")},
+$0(){return this.a.pS("https://github.com/origemjhanpoll/origemjhanpoll.github.io/raw/refs/heads/main/assets/resume/Jean%20Paul%20-%20PTBR.pdf")},
 $S:0}
 A.a8k.prototype={
 $0(){return this.a.pS("https://api.whatsapp.com/send/?phone=5598991391108&text&type=phone_number&app_absent=0")},
