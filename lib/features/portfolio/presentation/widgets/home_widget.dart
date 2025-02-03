@@ -14,6 +14,7 @@ class HomeWidget extends StatelessWidget {
     final theme = Theme.of(context);
     final size = MediaQuery.of(context).size;
     final isScreenMedium = size.width >= ScreenSize.small;
+    final padding = SpacingSize.getPadding(size.width);
     final localization = AppLocalizations.of(context)!;
     final urlLauncherUtil = UrlLauncherUtil();
 
@@ -25,8 +26,9 @@ class HomeWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Flexible(
-          child: Padding(
-            padding: EdgeInsets.all(SpacingSize.getPadding(size.width)),
+          child: AnimatedPadding(
+            duration: Durations.medium1,
+            padding: EdgeInsets.all(padding),
             child: Column(
               mainAxisAlignment: isScreenMedium
                   ? MainAxisAlignment.center
@@ -88,9 +90,9 @@ class HomeWidget extends StatelessWidget {
           ),
         ),
         Expanded(
-          child: Padding(
-            padding: EdgeInsets.all(
-                SpacingSize.getPadding(size.width) * (size.width * 0.002)),
+          child: AnimatedPadding(
+            duration: Durations.medium1,
+            padding: EdgeInsets.all(padding * (size.width * 0.002)),
             child: Center(
               child: ClipOval(
                 child: Image.asset(

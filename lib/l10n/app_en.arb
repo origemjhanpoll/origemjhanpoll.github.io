@@ -8,6 +8,10 @@
   "@menuAbout": {
     "description": "About"
   },
+  "menuExperiences": "Experiences",
+  "@menuExperiences": {
+    "description": "Experiences"
+  },
   "menuProject": "Projects",
   "@menuProject": {
     "description": "Projects"

@@ -21,6 +21,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     final localizationTabs = [
       localization.menuHome,
       localization.menuAbout,
+      localization.menuExperiences,
       localization.menuProject,
       localization.menuArticle,
       localization.menuContact,

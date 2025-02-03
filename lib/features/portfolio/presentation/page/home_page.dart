@@ -3,8 +3,8 @@ import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
 import 'package:origemjhanpoll_github_io/core/widgets/drawer_widget.dart';
 import 'package:origemjhanpoll_github_io/core/widgets/app_bar_widget.dart';
 import 'package:origemjhanpoll_github_io/features/portfolio/presentation/widgets/about_widget.dart';
+import 'package:origemjhanpoll_github_io/features/portfolio/presentation/widgets/experiences_widget.dart';
 import 'package:origemjhanpoll_github_io/features/portfolio/presentation/widgets/home_widget.dart';
-import 'package:origemjhanpoll_github_io/features/portfolio/presentation/widgets/projects_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,6 +16,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final homeKey = GlobalKey();
   final aboutKey = GlobalKey();
+  final experiencesKey = GlobalKey();
   final projectsKey = GlobalKey();
 
   void _onMenuClick(int value) {
@@ -35,6 +36,13 @@ class _HomePageState extends State<HomePage> {
         );
         break;
       case 2:
+        Scrollable.ensureVisible(
+          experiencesKey.currentContext!,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.easeInOut,
+        );
+        break;
+      case 3:
         Scrollable.ensureVisible(
           projectsKey.currentContext!,
           duration: const Duration(milliseconds: 500),
@@ -89,6 +97,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               HomeWidget(key: homeKey),
               AboutWidget(key: aboutKey),
+              ExperiencesWidget(key: experiencesKey),
               // ProjectsWidget(key: projectsKey),
             ],
           ),

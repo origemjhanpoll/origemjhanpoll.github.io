@@ -79,10 +79,19 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.work, color: theme.primaryColor),
-            title: Text(localization.menuProject,
+            title: Text(localization.menuExperiences,
                 style: theme.textTheme.labelLarge),
             onTap: () {
               onMenuClick(2);
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.work, color: theme.primaryColor),
+            title: Text(localization.menuProject,
+                style: theme.textTheme.labelLarge),
+            onTap: () {
+              onMenuClick(3);
               Navigator.pop(context);
             },
           ),
@@ -91,7 +100,7 @@ class DrawerWidget extends StatelessWidget {
             title: Text(localization.menuArticle,
                 style: theme.textTheme.labelLarge),
             onTap: () {
-              onMenuClick(3);
+              onMenuClick(4);
               Navigator.pop(context);
             },
           ),
@@ -100,7 +109,7 @@ class DrawerWidget extends StatelessWidget {
             title: Text(localization.menuContact,
                 style: theme.textTheme.labelLarge),
             onTap: () {
-              onMenuClick(4);
+              onMenuClick(5);
               Navigator.pop(context);
             },
           ),

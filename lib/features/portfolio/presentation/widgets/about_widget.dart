@@ -9,17 +9,15 @@ class AboutWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final size = MediaQuery.sizeOf(context);
+    final padding = SpacingSize.getPadding(size.width);
     final isScreenMedium = size.width >= ScreenSize.small;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: EdgeInsets.only(
-            top: SpacingSize.getPadding(size.width),
-            left: SpacingSize.getPadding(size.width),
-            right: SpacingSize.getPadding(size.width),
-          ),
+        AnimatedPadding(
+          duration: Durations.medium1,
+          padding: EdgeInsets.only(top: padding, left: padding, right: padding),
           child: SelectableText(
             'Um pouco sobre mim.',
             style: theme.textTheme.headlineMedium!
@@ -32,8 +30,9 @@ class AboutWidget extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Flexible(
-              child: Padding(
-                padding: EdgeInsets.all(SpacingSize.getPadding(size.width)),
+              child: AnimatedPadding(
+                duration: Durations.medium1,
+                padding: EdgeInsets.all(padding),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,8 +54,9 @@ class AboutWidget extends StatelessWidget {
               ),
             ),
             Flexible(
-              child: Padding(
-                padding: EdgeInsets.all(SpacingSize.getPadding(size.width)),
+              child: AnimatedPadding(
+                duration: Durations.medium1,
+                padding: EdgeInsets.all(padding),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   spacing: SpacingSize.extraLarge,
@@ -100,37 +100,31 @@ class AboutWidget extends StatelessWidget {
                               style: theme.textTheme.labelMedium,
                             ),
                           ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                          Wrap(
                             spacing: SpacingSize.small,
+                            runSpacing: SpacingSize.small,
                             children: [
-                              Flexible(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  spacing: SpacingSize.small,
-                                  children: List.generate(
-                                    toolsAndPlatforms_1.length,
-                                    (index) => SelectableText(
-                                      toolsAndPlatforms_1[index],
-                                      style: theme.textTheme.bodyLarge!
-                                          .copyWith(
-                                              overflow: TextOverflow.ellipsis),
-                                    ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                spacing: SpacingSize.small,
+                                children: List.generate(
+                                  toolsAndPlatforms_1.length,
+                                  (index) => SelectableText(
+                                    toolsAndPlatforms_1[index],
+                                    style: theme.textTheme.bodyLarge!.copyWith(
+                                        overflow: TextOverflow.ellipsis),
                                   ),
                                 ),
                               ),
-                              Flexible(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  spacing: SpacingSize.small,
-                                  children: List.generate(
-                                    toolsAndPlatforms_2.length,
-                                    (index) => SelectableText(
-                                      toolsAndPlatforms_2[index],
-                                      style: theme.textTheme.bodyLarge!
-                                          .copyWith(
-                                              overflow: TextOverflow.ellipsis),
-                                    ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                spacing: SpacingSize.small,
+                                children: List.generate(
+                                  toolsAndPlatforms_2.length,
+                                  (index) => SelectableText(
+                                    toolsAndPlatforms_2[index],
+                                    style: theme.textTheme.bodyLarge!.copyWith(
+                                        overflow: TextOverflow.ellipsis),
                                   ),
                                 ),
                               ),
