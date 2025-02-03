@@ -12,142 +12,134 @@ class AboutWidget extends StatelessWidget {
     final padding = SpacingSize.getPadding(size.width);
     final isScreenMedium = size.width >= ScreenSize.small;
 
-    return DecoratedBox(
-      decoration: BoxDecoration(color: theme.cardTheme.color),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          AnimatedPadding(
-            duration: Durations.medium1,
-            padding:
-                EdgeInsets.only(top: padding, left: padding, right: padding),
-            child: SelectableText(
-              'Um pouco sobre mim.',
-              style: theme.textTheme.headlineMedium!
-                  .copyWith(fontWeight: FontWeight.bold),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        AnimatedPadding(
+          duration: Durations.medium1,
+          padding: EdgeInsets.only(top: padding, left: padding, right: padding),
+          child: SelectableText(
+            'Um pouco sobre mim.',
+            style: theme.textTheme.headlineMedium!
+                .copyWith(fontWeight: FontWeight.bold),
+          ),
+        ),
+        Flex(
+          direction: isScreenMedium ? Axis.horizontal : Axis.vertical,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Flexible(
+              child: AnimatedPadding(
+                duration: Durations.medium1,
+                padding: EdgeInsets.all(padding),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(bottom: SpacingSize.large),
+                      child: Text(
+                        '/HISTÓRIA',
+                        style: theme.textTheme.labelMedium,
+                      ),
+                    ),
+                    SelectableText(
+                      lorem,
+                      style: theme.textTheme.bodyLarge!
+                          .copyWith(overflow: TextOverflow.ellipsis),
+                    ),
+                  ],
+                ),
+              ),
             ),
-          ),
-          Flex(
-            direction: isScreenMedium ? Axis.horizontal : Axis.vertical,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Flexible(
-                child: AnimatedPadding(
-                  duration: Durations.medium1,
-                  padding: EdgeInsets.all(padding),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(bottom: SpacingSize.large),
-                        child: Text(
-                          '/HISTÓRIA',
-                          style: theme.textTheme.labelMedium,
-                        ),
-                      ),
-                      SelectableText(
-                        lorem,
-                        style: theme.textTheme.bodyLarge!
-                            .copyWith(overflow: TextOverflow.ellipsis),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Flexible(
-                child: AnimatedPadding(
-                  duration: Durations.medium1,
-                  padding: EdgeInsets.all(padding),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    spacing: SpacingSize.extraLarge,
-                    children: [
-                      Flexible(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsets.only(bottom: SpacingSize.large),
-                              child: Text(
-                                '/TECNOLOGIAS',
-                                style: theme.textTheme.labelMedium,
+            Flexible(
+              child: AnimatedPadding(
+                duration: Durations.medium1,
+                padding: EdgeInsets.all(padding),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  spacing: SpacingSize.extraLarge,
+                  children: [
+                    Flexible(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(bottom: SpacingSize.large),
+                            child: Text(
+                              '/TECNOLOGIAS',
+                              style: theme.textTheme.labelMedium,
+                            ),
+                          ),
+                          Wrap(
+                            direction: Axis.vertical,
+                            spacing: SpacingSize.small,
+                            children: List.generate(
+                              technologies.length,
+                              (index) => SelectableText(
+                                technologies[index],
+                                style: theme.textTheme.bodyLarge!
+                                    .copyWith(overflow: TextOverflow.ellipsis),
                               ),
                             ),
-                            Wrap(
-                              direction: Axis.vertical,
-                              spacing: SpacingSize.small,
-                              children: List.generate(
-                                technologies.length,
-                                (index) => SelectableText(
-                                  technologies[index],
-                                  style: theme.textTheme.bodyLarge!.copyWith(
-                                      overflow: TextOverflow.ellipsis),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                      Flexible(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding:
-                                  EdgeInsets.only(bottom: SpacingSize.large),
-                              child: Text(
-                                '/OUTROS',
-                                style: theme.textTheme.labelMedium,
-                              ),
+                    ),
+                    Flexible(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(bottom: SpacingSize.large),
+                            child: Text(
+                              '/OUTROS',
+                              style: theme.textTheme.labelMedium,
                             ),
-                            Wrap(
-                              spacing: SpacingSize.small,
-                              runSpacing: SpacingSize.small,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  spacing: SpacingSize.small,
-                                  children: List.generate(
-                                    toolsAndPlatforms_1.length,
-                                    (index) => SelectableText(
-                                      toolsAndPlatforms_1[index],
-                                      style: theme.textTheme.bodyLarge!
-                                          .copyWith(
-                                              overflow: TextOverflow.ellipsis),
-                                    ),
+                          ),
+                          Wrap(
+                            spacing: SpacingSize.small,
+                            runSpacing: SpacingSize.small,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                spacing: SpacingSize.small,
+                                children: List.generate(
+                                  toolsAndPlatforms_1.length,
+                                  (index) => SelectableText(
+                                    toolsAndPlatforms_1[index],
+                                    style: theme.textTheme.bodyLarge!.copyWith(
+                                        overflow: TextOverflow.ellipsis),
                                   ),
                                 ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  spacing: SpacingSize.small,
-                                  children: List.generate(
-                                    toolsAndPlatforms_2.length,
-                                    (index) => SelectableText(
-                                      toolsAndPlatforms_2[index],
-                                      style: theme.textTheme.bodyLarge!
-                                          .copyWith(
-                                              overflow: TextOverflow.ellipsis),
-                                    ),
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                spacing: SpacingSize.small,
+                                children: List.generate(
+                                  toolsAndPlatforms_2.length,
+                                  (index) => SelectableText(
+                                    toolsAndPlatforms_2[index],
+                                    style: theme.textTheme.bodyLarge!.copyWith(
+                                        overflow: TextOverflow.ellipsis),
                                   ),
                                 ),
-                              ],
-                            ),
-                          ],
-                        ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
-        ],
-      ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

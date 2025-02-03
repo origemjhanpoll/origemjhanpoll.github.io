@@ -7,36 +7,40 @@ class ExperiencesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     final size = MediaQuery.of(context).size;
     final padding = SpacingSize.getPadding(size.width);
 
-    return AnimatedPadding(
-      duration: Durations.medium1,
-      padding: EdgeInsets.all(padding),
-      child: Column(
-        spacing: SpacingSize.extraLarge,
-        children: [
-          ExperienceWidget(
-            period: 'DEZ 2021 - AGO 2024',
-            company: 'Gupy',
-            ocupattion: 'Desenvolvedor Mobile Pleno',
-            skills: ['Flutter', 'Dart', 'Dart Web'],
-            descriptions: [
-              'Contribuição no Aumento de Engajamento: Colaborei no desenvolvimento de um aplicativo de treinamento corporativo utilizando Flutter/Dart com gamificação, que resultou em 70% de engajamento, NPS de 8.0 e avaliação de 4.8 estrelas.',
-              'Melhoria de UX e Performance: Participei do desenvolvimento front-end de uma plataforma web, ajudando a melhorar a responsividade da interface e contribuindo para o aumento de 30% no engajamento dos usuários.',
-            ],
-          ),
-          ExperienceWidget(
-            period: 'SET 2017 - DEZ 2021',
-            company: 'Pulse',
-            ocupattion: 'Desenvolvedor Mobile Junior',
-            skills: ['React Native', 'TypeScript', 'ReactJs', 'JavaScript'],
-            descriptions: [
-              'Melhoria de processos: Colaborei no desenvolvimento de um aplicativo de micro gerenciamento de rotinas e acompanhamentos de indicadores do grupos de supermercados utilizando React Native/JavaScript tanto para Gestores quanto para Colaboradores.',
-              'Melhoria significativa de UX: Participei do desenvolvimento front-end de uma plataforma web com React, ajudando a melhorar a responsividade da interface e contribuindo para o aumento no engajamento dos clientes de diferentes setores do mercado, criando e melhorando rotinas do varejo, atacado e suas logísticas e processos.',
-            ],
-          ),
-        ],
+    return DecoratedBox(
+      decoration: BoxDecoration(color: theme.cardTheme.color),
+      child: AnimatedPadding(
+        duration: Durations.medium1,
+        padding: EdgeInsets.all(padding),
+        child: Column(
+          spacing: SpacingSize.extraLarge,
+          children: [
+            ExperienceWidget(
+              period: 'DEZ 2021 - AGO 2024',
+              company: 'Gupy',
+              ocupattion: 'Desenvolvedor Mobile Pleno',
+              skills: ['Flutter', 'Dart', 'Dart Web'],
+              descriptions: [
+                'Contribuição no Aumento de Engajamento: Colaborei no desenvolvimento de um aplicativo de treinamento corporativo utilizando Flutter/Dart com gamificação, que resultou em 70% de engajamento, NPS de 8.0 e avaliação de 4.8 estrelas.',
+                'Melhoria de UX e Performance: Participei do desenvolvimento front-end de uma plataforma web, ajudando a melhorar a responsividade da interface e contribuindo para o aumento de 30% no engajamento dos usuários.',
+              ],
+            ),
+            ExperienceWidget(
+              period: 'SET 2017 - DEZ 2021',
+              company: 'Pulse',
+              ocupattion: 'Desenvolvedor Mobile Junior',
+              skills: ['React Native', 'TypeScript', 'ReactJs', 'JavaScript'],
+              descriptions: [
+                'Melhoria de processos: Colaborei no desenvolvimento de um aplicativo de micro gerenciamento de rotinas e acompanhamentos de indicadores do grupos de supermercados utilizando React Native/JavaScript tanto para Gestores quanto para Colaboradores.',
+                'Melhoria significativa de UX: Participei do desenvolvimento front-end de uma plataforma web com React, ajudando a melhorar a responsividade da interface e contribuindo para o aumento no engajamento dos clientes de diferentes setores do mercado, criando e melhorando rotinas do varejo, atacado e suas logísticas e processos.',
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
