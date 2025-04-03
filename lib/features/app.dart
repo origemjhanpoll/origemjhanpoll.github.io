@@ -4,7 +4,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:origemjhanpoll_github_io/core/controllers/theme_controller.dart';
 import 'package:origemjhanpoll_github_io/core/theme/theme.dart';
 import 'package:origemjhanpoll_github_io/features/portfolio/presentation/page/home_page.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../l10n/app_localizations.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

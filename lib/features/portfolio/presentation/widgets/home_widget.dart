@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/url_utils.dart';
 import 'package:origemjhanpoll_github_io/core/utils/url_launcher_util.dart';
+
+import '../../../../l10n/app_localizations.dart';
 
 class HomeWidget extends StatelessWidget {
   const HomeWidget({super.key});
