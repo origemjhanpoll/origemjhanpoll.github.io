@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
             children: [
               HomeWidget(key: homeKey),
               AboutWidget(key: aboutKey),
-              ExperiencesWidget(key: experiencesKey),
+              // ExperiencesWidget(key: experiencesKey),
               // ProjectsWidget(key: projectsKey),
             ],
           ),
