@@ -5,8 +5,8 @@ import 'package:origemjhanpoll_github_io/core/controllers/theme_controller.dart'
 import '../../l10n/app_localizations.dart';
 
 class DrawerWidget extends StatelessWidget {
-  final ValueChanged<int> onMenuClick;
-  const DrawerWidget({super.key, required this.onMenuClick});
+  final ValueChanged<int> onPage;
+  const DrawerWidget({super.key, required this.onPage});
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +65,7 @@ class DrawerWidget extends StatelessWidget {
             title:
                 Text(localization.menuHome, style: theme.textTheme.labelLarge),
             onTap: () {
-              onMenuClick(0);
+              onPage(0);
               Navigator.pop(context);
             },
           ),
@@ -74,7 +74,7 @@ class DrawerWidget extends StatelessWidget {
             title:
                 Text(localization.menuAbout, style: theme.textTheme.labelLarge),
             onTap: () {
-              onMenuClick(1);
+              onPage(1);
               Navigator.pop(context);
             },
           ),
@@ -83,7 +83,7 @@ class DrawerWidget extends StatelessWidget {
             title: Text(localization.menuExperiences,
                 style: theme.textTheme.labelLarge),
             onTap: () {
-              onMenuClick(2);
+              onPage(2);
               Navigator.pop(context);
             },
           ),
@@ -92,7 +92,7 @@ class DrawerWidget extends StatelessWidget {
             title: Text(localization.menuProject,
                 style: theme.textTheme.labelLarge),
             onTap: () {
-              onMenuClick(3);
+              onPage(3);
               Navigator.pop(context);
             },
           ),
@@ -101,7 +101,7 @@ class DrawerWidget extends StatelessWidget {
             title: Text(localization.menuArticle,
                 style: theme.textTheme.labelLarge),
             onTap: () {
-              onMenuClick(4);
+              onPage(4);
               Navigator.pop(context);
             },
           ),
@@ -110,7 +110,7 @@ class DrawerWidget extends StatelessWidget {
             title: Text(localization.menuContact,
                 style: theme.textTheme.labelLarge),
             onTap: () {
-              onMenuClick(5);
+              onPage(5);
               Navigator.pop(context);
             },
           ),

@@ -145,7 +145,7 @@ class AboutWidget extends StatelessWidget {
 }
 
 const lorem =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat orci non posuere porttitor. Sed ornare, libero convallis dictum convallis, mauris diam condimentum enim, sit amet laoreet nibh ex ut nibh. Praesent arcu dolor, placerat sed ullamcorper ac, maximus a purus. Vivamus tempor lacinia tellus, vitae tempus metus dictum at.';
+    'Sou especializado em desenvolvimento mobile, com mais de 6 anos de experiência criando soluções robustas, intuitivas e seguras para Android, iOS e web. Tenho domínio de Flutter, Dart, React Native, React, JavaScript e TypeScript, além de experiência com ferramentas como Firebase, Datadog e Codemagic. Me destaco na criação de interfaces responsivas, aplicação de Design Systems escaláveis e foco constante na experiência do usuário.\n\nAo longo da minha trajetória, atuei diretamente na melhoria de performance, organização de código, segurança de dados e componentização de interfaces em diversos projetos mobile e web. Tenho também forte atuação em UX/UI, motion design e prototipagem com Figma e Adobe Suite, utilizando animações e micro interações para tornar produtos mais envolventes e agradáveis de usar.';
 const technologies = [
   'Flutter',
   'Dart',

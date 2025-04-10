@@ -17,7 +17,7 @@ class ExperiencesWidget extends StatelessWidget {
         duration: Durations.medium1,
         padding: EdgeInsets.all(padding),
         child: Column(
-          spacing: SpacingSize.extraLarge,
+          spacing: padding,
           children: [
             ExperienceWidget(
               period: 'DEZ 2021 - AGO 2024',

@@ -5,9 +5,9 @@ import 'package:origemjhanpoll_github_io/core/controllers/theme_controller.dart'
 import '../../l10n/app_localizations.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
-  final ValueChanged<int> onMenuClick;
+  final ValueChanged<int> onPage;
 
-  const AppBarWidget({super.key, required this.onMenuClick});
+  const AppBarWidget({super.key, required this.onPage});
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
@@ -30,6 +30,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
 
     return AppBar(
       titleSpacing: size.width * 0.02,
+      forceMaterialTransparency: true,
       title: RichText(
         text: TextSpan(
           text: 'Jean',
@@ -46,7 +47,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
           itemCount: localizationTabs.length,
           shrinkWrap: true,
           itemBuilder: (_, index) => TextButton(
-            onPressed: () => onMenuClick(index),
+            onPressed: () => onPage(index),
             child: Text(localizationTabs[index],
                 style: theme.textTheme.labelLarge),
           ),
