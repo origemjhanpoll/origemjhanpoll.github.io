@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
 import 'package:origemjhanpoll_github_io/core/widgets/background_widget.dart';
 import 'package:origemjhanpoll_github_io/core/widgets/float_appbar_widget.dart';
-import 'package:origemjhanpoll_github_io/features/views/widgets/about_widget.dart';
-import 'package:origemjhanpoll_github_io/features/views/widgets/initial_widget.dart';
-import 'package:origemjhanpoll_github_io/features/views/widgets/projects_widget.dart';
+import 'package:origemjhanpoll_github_io/feature/views/widgets/about_widget.dart';
+import 'package:origemjhanpoll_github_io/feature/views/widgets/initial_widget.dart';
+import 'package:origemjhanpoll_github_io/feature/views/widgets/projects_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

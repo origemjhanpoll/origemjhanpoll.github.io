@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:origemjhanpoll_github_io/core/controllers/theme_controller.dart';
 import 'package:origemjhanpoll_github_io/core/theme/theme.dart';
-import 'package:origemjhanpoll_github_io/features/views/home_page.dart';
+import 'package:origemjhanpoll_github_io/feature/views/home_page.dart';
 
 import '../l10n/app_localizations.dart';
 
