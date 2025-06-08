@@ -1,26 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:origemjhanpoll_github_io/feature/models/project_model.dart';
 
 class ProjectsWidget extends StatelessWidget {
-  const ProjectsWidget({super.key});
+  final List<ProjectModel> model;
+
+  const ProjectsWidget({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: List.generate(
-          43,
-          (i) => Container(
-                margin: EdgeInsets.all(16),
-                height: 80,
-                color: Colors.amber,
-                child: Center(
-                    child: Text(
-                  i.toString(),
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 36,
-                      fontWeight: FontWeight.bold),
-                )),
-              )),
+    return SliverList.builder(
+      itemCount: model.length,
+      itemBuilder: (context, index) {
+        final element = model[index];
+        return Column(
+          children: [
+            SizedBox.fromSize(
+                size: Size(200, 180), child: Image.network(element.image))
+          ],
+        );
+      },
     );
   }
 }

@@ -72,10 +72,17 @@ class _HomePageState extends State<HomePage> {
                     SliverFillRemaining(
                         child: InitialWidget(
                       key: initialKey,
-                      model: state.data.initial,
+                      model: state.model.initial,
                     )),
-                    SliverToBoxAdapter(child: AboutWidget(key: aboutKey)),
-                    SliverToBoxAdapter(child: ProjectsWidget(key: projectsKey)),
+                    SliverToBoxAdapter(
+                        child: AboutWidget(
+                      key: aboutKey,
+                      model: state.model.about,
+                    )),
+                    ProjectsWidget(
+                      key: projectsKey,
+                      model: state.model.projects,
+                    ),
                   ],
                 );
               } else if (state is PortifolioError) {

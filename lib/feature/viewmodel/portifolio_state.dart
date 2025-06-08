@@ -7,8 +7,8 @@ class PortifolioInitial extends PortifolioState {}
 class PortifolioLoading extends PortifolioState {}
 
 class PortifolioLoaded extends PortifolioState {
-  final Response data;
-  PortifolioLoaded(this.data);
+  final Response model;
+  PortifolioLoaded(this.model);
 }
 
 class PortifolioError extends PortifolioState {
