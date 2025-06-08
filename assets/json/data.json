@@ -1,0 +1,64 @@
+{
+  "initial": {
+    "name": "Jean Paul",
+    "role": "Desenvolvedor de Software",
+    "description": "Sou um engenheiro de software focado na criação de aplicativos móveis de alto desempenho com código limpo e design excelente. Vamos transformar ideias em realidade!",
+    "photo": "path/to/image.jpg",
+    "buttons": [
+      {
+        "text": "Meu Currículo",
+        "url": "link/to/resume"
+      },
+      {
+        "text": "Entre em contato",
+        "url": "link/to/contact"
+      }
+    ]
+  },
+  "about": {
+    "title": "Um pouco sobre mim.",
+    "history": "Sou especializado em desenvolvimento mobile, com mais de 6 anos de experiência criando soluções robustas, intuitivas e seguras para Android, iOS e web. Tenho domínio de Flutter, Dart, React Native, React, JavaScript e TypeScript, além de experiência com ferramentas como Firebase, Datadog e Codemagic. Me destaco na criação de interfaces responsivas, aplicação de Design Systems escaláveis e foco constante na experiência do usuário.\n\nAo longo da minha trajetória, atuei diretamente na melhoria de performance, organização de código, segurança de dados e componentização de interfaces em diversos projetos mobile e web. Tenho também forte atuação em UX/UI, motion design e prototipagem com Figma e Adobe Suite, utilizando animações e micro interações para tornar produtos mais envolventes e agradáveis de usar.",
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "React Native",
+      "TypeScript",
+      "Android",
+      "iOS",
+      "ReactJs",
+      "JavaScript"
+    ],
+    "others": [
+      "Bitbucket",
+      "CI/CD",
+      "Codemagic",
+      "CSS",
+      "Figma",
+      "Firebase",
+      "Git",
+      "Google Cloud",
+      "GraphQL",
+      "HTML",
+      "Jira"
+    ]
+  },
+  "projects": [
+    {
+      "title": "Restaurantes Delivery App",
+      "description": "Aplicativo mobile feito em Flutter para restaurantes de alto padrão gerenciarem pedidos e fidelizarem clientes sem depender de iFood ou Rappi.",
+      "technologies": [
+        "Flutter",
+        "Firebase",
+        "Codemagic"
+      ],
+      "image": "assets/images/delivery-app.jpg",
+      "url": "https://origemjhanpoll.com/delivery-app",
+      "github": "https://github.com/origemjhanpoll/delivery-app",
+      "year": 2025,
+      "types": [
+        "Mobile",
+        "Web"
+      ]
+    }
+  ]
+}

@@ -33,7 +33,8 @@ class AppLocalizationsPt extends AppLocalizations {
   String get occupation => 'Desenvolvedor de Software';
 
   @override
-  String get introduction => 'Sou engenheiro de software, focado em criar aplicativos móveis de alta performance com código limpo e design excelente. Vamos transformar ideias em realidade!';
+  String get introduction =>
+      'Sou engenheiro de software, focado em criar aplicativos móveis de alta performance com código limpo e design excelente. Vamos transformar ideias em realidade!';
 
   @override
   String get myresume => 'Meu currículo';

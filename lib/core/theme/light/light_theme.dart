@@ -65,7 +65,7 @@ class LightTheme {
       radius: const Radius.circular(16.0),
       thickness: WidgetStatePropertyAll(4.0),
     ),
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       color: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),

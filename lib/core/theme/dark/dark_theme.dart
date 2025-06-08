@@ -68,7 +68,7 @@ class DarkTheme {
       radius: const Radius.circular(16.0),
       thickness: WidgetStatePropertyAll(4.0),
     ),
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       color: DarkColors.surfacePrimary,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),

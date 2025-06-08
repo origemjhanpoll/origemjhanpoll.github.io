@@ -34,8 +34,7 @@ class _FloatAppbarWidgetState extends State<FloatAppbarWidget> {
     final localizationTabs = [
       ItemTab(icon: Icons.circle, name: localization.menuHome),
       ItemTab(icon: Icons.circle, name: localization.menuAbout),
-      ItemTab(icon: Icons.circle, name: localization.menuExperiences),
-      // ItemTab(icon: Icons.circle, name: localization.menuProject),
+      ItemTab(icon: Icons.circle, name: localization.menuProject),
       // ItemTab(icon: Icons.circle, name: localization.menuArticle),
       // ItemTab(icon: Icons.circle, name: localization.menuContact),
     ];
