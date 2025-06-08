@@ -1,17 +1,17 @@
 {
   "initial": {
-    "name": "Jean Paul",
+    "name": "Olá, eu sou Jean Paul",
     "role": "Desenvolvedor de Software",
     "description": "Sou um engenheiro de software focado na criação de aplicativos móveis de alto desempenho com código limpo e design excelente. Vamos transformar ideias em realidade!",
     "photo": "path/to/image.jpg",
     "buttons": [
       {
         "text": "Meu Currículo",
-        "url": "link/to/resume"
+        "url": "https://github.com/origemjhanpoll/origemjhanpoll.github.io/raw/refs/heads/main/assets/resume/Jean%20Paul%20-%20PTBR.pdf"
       },
       {
         "text": "Entre em contato",
-        "url": "link/to/contact"
+        "url": "https://api.whatsapp.com/send/?phone=5598991391108"
       }
     ]
   },

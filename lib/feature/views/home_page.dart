@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
 import 'package:origemjhanpoll_github_io/core/widgets/background_widget.dart';
 import 'package:origemjhanpoll_github_io/core/widgets/float_appbar_widget.dart';
+import 'package:origemjhanpoll_github_io/feature/viewmodel/portifolio_cubit.dart';
+import 'package:origemjhanpoll_github_io/feature/viewmodel/portifolio_state.dart';
 import 'package:origemjhanpoll_github_io/feature/views/widgets/about_widget.dart';
 import 'package:origemjhanpoll_github_io/feature/views/widgets/initial_widget.dart';
 import 'package:origemjhanpoll_github_io/feature/views/widgets/projects_widget.dart';
@@ -14,11 +17,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final homeKey = GlobalKey();
+  final initialKey = GlobalKey();
   final aboutKey = GlobalKey();
   final projectsKey = GlobalKey();
-
   final scrollController = ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    context.read<PortifolioCubit>().fetchPortifolio();
+  }
 
   void scrollTo(GlobalKey key) {
     final context = key.currentContext;
@@ -34,7 +42,7 @@ class _HomePageState extends State<HomePage> {
   void scrollToIndex(int index) {
     switch (index) {
       case 0:
-        scrollTo(homeKey);
+        scrollTo(initialKey);
         break;
       case 1:
         scrollTo(aboutKey);
@@ -53,13 +61,28 @@ class _HomePageState extends State<HomePage> {
       body: Stack(
         children: [
           BackgroundWidget(color: theme.primaryColor.withValues(alpha: 0.1)),
-          CustomScrollView(
-            controller: scrollController,
-            slivers: [
-              SliverFillRemaining(child: InitialWidget(key: homeKey)),
-              SliverToBoxAdapter(child: AboutWidget(key: aboutKey)),
-              SliverToBoxAdapter(child: ProjectsWidget(key: projectsKey)),
-            ],
+          BlocBuilder<PortifolioCubit, PortifolioState>(
+            builder: (context, state) {
+              if (state is PortifolioLoading) {
+                return Center(child: CircularProgressIndicator());
+              } else if (state is PortifolioLoaded) {
+                return CustomScrollView(
+                  controller: scrollController,
+                  slivers: [
+                    SliverFillRemaining(
+                        child: InitialWidget(
+                      key: initialKey,
+                      model: state.data.initial,
+                    )),
+                    SliverToBoxAdapter(child: AboutWidget(key: aboutKey)),
+                    SliverToBoxAdapter(child: ProjectsWidget(key: projectsKey)),
+                  ],
+                );
+              } else if (state is PortifolioError) {
+                return Center(child: Text('Erro: ${state.message}'));
+              }
+              return LimitedBox();
+            },
           ),
         ],
       ),

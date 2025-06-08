@@ -4,11 +4,13 @@ import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/url_utils.dart';
 import 'package:origemjhanpoll_github_io/core/utils/url_launcher_util.dart';
+import 'package:origemjhanpoll_github_io/feature/models/initial_model.dart';
 
 import '../../../l10n/app_localizations.dart';
 
 class InitialWidget extends StatelessWidget {
-  const InitialWidget({super.key});
+  final InitialModel model;
+  const InitialWidget({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +43,7 @@ class InitialWidget extends StatelessWidget {
                     fontSize: !isScreenMedium ? 28.0 : null),
                 child: Column(
                   children: [
-                    Text(localization.hello),
+                    Text(model.name),
                   ],
                 ),
               ),
@@ -49,9 +51,7 @@ class InitialWidget extends StatelessWidget {
                 duration: Durations.medium1,
                 style: theme.textTheme.headlineLarge!
                     .copyWith(fontSize: !isScreenMedium ? 20.0 : null),
-                child: Text(
-                  localization.occupation,
-                ),
+                child: Text(model.role),
               ),
               Flexible(
                 child: Padding(
@@ -63,7 +63,7 @@ class InitialWidget extends StatelessWidget {
                             ? size.width * 0.5
                             : size.width * 0.8),
                     child: Text(
-                      localization.introduction,
+                      model.description,
                       maxLines: 4,
                       textAlign: TextAlign.center,
                       style: theme.textTheme.bodyLarge!
@@ -77,11 +77,12 @@ class InitialWidget extends StatelessWidget {
                 runSpacing: SpacingSize.small,
                 children: [
                   FilledButton.icon(
-                    onPressed: () => urlLauncherUtil.launchURL(UrlUtils.resume),
+                    onPressed: () =>
+                        urlLauncherUtil.launchURL(model.buttons[0].url),
                     icon: Icon(Icons.attach_file),
                     style: ButtonStyle(visualDensity: VisualDensity.standard),
                     label: Text(
-                      localization.myresume,
+                      model.buttons[0].text,
                       softWrap: true,
                     ),
                   ),

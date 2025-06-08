@@ -1,19 +1,20 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:origemjhanpoll_github_io/feature/models/response.dart';
 
 class RemoteService {
   final http.Client client;
   RemoteService(this.client);
-  static const String _baseUrl = 'https://jsonplaceholder.typicode.com';
 
-  Future<Map<String, dynamic>> getPortfolio() async {
-    final response = await client.get(Uri.parse('$_baseUrl/posts'));
+  Future<Response> fetchPortifolio() async {
+    final response = await client.get(Uri.parse(
+        'https://raw.githubusercontent.com/origemjhanpoll/origemjhanpoll.github.io/refs/heads/main/assets/json/pt_br/data.json'));
 
     if (response.statusCode == 200) {
-      final body = jsonDecode(response.body);
-      return body.cast<Map<String, dynamic>>();
+      final data = json.decode(response.body);
+      return Response.fromJson(data);
     } else {
-      throw Exception('Failed to load data');
+      throw Exception('Erro ao carregar response');
     }
   }
 }

@@ -7,6 +7,5 @@ class UrlUtils {
   static const email = 'origemjhanpoll@gmail.com';
   static const resume =
       'https://github.com/origemjhanpoll/origemjhanpoll.github.io/raw/refs/heads/main/assets/resume/Jean%20Paul%20-%20PTBR.pdf';
-  static const whatsapp =
-      'https://api.whatsapp.com/send/?phone=5598991391108&text&type=phone_number&app_absent=0';
+  static const whatsapp = 'https://api.whatsapp.com/send/?phone=5598991391108';
 }
