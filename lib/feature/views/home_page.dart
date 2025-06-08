@@ -79,9 +79,14 @@ class _HomePageState extends State<HomePage> {
                       key: aboutKey,
                       model: state.model.about,
                     )),
-                    ProjectsWidget(
-                      key: projectsKey,
-                      model: state.model.projects,
+                    SliverToBoxAdapter(
+                      child: ProjectsWidget(
+                        key: projectsKey,
+                        model: [
+                          ...state.model.projects,
+                          ...state.model.projects
+                        ],
+                      ),
                     ),
                   ],
                 );
