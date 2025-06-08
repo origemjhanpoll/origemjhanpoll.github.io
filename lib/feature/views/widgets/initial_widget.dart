@@ -2,11 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
-import 'package:origemjhanpoll_github_io/core/constants/url_utils.dart';
 import 'package:origemjhanpoll_github_io/core/utils/url_launcher_util.dart';
 import 'package:origemjhanpoll_github_io/feature/models/initial_model.dart';
-
-import '../../../l10n/app_localizations.dart';
 
 class InitialWidget extends StatelessWidget {
   final InitialModel model;
@@ -18,7 +15,6 @@ class InitialWidget extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     final isScreenMedium = size.width >= ScreenSize.small;
     final padding = SpacingSize.getPadding(size.width);
-    final localization = AppLocalizations.of(context)!;
     final urlLauncherUtil = UrlLauncherUtil();
 
     return AnimatedPadding(
@@ -78,7 +74,7 @@ class InitialWidget extends StatelessWidget {
                 children: [
                   FilledButton.icon(
                     onPressed: () =>
-                        urlLauncherUtil.launchURL(model.buttons[0].url),
+                        urlLauncherUtil.launchURL(model.buttons.first.url),
                     icon: Icon(Icons.attach_file),
                     style: ButtonStyle(visualDensity: VisualDensity.standard),
                     label: Text(
@@ -88,7 +84,7 @@ class InitialWidget extends StatelessWidget {
                   ),
                   OutlinedButton.icon(
                     onPressed: () =>
-                        urlLauncherUtil.launchURL(UrlUtils.whatsapp),
+                        urlLauncherUtil.launchURL(model.buttons.last.url),
                     icon: SvgPicture.asset(
                       'assets/svg/icon_whatsapp.svg',
                       width: 20.0,
@@ -97,8 +93,8 @@ class InitialWidget extends StatelessWidget {
                     ),
                     style: ButtonStyle(visualDensity: VisualDensity.standard),
                     label: Text(
+                      model.buttons.last.text,
                       overflow: TextOverflow.clip,
-                      localization.getInTouch,
                       style: theme.textTheme.bodyMedium,
                       softWrap: true,
                     ),
