@@ -20,13 +20,12 @@ class ProjectsWidget extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(vertical: SpacingSize.large),
           child: Text(
-            'Projetos'.toUpperCase(),
+            model.title.toUpperCase(),
             style: theme.textTheme.headlineMedium!
                 .copyWith(fontWeight: FontWeight.bold),
           ),
         ),
         SizedBox.fromSize(
-          // size: Size.fromHeight(screen.height * 0.8),
           size: Size.fromHeight(812),
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -35,9 +34,31 @@ class ProjectsWidget extends StatelessWidget {
               final element = model.items[index];
               return Row(
                 children: [
+                  AnimatedPadding(
+                    duration: Durations.medium1,
+                    padding: EdgeInsets.all(padding),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        if (element.logo != null)
+                          CircleAvatar(
+                            backgroundImage: NetworkImage(element.logo!),
+                          ),
+                        Text(element.title),
+                        ConstrainedBox(
+                          constraints:
+                              BoxConstraints(maxWidth: screen.width * .3),
+                          child: Text(
+                            element.description,
+                            maxLines: 5,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                   ...element.images.map(
                     (image) => Padding(
-                      padding: EdgeInsets.all(SpacingSize.small),
+                      padding: EdgeInsets.only(right: SpacingSize.medium),
                       child: SizedBox.fromSize(
                         size: Size.fromWidth(375),
                         child: ClipRRect(

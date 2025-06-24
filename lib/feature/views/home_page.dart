@@ -90,13 +90,9 @@ class _HomePageState extends State<HomePage> {
                         hasScrollBody: false,
                         child: ProjectsWidget(
                           key: projectsKey,
-                          model: [
-                            ...state.model.projects,
-                            ...state.model.projects,
-                            ...state.model.projects,
-                            ...state.model.projects,
-                          ],
+                          model: state.model.projects,
                         )),
+                    SliverFillRemaining(child: LimitedBox()),
                   ],
                 );
               } else if (state is PortifolioError) {
