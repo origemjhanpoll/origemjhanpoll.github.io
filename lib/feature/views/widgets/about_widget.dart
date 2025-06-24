@@ -21,8 +21,8 @@ class AboutWidget extends StatelessWidget {
         AnimatedPadding(
           duration: Durations.medium1,
           padding: EdgeInsets.only(top: padding, left: padding, right: padding),
-          child: SelectableText(
-            model.title,
+          child: Text(
+            model.title.toUpperCase(),
             style: theme.textTheme.headlineMedium!
                 .copyWith(fontWeight: FontWeight.bold),
           ),

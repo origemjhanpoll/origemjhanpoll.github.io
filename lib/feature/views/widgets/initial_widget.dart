@@ -20,86 +20,74 @@ class InitialWidget extends StatelessWidget {
     return AnimatedPadding(
       duration: Durations.medium1,
       padding: EdgeInsets.all(padding),
-      child: Stack(
-        fit: StackFit.expand,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        spacing: SpacingSize.medium,
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            spacing: SpacingSize.medium,
+          CircleAvatar(
+            radius: size.height * 0.2,
+            backgroundImage: AssetImage('assets/images/origemjhanpoll.png'),
+          ),
+          AnimatedDefaultTextStyle(
+            duration: Durations.medium1,
+            style: theme.textTheme.displayMedium!.copyWith(
+                fontWeight: FontWeight.bold,
+                fontSize: !isScreenMedium ? 28.0 : null),
+            child: Text(model.name),
+          ),
+          AnimatedDefaultTextStyle(
+            duration: Durations.medium1,
+            style: theme.textTheme.headlineLarge!
+                .copyWith(fontSize: !isScreenMedium ? 20.0 : null),
+            child: Text(model.role),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: SpacingSize.medium),
+            child: AnimatedContainer(
+              duration: Durations.medium1,
+              constraints: BoxConstraints(
+                  maxWidth:
+                      isScreenMedium ? size.width * 0.5 : size.width * 0.8),
+              child: Text(
+                model.description,
+                maxLines: 4,
+                textAlign: TextAlign.center,
+                style: theme.textTheme.bodyLarge!
+                    .copyWith(overflow: TextOverflow.ellipsis),
+              ),
+            ),
+          ),
+          Wrap(
+            spacing: SpacingSize.small,
+            runSpacing: SpacingSize.small,
             children: [
-              CircleAvatar(
-                radius: size.height * 0.2,
-                backgroundImage: AssetImage('assets/images/origemjhanpoll.png'),
-              ),
-              AnimatedDefaultTextStyle(
-                duration: Durations.medium1,
-                style: theme.textTheme.displayMedium!.copyWith(
-                    fontWeight: FontWeight.bold,
-                    fontSize: !isScreenMedium ? 28.0 : null),
-                child: Column(
-                  children: [
-                    Text(model.name),
-                  ],
+              FilledButton.icon(
+                onPressed: () =>
+                    urlLauncherUtil.launchURL(model.buttons.first.url),
+                icon: Icon(Icons.attach_file),
+                style: ButtonStyle(visualDensity: VisualDensity.standard),
+                label: Text(
+                  model.buttons[0].text,
+                  softWrap: true,
                 ),
               ),
-              AnimatedDefaultTextStyle(
-                duration: Durations.medium1,
-                style: theme.textTheme.headlineLarge!
-                    .copyWith(fontSize: !isScreenMedium ? 20.0 : null),
-                child: Text(model.role),
-              ),
-              Flexible(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: SpacingSize.medium),
-                  child: AnimatedContainer(
-                    duration: Durations.medium1,
-                    constraints: BoxConstraints(
-                        maxWidth: isScreenMedium
-                            ? size.width * 0.5
-                            : size.width * 0.8),
-                    child: Text(
-                      model.description,
-                      maxLines: 4,
-                      textAlign: TextAlign.center,
-                      style: theme.textTheme.bodyLarge!
-                          .copyWith(overflow: TextOverflow.ellipsis),
-                    ),
-                  ),
+              OutlinedButton.icon(
+                onPressed: () =>
+                    urlLauncherUtil.launchURL(model.buttons.last.url),
+                icon: SvgPicture.asset(
+                  'assets/svg/icon_whatsapp.svg',
+                  width: 20.0,
+                  colorFilter: ColorFilter.mode(
+                      theme.colorScheme.secondary, BlendMode.srcIn),
                 ),
-              ),
-              Wrap(
-                spacing: SpacingSize.small,
-                runSpacing: SpacingSize.small,
-                children: [
-                  FilledButton.icon(
-                    onPressed: () =>
-                        urlLauncherUtil.launchURL(model.buttons.first.url),
-                    icon: Icon(Icons.attach_file),
-                    style: ButtonStyle(visualDensity: VisualDensity.standard),
-                    label: Text(
-                      model.buttons[0].text,
-                      softWrap: true,
-                    ),
-                  ),
-                  OutlinedButton.icon(
-                    onPressed: () =>
-                        urlLauncherUtil.launchURL(model.buttons.last.url),
-                    icon: SvgPicture.asset(
-                      'assets/svg/icon_whatsapp.svg',
-                      width: 20.0,
-                      colorFilter: ColorFilter.mode(
-                          theme.colorScheme.secondary, BlendMode.srcIn),
-                    ),
-                    style: ButtonStyle(visualDensity: VisualDensity.standard),
-                    label: Text(
-                      model.buttons.last.text,
-                      overflow: TextOverflow.clip,
-                      style: theme.textTheme.bodyMedium,
-                      softWrap: true,
-                    ),
-                  ),
-                ],
+                style: ButtonStyle(visualDensity: VisualDensity.standard),
+                label: Text(
+                  model.buttons.last.text,
+                  overflow: TextOverflow.clip,
+                  style: theme.textTheme.bodyMedium,
+                  softWrap: true,
+                ),
               ),
             ],
           ),

@@ -4,21 +4,25 @@ class ProjectModel extends Equatable {
   final String title;
   final String description;
   final List<String> technologies;
-  final String image;
-  final String url;
-  final String github;
-  final int year;
-  final List<String> types;
+  final String? url;
+  final String? github;
+  final int? year;
+  final List<String>? types;
+  final String? playstore;
+  final String? appstore;
+  final List<String>? images;
 
   const ProjectModel({
     required this.title,
     required this.description,
     required this.technologies,
-    required this.image,
-    required this.url,
-    required this.github,
-    required this.year,
-    required this.types,
+    this.url,
+    this.github,
+    this.year,
+    this.types,
+    this.playstore,
+    this.appstore,
+    this.images,
   });
 
   factory ProjectModel.fromJson(Map<String, dynamic> json) {
@@ -26,11 +30,13 @@ class ProjectModel extends Equatable {
       title: json['title'],
       description: json['description'],
       technologies: List<String>.from(json['technologies']),
-      image: json['image'],
       url: json['url'],
       github: json['github'],
       year: json['year'],
       types: List<String>.from(json['types']),
+      playstore: json['playstore'],
+      appstore: json['appstore'],
+      images: List<String>.from(json['images'] ?? []),
     );
   }
 
@@ -39,11 +45,13 @@ class ProjectModel extends Equatable {
       'title': title,
       'description': description,
       'technologies': technologies,
-      'image': image,
       'url': url,
       'github': github,
       'year': year,
       'types': types,
+      'playstore': playstore,
+      'appstore': appstore,
+      'images': images,
     };
   }
 
@@ -52,10 +60,12 @@ class ProjectModel extends Equatable {
         title,
         description,
         technologies,
-        image,
         url,
         github,
         year,
         types,
+        playstore,
+        appstore,
+        images,
       ];
 }

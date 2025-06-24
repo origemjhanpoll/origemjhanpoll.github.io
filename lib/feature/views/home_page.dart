@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
 import 'package:origemjhanpoll_github_io/core/widgets/background_widget.dart';
 import 'package:origemjhanpoll_github_io/core/widgets/float_appbar_widget.dart';
@@ -26,6 +27,11 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     context.read<PortifolioCubit>().fetchPortifolio();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
   }
 
   void scrollTo(GlobalKey key) {
@@ -56,11 +62,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBody: true,
-      extendBodyBehindAppBar: true,
       body: Stack(
         children: [
-          BackgroundWidget(color: theme.primaryColor.withValues(alpha: 0.1)),
+          RepaintBoundary(
+            child: BackgroundWidget(color: theme.primaryColor.withAlpha(25)),
+          ),
           BlocBuilder<PortifolioCubit, PortifolioState>(
             builder: (context, state) {
               if (state is PortifolioLoading) {
@@ -70,24 +76,27 @@ class _HomePageState extends State<HomePage> {
                   controller: scrollController,
                   slivers: [
                     SliverFillRemaining(
+                        hasScrollBody: false,
                         child: InitialWidget(
-                      key: initialKey,
-                      model: state.model.initial,
-                    )),
+                          key: initialKey,
+                          model: state.model.initial,
+                        )),
                     SliverToBoxAdapter(
                         child: AboutWidget(
                       key: aboutKey,
                       model: state.model.about,
                     )),
-                    SliverToBoxAdapter(
-                      child: ProjectsWidget(
-                        key: projectsKey,
-                        model: [
-                          ...state.model.projects,
-                          ...state.model.projects
-                        ],
-                      ),
-                    ),
+                    SliverFillRemaining(
+                        hasScrollBody: false,
+                        child: ProjectsWidget(
+                          key: projectsKey,
+                          model: [
+                            ...state.model.projects,
+                            ...state.model.projects,
+                            ...state.model.projects,
+                            ...state.model.projects,
+                          ],
+                        )),
                   ],
                 );
               } else if (state is PortifolioError) {
