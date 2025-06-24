@@ -45,28 +45,31 @@
       "Jira"
     ]
   },
-  "projects": [
-    {
-      "title": "Restaurantes Delivery App",
-      "description": "Aplicativo mobile feito em Flutter para restaurantes de alto padrão gerenciarem pedidos e fidelizarem clientes sem depender de iFood ou Rappi.",
-      "technologies": [
-        "Flutter",
-        "Firebase",
-        "Codemagic"
-      ],
-      "images": [
-        "https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg",
-        "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
-      ],
-      "url": "https://origemjhanpoll.com/delivery-app",
-      "github": "https://github.com/origemjhanpoll/delivery-app",
-      "playstore": "https://play.google.com/store/apps/details?id=com.exemplo.restauranteapp",
-      "appstore": "https://apps.apple.com/app/id0000000000",
-      "year": 2025,
-      "types": [
-        "Mobile",
-        "Web"
-      ]
-    }
-  ]
+  "projects": {
+    "title": "Projetos",
+    "items": [
+      {
+        "title": "Restaurantes Delivery App",
+        "description": "Aplicativo mobile feito em Flutter para restaurantes de alto padrão gerenciarem pedidos e fidelizarem clientes sem depender de iFood ou Rappi.",
+        "technologies": [
+          "Flutter",
+          "Firebase",
+          "Codemagic"
+        ],
+        "images": [
+          "https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg",
+          "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
+        ],
+        "url": "https://origemjhanpoll.com/delivery-app",
+        "github": "https://github.com/origemjhanpoll/delivery-app",
+        "playstore": "https://play.google.com/store/apps/details?id=com.exemplo.restauranteapp",
+        "appstore": "https://apps.apple.com/app/id0000000000",
+        "year": 2025,
+        "types": [
+          "Mobile",
+          "Web"
+        ]
+      }
+    ]
+  }
 }
