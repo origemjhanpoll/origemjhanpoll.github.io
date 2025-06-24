@@ -16,23 +16,42 @@ class ProjectsWidget extends StatelessWidget {
     final isScreenMedium = screen.width >= ScreenSize.small;
 
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Center(
-            child: Text(
-          'Projetos'.toUpperCase(),
-          style: theme.textTheme.headlineMedium!
-              .copyWith(fontWeight: FontWeight.bold),
-        )),
+        Padding(
+          padding: EdgeInsets.symmetric(vertical: SpacingSize.large),
+          child: Text(
+            'Projetos'.toUpperCase(),
+            style: theme.textTheme.headlineMedium!
+                .copyWith(fontWeight: FontWeight.bold),
+          ),
+        ),
         SizedBox.fromSize(
-          size: Size.fromHeight(screen.height * 0.9),
-          child: GridView.builder(
-            physics: NeverScrollableScrollPhysics(),
+          // size: Size.fromHeight(screen.height * 0.8),
+          size: Size.fromHeight(812),
+          child: ListView.builder(
+            scrollDirection: Axis.horizontal,
             itemCount: model.items.length,
-            gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
             itemBuilder: (context, index) {
-              return FlutterLogo();
+              final element = model.items[index];
+              return Row(
+                children: [
+                  ...element.images.map(
+                    (image) => Padding(
+                      padding: EdgeInsets.all(SpacingSize.small),
+                      child: SizedBox.fromSize(
+                        size: Size.fromWidth(375),
+                        child: ClipRRect(
+                          borderRadius: BorderRadiusGeometry.circular(18),
+                          child: Image.network(
+                            image,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              );
             },
           ),
         ),
