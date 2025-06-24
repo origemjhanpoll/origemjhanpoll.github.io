@@ -4,7 +4,7 @@ import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
 import 'package:origemjhanpoll_github_io/feature/models/project_model.dart';
 
 class ProjectsWidget extends StatelessWidget {
-  final List<ProjectModel> model;
+  final ProjectsModel model;
 
   const ProjectsWidget({super.key, required this.model});
 
@@ -28,9 +28,9 @@ class ProjectsWidget extends StatelessWidget {
           size: Size.fromHeight(screen.height * 0.9),
           child: GridView.builder(
             physics: NeverScrollableScrollPhysics(),
-            itemCount: model.length,
+            itemCount: model.items.length,
             gridDelegate:
-                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
             itemBuilder: (context, index) {
               return FlutterLogo();
             },

@@ -6,7 +6,7 @@ import 'project_model.dart';
 class Response extends Equatable {
   final InitialModel initial;
   final AboutModel about;
-  final List<ProjectModel> projects;
+  final ProjectsModel projects;
 
   const Response({
     required this.initial,
@@ -18,9 +18,7 @@ class Response extends Equatable {
     return Response(
       initial: InitialModel.fromJson(json['initial']),
       about: AboutModel.fromJson(json['about']),
-      projects: (json['projects'] as List)
-          .map((e) => ProjectModel.fromJson(e))
-          .toList(),
+      projects: ProjectsModel.fromJson(json['projects']),
     );
   }
 
@@ -28,7 +26,7 @@ class Response extends Equatable {
     return {
       'initial': initial.toJson(),
       'about': about.toJson(),
-      'projects': projects.map((e) => e.toJson()).toList(),
+      'projects': projects.toJson(),
     };
   }
 

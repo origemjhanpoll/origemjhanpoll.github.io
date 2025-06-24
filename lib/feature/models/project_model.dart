@@ -1,5 +1,34 @@
 import 'package:equatable/equatable.dart';
 
+class ProjectsModel extends Equatable {
+  final String title;
+  final List<ProjectModel> items;
+
+  const ProjectsModel({
+    required this.title,
+    required this.items,
+  });
+
+  factory ProjectsModel.fromJson(Map<String, dynamic> json) {
+    return ProjectsModel(
+      title: json['title'],
+      items: (json['items'] as List)
+          .map((item) => ProjectModel.fromJson(item))
+          .toList(),
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'title': title,
+      'items': items.map((item) => item.toJson()).toList(),
+    };
+  }
+
+  @override
+  List<Object?> get props => [title, items];
+}
+
 class ProjectModel extends Equatable {
   final String title;
   final String description;
@@ -68,33 +97,4 @@ class ProjectModel extends Equatable {
         appstore,
         images,
       ];
-}
-
-class ProjectsSectionModel extends Equatable {
-  final String title;
-  final List<ProjectModel> items;
-
-  const ProjectsSectionModel({
-    required this.title,
-    required this.items,
-  });
-
-  factory ProjectsSectionModel.fromJson(Map<String, dynamic> json) {
-    return ProjectsSectionModel(
-      title: json['title'],
-      items: (json['items'] as List)
-          .map((item) => ProjectModel.fromJson(item))
-          .toList(),
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'title': title,
-      'items': items.map((item) => item.toJson()).toList(),
-    };
-  }
-
-  @override
-  List<Object?> get props => [title, items];
 }
