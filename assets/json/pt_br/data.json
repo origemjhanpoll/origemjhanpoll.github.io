@@ -51,6 +51,7 @@
       {
         "title": "Restaurantes Delivery App",
         "description": "Aplicativo mobile feito em Flutter para restaurantes de alto padrão gerenciarem pedidos e fidelizarem clientes sem depender de iFood ou Rappi.",
+        "logo": "https://example.com/logo.png",
         "technologies": [
           "Flutter",
           "Firebase",

@@ -40,6 +40,7 @@ class ProjectModel extends Equatable {
   final String? playstore;
   final String? appstore;
   final List<String> images;
+  final String? logo;
 
   const ProjectModel({
     required this.title,
@@ -52,6 +53,7 @@ class ProjectModel extends Equatable {
     this.playstore,
     this.appstore,
     required this.images,
+    this.logo,
   });
 
   factory ProjectModel.fromJson(Map<String, dynamic> json) {
@@ -66,6 +68,7 @@ class ProjectModel extends Equatable {
       playstore: json['playstore'],
       appstore: json['appstore'],
       images: List<String>.from(json['images'] ?? []),
+      logo: json['logo'],
     );
   }
 
@@ -81,6 +84,7 @@ class ProjectModel extends Equatable {
       'playstore': playstore,
       'appstore': appstore,
       'images': images,
+      'logo': logo,
     };
   }
 
@@ -96,5 +100,6 @@ class ProjectModel extends Equatable {
         playstore,
         appstore,
         images,
+        logo,
       ];
 }
