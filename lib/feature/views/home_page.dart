@@ -102,7 +102,6 @@ class _HomePageState extends State<HomePage> {
                       key: contactKey,
                       model: state.model.contact,
                     )),
-                    SliverFillRemaining(child: LimitedBox()),
                   ],
                 );
               } else if (state is PortifolioError) {

@@ -71,6 +71,73 @@
           "Mobile",
           "Web"
         ]
+      },
+      {
+        "title": "E-commerce Mobile App",
+        "description": "Aplicativo de e-commerce completo com sistema de pagamentos, carrinho de compras e gestão de pedidos. Interface moderna e intuitiva.",
+        "logo": "https://example.com/ecommerce-logo.png",
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "Firebase",
+          "Stripe"
+        ],
+        "images": [
+          "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg",
+          "https://images.pexels.com/photos/5632401/pexels-photo-5632401.jpeg"
+        ],
+        "url": "https://origemjhanpoll.com/ecommerce-app",
+        "github": "https://github.com/origemjhanpoll/ecommerce-app",
+        "playstore": "https://play.google.com/store/apps/details?id=com.exemplo.ecommerceapp",
+        "appstore": "https://apps.apple.com/app/id0000000001",
+        "year": 2024,
+        "types": [
+          "Mobile"
+        ]
+      },
+      {
+        "title": "Task Management System",
+        "description": "Sistema web de gerenciamento de tarefas com drag-and-drop, notificações em tempo real e colaboração em equipe.",
+        "logo": "https://example.com/task-logo.png",
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Node.js",
+          "Socket.io"
+        ],
+        "images": [
+          "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+          "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg"
+        ],
+        "url": "https://origemjhanpoll.com/task-management",
+        "github": "https://github.com/origemjhanpoll/task-management",
+        "year": 2024,
+        "types": [
+          "Web"
+        ]
+      },
+      {
+        "title": "Fitness Tracking App",
+        "description": "Aplicativo de fitness com tracking de exercícios, planos de treino personalizados e integração com wearables.",
+        "logo": "https://example.com/fitness-logo.png",
+        "technologies": [
+          "React Native",
+          "TypeScript",
+          "Firebase",
+          "HealthKit"
+        ],
+        "images": [
+          "https://images.pexels.com/photos/4498290/pexels-photo-4498290.jpeg",
+          "https://images.pexels.com/photos/4498291/pexels-photo-4498291.jpeg"
+        ],
+        "url": "https://origemjhanpoll.com/fitness-app",
+        "github": "https://github.com/origemjhanpoll/fitness-app",
+        "playstore": "https://play.google.com/store/apps/details?id=com.exemplo.fitnessapp",
+        "appstore": "https://apps.apple.com/app/id0000000002",
+        "year": 2023,
+        "types": [
+          "Mobile"
+        ]
       }
     ]
   },
