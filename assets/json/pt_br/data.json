@@ -73,5 +73,46 @@
         ]
       }
     ]
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "description": "Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato através de qualquer um dos canais abaixo:",
+    "contact_items": [
+      {
+        "title": "Email",
+        "value": "jeanpaul@origemjhanpoll.com",
+        "icon": "email",
+        "url": "mailto:jeanpaul@origemjhanpoll.com",
+        "type": "email"
+      },
+      {
+        "title": "WhatsApp",
+        "value": "+55 (98) 99139-1108",
+        "icon": "whatsapp",
+        "url": "https://api.whatsapp.com/send/?phone=5598991391108",
+        "type": "whatsapp"
+      },
+      {
+        "title": "LinkedIn",
+        "value": "Jean Paul",
+        "icon": "linkedin",
+        "url": "https://www.linkedin.com/in/origemjhanpoll",
+        "type": "linkedin"
+      },
+      {
+        "title": "GitHub",
+        "value": "origemjhanpoll",
+        "icon": "github",
+        "url": "https://github.com/origemjhanpoll",
+        "type": "github"
+      },
+      {
+        "title": "Website",
+        "value": "origemjhanpoll.com",
+        "icon": "website",
+        "url": "https://origemjhanpoll.com",
+        "type": "website"
+      }
+    ]
   }
 }

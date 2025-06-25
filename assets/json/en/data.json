@@ -1,0 +1,118 @@
+{
+    "initial": {
+        "name": "Hi, I'm Jean Paul",
+        "role": "Software Developer",
+        "description": "I'm a software engineer focused on building high-performance mobile apps with clean code and great design. Let's turn ideas into reality!",
+        "photo": "path/to/image.jpg",
+        "buttons": [
+            {
+                "text": "My Resume",
+                "url": "https://github.com/origemjhanpoll/origemjhanpoll.github.io/raw/refs/heads/main/assets/resume/Jean%20Paul%20-%20PTBR.pdf"
+            },
+            {
+                "text": "Get in touch",
+                "url": "https://api.whatsapp.com/send/?phone=5598991391108"
+            }
+        ]
+    },
+    "about": {
+        "title": "A bit about me.",
+        "history_label": "History",
+        "history": "I specialize in mobile development, with over 6 years of experience creating robust, intuitive, and secure solutions for Android, iOS, and web. I have expertise in Flutter, Dart, React Native, React, JavaScript, and TypeScript, as well as experience with tools like Firebase, Datadog, and Codemagic. I excel at creating responsive interfaces, implementing scalable Design Systems, and maintaining a constant focus on user experience.\n\nThroughout my career, I have directly contributed to performance improvements, code organization, data security, and interface componentization in various mobile and web projects. I also have strong experience in UX/UI, motion design, and prototyping with Figma and Adobe Suite, using animations and micro-interactions to make products more engaging and pleasant to use.",
+        "technologies_label": "Technologies",
+        "technologies": [
+            "Flutter",
+            "Dart",
+            "React Native",
+            "TypeScript",
+            "Android",
+            "iOS",
+            "ReactJs",
+            "JavaScript"
+        ],
+        "others_label": "Others",
+        "others": [
+            "Bitbucket",
+            "CI/CD",
+            "Codemagic",
+            "CSS",
+            "Figma",
+            "Firebase",
+            "Git",
+            "Google Cloud",
+            "GraphQL",
+            "HTML",
+            "Jira"
+        ]
+    },
+    "projects": {
+        "title": "Projects",
+        "items": [
+            {
+                "title": "Restaurants Delivery App",
+                "description": "Mobile app built with Flutter for high-end restaurants to manage orders and retain customers without depending on iFood or Rappi.",
+                "logo": "https://example.com/logo.png",
+                "technologies": [
+                    "Flutter",
+                    "Firebase",
+                    "Codemagic"
+                ],
+                "images": [
+                    "https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg",
+                    "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg",
+                    "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
+                ],
+                "url": "https://origemjhanpoll.com/delivery-app",
+                "github": "https://github.com/origemjhanpoll/delivery-app",
+                "playstore": "https://play.google.com/store/apps/details?id=com.exemplo.restauranteapp",
+                "appstore": "https://apps.apple.com/app/id0000000000",
+                "year": 2025,
+                "types": [
+                    "Mobile",
+                    "Web"
+                ]
+            }
+        ]
+    },
+    "contact": {
+        "title": "Get in Touch",
+        "description": "I'm always open to new opportunities and collaborations. Feel free to reach out through any of the channels below:",
+        "contact_items": [
+            {
+                "title": "Email",
+                "value": "jeanpaul@origemjhanpoll.com",
+                "icon": "email",
+                "url": "mailto:jeanpaul@origemjhanpoll.com",
+                "type": "email"
+            },
+            {
+                "title": "WhatsApp",
+                "value": "+55 (98) 99139-1108",
+                "icon": "whatsapp",
+                "url": "https://api.whatsapp.com/send/?phone=5598991391108",
+                "type": "whatsapp"
+            },
+            {
+                "title": "LinkedIn",
+                "value": "Jean Paul",
+                "icon": "linkedin",
+                "url": "https://www.linkedin.com/in/origemjhanpoll",
+                "type": "linkedin"
+            },
+            {
+                "title": "GitHub",
+                "value": "origemjhanpoll",
+                "icon": "github",
+                "url": "https://github.com/origemjhanpoll",
+                "type": "github"
+            },
+            {
+                "title": "Website",
+                "value": "origemjhanpoll.com",
+                "icon": "website",
+                "url": "https://origemjhanpoll.com",
+                "type": "website"
+            }
+        ]
+    }
+}

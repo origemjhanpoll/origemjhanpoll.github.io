@@ -7,6 +7,7 @@ import 'package:origemjhanpoll_github_io/core/widgets/float_appbar_widget.dart';
 import 'package:origemjhanpoll_github_io/feature/viewmodel/portifolio_cubit.dart';
 import 'package:origemjhanpoll_github_io/feature/viewmodel/portifolio_state.dart';
 import 'package:origemjhanpoll_github_io/feature/views/widgets/about_widget.dart';
+import 'package:origemjhanpoll_github_io/feature/views/widgets/contact_widget.dart';
 import 'package:origemjhanpoll_github_io/feature/views/widgets/initial_widget.dart';
 import 'package:origemjhanpoll_github_io/feature/views/widgets/projects_widget.dart';
 
@@ -21,6 +22,7 @@ class _HomePageState extends State<HomePage> {
   final initialKey = GlobalKey();
   final aboutKey = GlobalKey();
   final projectsKey = GlobalKey();
+  final contactKey = GlobalKey();
   final scrollController = ScrollController();
 
   @override
@@ -55,6 +57,9 @@ class _HomePageState extends State<HomePage> {
         break;
       case 2:
         scrollTo(projectsKey);
+        break;
+      case 3:
+        scrollTo(contactKey);
         break;
     }
   }
@@ -92,6 +97,11 @@ class _HomePageState extends State<HomePage> {
                           key: projectsKey,
                           model: state.model.projects,
                         )),
+                    SliverToBoxAdapter(
+                        child: ContactWidget(
+                      key: contactKey,
+                      model: state.model.contact,
+                    )),
                     SliverFillRemaining(child: LimitedBox()),
                   ],
                 );

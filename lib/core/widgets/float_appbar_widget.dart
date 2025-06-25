@@ -35,8 +35,8 @@ class _FloatAppbarWidgetState extends State<FloatAppbarWidget> {
       ItemTab(icon: Icons.circle, name: localization.menuHome),
       ItemTab(icon: Icons.circle, name: localization.menuAbout),
       ItemTab(icon: Icons.circle, name: localization.menuProject),
+      ItemTab(icon: Icons.contact_mail, name: localization.menuContact),
       // ItemTab(icon: Icons.circle, name: localization.menuArticle),
-      // ItemTab(icon: Icons.circle, name: localization.menuContact),
     ];
 
     return LayoutBuilder(builder: (context, constraints) {

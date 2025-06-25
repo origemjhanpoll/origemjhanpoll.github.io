@@ -6,9 +6,9 @@ class RemoteService {
   final http.Client client;
   RemoteService(this.client);
 
-  Future<Response> fetchPortifolio() async {
+  Future<Response> fetchPortifolio({String language = 'pt_br'}) async {
     final response = await client.get(Uri.parse(
-        'https://raw.githubusercontent.com/origemjhanpoll/origemjhanpoll.github.io/refs/heads/main/assets/json/pt_br/data.json'));
+        'https://raw.githubusercontent.com/origemjhanpoll/origemjhanpoll.github.io/refs/heads/main/assets/json/$language/data.json'));
 
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
