@@ -15,6 +15,11 @@ class ProjectsWidget extends StatelessWidget {
     final padding = SpacingSize.getPadding(screen.width);
     final isScreenMedium = screen.width >= ScreenSize.small;
 
+    // Calcula altura responsiva com limites
+    final minHeight = 400.0;
+    final maxHeight = 812.0;
+    final responsiveHeight = (screen.height * 0.85).clamp(minHeight, maxHeight);
+
     return Column(
       children: [
         Padding(
@@ -25,8 +30,8 @@ class ProjectsWidget extends StatelessWidget {
                 .copyWith(fontWeight: FontWeight.bold),
           ),
         ),
-        SizedBox.fromSize(
-          size: Size.fromHeight(812),
+        SizedBox(
+          height: responsiveHeight,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: model.items.length,
@@ -65,7 +70,7 @@ class ProjectsWidget extends StatelessWidget {
                           borderRadius: BorderRadiusGeometry.circular(18),
                           child: Image.network(
                             image,
-                            fit: BoxFit.cover,
+                            fit: BoxFit.fitHeight,
                           ),
                         ),
                       ),

@@ -19,7 +19,7 @@ class ContactWidget extends StatelessWidget {
     final urlLauncherUtil = UrlLauncherUtil();
 
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         AnimatedPadding(
           duration: Durations.medium1,
@@ -28,6 +28,7 @@ class ContactWidget extends StatelessWidget {
             model.title.toUpperCase(),
             style: theme.textTheme.headlineMedium!
                 .copyWith(fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
           ),
         ),
         AnimatedPadding(
