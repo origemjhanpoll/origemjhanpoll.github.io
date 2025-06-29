@@ -49,92 +49,73 @@
     "title": "Projetos",
     "items": [
       {
-        "title": "Restaurantes Delivery App",
-        "description": "Aplicativo mobile feito em Flutter para restaurantes de alto padrão gerenciarem pedidos e fidelizarem clientes sem depender de iFood ou Rappi.",
-        "logo": "https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg?auto=compress&cs=tinysrgb&w=100",
+        "title": "Maestro Mateus",
+        "description": "Sistema de gestão de rotinas para funcionários de uma rede de supermercados. Desenvolvido em Flutter, o Maestro Mateus gerencia tarefas, setores e rotinas diárias dos colaboradores.\n\nPrincipais funcionalidades:\n- Gestão de rotinas por setor\n- Controle de tarefas diárias\n- Perfil do usuário com interface renovada\n- Controle de validade de produtos\n- Sistema de notificações\n- Relatórios de produtividade\n- Integração com sistemas internos\n\nMelhorias recentes:\n• Desempenho aprimorado para navegação mais fluida\n• Login mais rápido e eficiente\n• Melhorias no carregamento das funcionalidades\n• Nova funcionalidade: Saúde Emocional\n\nSolução completa que otimiza a gestão de rotinas e aumenta a eficiência operacional dos funcionários em todos os setores da rede.",
+        "logo": "https://play-lh.googleusercontent.com/Q6af1uoiGbEzxZk3FQsgmS76s4NgIEy0mvrtr9bdku7QpQyegACRkVJAArGL1PeuOwM",
         "technologies": [
-          "Flutter",
-          "Firebase",
-          "Codemagic"
+          "React Native",
+          "Firebase"
         ],
         "images": [
-          "https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg",
-          "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg",
-          "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
+          "https://play-lh.googleusercontent.com/GAjT2QVIfZdJIWU5X2n2GGY8HPI9PesA194vXIE-lrCeHn94oBp0mq-Ulkb5rTwthkM",
+          "https://play-lh.googleusercontent.com/kEKEa0n5shFtALPwe5LGhrVSEzFrh76IJE92rn1gS7AsLpAZ-otlJtV6K0Ui-5By1YM",
+          "https://play-lh.googleusercontent.com/CsCCAAmb2_BkDeVi3EvptZLHH7HY0Y2y1_83qcEbkpmw7JSqanXcSmFlgc1L2XpdQDk"
         ],
-        "url": "https://origemjhanpoll.com/delivery-app",
-        "github": "https://github.com/origemjhanpoll/delivery-app",
-        "playstore": "https://play.google.com/store/apps/details?id=com.exemplo.restauranteapp",
-        "appstore": "https://apps.apple.com/app/id0000000000",
-        "year": 2025,
+        "url": "https://www.linkedin.com/company/pulseoficial/",
+        "github": null,
+        "playstore": "https://play.google.com/store/apps/details?id=com.ithappens_piloto_app",
+        "appstore": null,
+        "year": 2019,
         "types": [
           "Mobile",
           "Web"
         ]
       },
       {
-        "title": "E-commerce Mobile App",
-        "description": "Aplicativo de e-commerce completo com sistema de pagamentos, carrinho de compras e gestão de pedidos. Interface moderna e intuitiva.",
-        "logo": "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=100",
+        "title": "Gupy EduCorp",
+        "description": "A Gupy EduCorp é uma solução para desenvolvimento de colaboradores baseada em doses de conhecimento e Gamificação, o que torna o aprendizado interativo e divertido, aprimorando os resultados das empresas. Ranking, pontos e recompensas, além de outros como um quiz online, o Batalha, são recursos que a Gupy EduCorp utiliza para motivar de forma inovadora os colaboradores das empresas em seus treinamentos no aplicativo.",
+        "logo": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/57/5c/d2/575cd282-7fea-b019-2566-4edbc5375a59/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/217x0w.webp",
         "technologies": [
           "Flutter",
           "Dart",
           "Firebase",
-          "Stripe"
+          "Codemagic"
         ],
         "images": [
-          "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg",
-          "https://images.pexels.com/photos/5632401/pexels-photo-5632401.jpeg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/06/0f/d8/060fd880-a785-8340-9c97-b81db016f7ec/563460e3-e50a-4889-a673-9ec31d0c6843_EdCorp---iPhone65Prancheta-1.png/157x0w.webp",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/8d/0e/7f/8d0e7f66-9c45-ad54-c398-46208d469bb5/071ed564-f3df-4950-a47d-5042146d9117_EdCorp---iPhone65Prancheta-2.png/157x0w.webp",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/82/a2/f4/82a2f4de-8299-6ad4-529a-23e9134f147c/6b9e2343-4125-466a-b7a1-39f4bb4aed2f_EdCorp---iPhone65Prancheta-3.png/157x0w.webp"
         ],
-        "url": "https://origemjhanpoll.com/ecommerce-app",
-        "github": "https://github.com/origemjhanpoll/ecommerce-app",
-        "playstore": "https://play.google.com/store/apps/details?id=com.exemplo.ecommerceapp",
-        "appstore": "https://apps.apple.com/app/id0000000001",
-        "year": 2024,
+        "url": "https://www.gupy.io/plataforma-de-educacao-corporativa",
+        "github": null,
+        "playstore": "https://play.google.com/store/apps/details?id=com.workeduc.appv4&hl",
+        "appstore": "https://apps.apple.com/bo/app/gupy-educorp/id1287059492?platform=iphone",
+        "year": 2021,
         "types": [
-          "Mobile"
-        ]
-      },
-      {
-        "title": "Task Management System",
-        "description": "Sistema web de gerenciamento de tarefas com drag-and-drop, notificações em tempo real e colaboração em equipe.",
-        "logo": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=100",
-        "technologies": [
-          "React",
-          "TypeScript",
-          "Node.js",
-          "Socket.io"
-        ],
-        "images": [
-          "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
-          "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg"
-        ],
-        "url": "https://origemjhanpoll.com/task-management",
-        "github": "https://github.com/origemjhanpoll/task-management",
-        "year": 2024,
-        "types": [
+          "Mobile",
           "Web"
         ]
       },
       {
-        "title": "Fitness Tracking App",
-        "description": "Aplicativo de fitness com tracking de exercícios, planos de treino personalizados e integração com wearables.",
-        "logo": "https://images.pexels.com/photos/4498290/pexels-photo-4498290.jpeg?auto=compress&cs=tinysrgb&w=100",
+        "title": "Brasil Card Digital",
+        "description": "A BRASIL CARD, atuando desde 1999 no mercado brasileiro, está presente em todo o território nacional. Oferecemos o cartão Private Label customizado para cada negócio e o cartão de crédito BrasilCard para clientes finais.\n\nAgora com bandeira VISA, o BrasilCard oferece facilidades para compras online e em milhares de estabelecimentos, proporcionando maior poder de compra e fidelizando clientes com segurança.",
+        "logo": "https://play-lh.googleusercontent.com/kqDZAOLduP1akYNUsRPMIFN1AnCck2v2k2phWpPgvMOdMOO_TxIYc31x7Id5gGlgKOI",
         "technologies": [
-          "React Native",
-          "TypeScript",
+          "Flutter",
+          "Dart",
           "Firebase",
-          "HealthKit"
+          "Codemagic"
         ],
         "images": [
-          "https://images.pexels.com/photos/4498290/pexels-photo-4498290.jpeg",
-          "https://images.pexels.com/photos/4498291/pexels-photo-4498291.jpeg"
+          "https://play-lh.googleusercontent.com/1tYBASzpRyGctM0kcRCaAwQ3V9Qx_Mf-YVJ_ZhWQfrSi-52dNXHTURLZ2z3tm5WC__au",
+          "https://play-lh.googleusercontent.com/SPMGYAN8H6S2QNmYCUZdNQFi8pdWtXbEiYl-0QyUg1VeQiT9athOiq24SNdsSujQ1A",
+          "https://play-lh.googleusercontent.com/SYhepOiQ556VYdKyqHSuW3CD-hQaBBqdm3a4wxhwQFog3-JCtrxEVQO-JqnsJmg0jVM"
         ],
-        "url": "https://origemjhanpoll.com/fitness-app",
-        "github": "https://github.com/origemjhanpoll/fitness-app",
-        "playstore": "https://play.google.com/store/apps/details?id=com.exemplo.fitnessapp",
-        "appstore": "https://apps.apple.com/app/id0000000002",
-        "year": 2023,
+        "url": "https://www.brasilcarddigital.com.br",
+        "github": null,
+        "playstore": "https://play.google.com/store/apps/details?id=br.com.brasilcard.app_banco_digital",
+        "appstore": "https://apps.apple.com/br/app/brasilcard-digital/id1593431800?platform=iphone",
+        "year": 2025,
         "types": [
           "Mobile"
         ]
