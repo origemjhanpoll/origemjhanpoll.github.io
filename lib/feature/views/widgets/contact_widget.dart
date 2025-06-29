@@ -4,6 +4,7 @@ import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
 import 'package:origemjhanpoll_github_io/core/utils/url_launcher_util.dart';
 import 'package:origemjhanpoll_github_io/feature/models/contact_model.dart';
+import 'package:origemjhanpoll_github_io/gen/assets.gen.dart';
 
 class ContactWidget extends StatelessWidget {
   final ContactModel model;
@@ -81,9 +82,9 @@ class ContactWidget extends StatelessWidget {
             padding: EdgeInsets.all(SpacingSize.medium),
             child: Column(
               mainAxisSize: MainAxisSize.min,
+              spacing: SpacingSize.small,
               children: [
                 _buildIcon(contactItem, theme),
-                SizedBox(height: SpacingSize.small),
                 Text(
                   contactItem.title,
                   style: theme.textTheme.titleMedium?.copyWith(
@@ -91,7 +92,6 @@ class ContactWidget extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: SpacingSize.small),
                 Text(
                   contactItem.value,
                   style: theme.textTheme.bodyMedium,
@@ -123,7 +123,7 @@ class ContactWidget extends StatelessWidget {
         );
       case ContactType.whatsapp:
         return SvgPicture.asset(
-          'assets/svg/icon_whatsapp.svg',
+          Assets.svg.iconWhatsApp,
           width: iconSize,
           height: iconSize,
           colorFilter: ColorFilter.mode(

@@ -26,11 +26,11 @@ class $AssetsSvgGen {
   /// File path: assets/svg/icon_pdf.svg
   String get iconPdf => 'assets/svg/icon_pdf.svg';
 
-  /// File path: assets/svg/icon_whatsapp.svg
-  String get iconWhatsapp => 'assets/svg/icon_whatsapp.svg';
+  /// File path: assets/svg/icon_whats_app.svg
+  String get iconWhatsApp => 'assets/svg/icon_whats_app.svg';
 
   /// List of all assets
-  List<String> get values => [iconPdf, iconWhatsapp];
+  List<String> get values => [iconPdf, iconWhatsApp];
 }
 
 class Assets {
