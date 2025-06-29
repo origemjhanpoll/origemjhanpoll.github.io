@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
+import 'package:origemjhanpoll_github_io/core/utils/url_launcher_util.dart';
 import 'package:origemjhanpoll_github_io/feature/models/project_model.dart';
+import 'package:origemjhanpoll_github_io/gen/assets.gen.dart';
 
 class ProjectsWidget extends StatelessWidget {
   final ProjectsModel model;
@@ -12,6 +16,8 @@ class ProjectsWidget extends StatelessWidget {
     final theme = Theme.of(context);
     final screen = MediaQuery.sizeOf(context);
     final padding = SpacingSize.getPadding(screen.width);
+    final isMobileScreen = screen.width < ScreenSize.medium;
+    final urlLauncherUtil = UrlLauncherUtil();
 
     final minHeight = 400.0;
     final maxHeight = 812.0;
@@ -20,7 +26,7 @@ class ProjectsWidget extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(vertical: SpacingSize.large),
+          padding: EdgeInsets.symmetric(vertical: SpacingSize.large * 2),
           child: Text(
             model.title.toUpperCase(),
             style: theme.textTheme.headlineMedium!
@@ -36,43 +42,63 @@ class ProjectsWidget extends StatelessWidget {
             itemBuilder: (context, index) {
               final element = model.items[index];
               return Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  AnimatedPadding(
-                    duration: Durations.medium1,
-                    padding: EdgeInsets.all(padding),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      spacing: SpacingSize.small,
-                      children: [
-                        if (element.logo != null)
-                          CircleAvatar(
-                            radius: 48.0,
-                            backgroundImage: NetworkImage(element.logo!),
-                            onBackgroundImageError: (exception, stackTrace) {},
-                            child: element.logo == null
-                                ? Icon(
-                                    Icons.business,
-                                    size: 30,
-                                    color: theme.colorScheme.onSurface,
-                                  )
-                                : null,
+                  SizedBox.fromSize(
+                    size: Size.fromWidth(
+                        screen.width * (isMobileScreen ? .9 : .3)),
+                    child: AnimatedPadding(
+                      duration: Durations.medium1,
+                      padding: EdgeInsets.symmetric(horizontal: padding),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        spacing: SpacingSize.small,
+                        children: [
+                          if (element.logo != null)
+                            CircleAvatar(
+                              radius: 54.0,
+                              backgroundImage: NetworkImage(element.logo!),
+                              onBackgroundImageError:
+                                  (exception, stackTrace) {},
+                              child: element.logo == null
+                                  ? Icon(
+                                      Icons.business,
+                                      size: 30,
+                                      color: theme.colorScheme.onSurface,
+                                    )
+                                  : null,
+                            ),
+                          Text(
+                            element.title,
+                            style: theme.textTheme.headlineMedium?.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        Text(
-                          element.title,
-                          style: theme.textTheme.titleMedium?.copyWith(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        ConstrainedBox(
-                          constraints:
-                              BoxConstraints(maxWidth: screen.width * .3),
-                          child: Text(
+                          Text(
                             element.description,
-                            style: theme.textTheme.bodyMedium,
+                            style: theme.textTheme.bodyLarge,
                           ),
-                        )
-                      ],
+                          Row(
+                            spacing: SpacingSize.small,
+                            children: [
+                              if (element.appstore != null)
+                                InkWell(
+                                  onTap: () => urlLauncherUtil
+                                      .launchURL(element.appstore!),
+                                  child: SvgPicture.asset(
+                                      Assets.svg.applestoreDark),
+                                ),
+                              if (element.playstore != null)
+                                InkWell(
+                                  onTap: () => urlLauncherUtil
+                                      .launchURL(element.playstore!),
+                                  child: SvgPicture.asset(
+                                      Assets.svg.playstoreDark),
+                                ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   ...element.images.map(
@@ -82,9 +108,13 @@ class ProjectsWidget extends StatelessWidget {
                         borderRadius: BorderRadius.circular(18),
                         child: Image.network(
                           image,
+                          width: isMobileScreen ? 195 : 300,
+                          height: isMobileScreen ? 347.88 : 535.2,
+                          fit: BoxFit.cover,
                           errorBuilder: (context, error, stackTrace) {
                             return Container(
-                              width: 300,
+                              width: isMobileScreen ? 195 : 300,
+                              height: isMobileScreen ? 347.88 : 535.2,
                               decoration: BoxDecoration(
                                 color:
                                     theme.colorScheme.surfaceContainerHighest,

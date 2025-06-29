@@ -50,7 +50,7 @@
         "items": [
             {
                 "title": "Brasil Card Digital",
-                "description": "BRASIL CARD自1999年以来一直在巴西市场运营，遍布全国。我们为每个企业提供定制的Private Label卡和为最终客户提供BrasilCard信用卡。\n\n现在拥有VISA品牌，BrasilCard为在线购物和数千家商店提供便利，提供更大的购买力并确保客户忠诚度。",
+                "description": "BRASIL CARD自1999年以来一直在巴西市场运营，遍布全国。我们为每个企业提供定制的Private Label卡和为最终客户提供BrasilCard信用卡。",
                 "logo": "https://play-lh.googleusercontent.com/kqDZAOLduP1akYNUsRPMIFN1AnCck2v2k2phWpPgvMOdMOO_TxIYc31x7Id5gGlgKOI",
                 "technologies": [
                     "Flutter",
@@ -106,7 +106,7 @@
                     "Firebase"
                 ],
                 "images": [
-                    "https://play-lh.googleusercontent.com/GAjT2QVIfZdJIWU5X2n2GGY8HPI9PesA194vXIE-lrCeHn94oBp0mq-Ulkb5rTwthkM",
+                    "https://play-lh.googleusercontent.com/tPZK5HpZXwaxrKouU7X-jajx0hhS-RuUlAjXHbcmrY3Pn4qqtaSnHlAy07hiOQlFAQ",
                     "https://play-lh.googleusercontent.com/kEKEa0n5shFtALPwe5LGhrVSEzFrh76IJE92rn1gS7AsLpAZ-otlJtV6K0Ui-5By1YM",
                     "https://play-lh.googleusercontent.com/CsCCAAmb2_BkDeVi3EvptZLHH7HY0Y2y1_83qcEbkpmw7JSqanXcSmFlgc1L2XpdQDk"
                 ],

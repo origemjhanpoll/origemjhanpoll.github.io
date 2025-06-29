@@ -17,48 +17,47 @@ class ContactWidget extends StatelessWidget {
     final size = MediaQuery.sizeOf(context);
     final padding = SpacingSize.getPadding(size.width);
     final isScreenMedium = size.width >= ScreenSize.small;
+    final isMobileScreen = size.width < ScreenSize.small;
     final urlLauncherUtil = UrlLauncherUtil();
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        AnimatedPadding(
-          duration: Durations.medium1,
-          padding: EdgeInsets.only(top: padding, left: padding, right: padding),
-          child: Text(
+    return AnimatedPadding(
+      duration: Durations.medium1,
+      padding: EdgeInsets.all(padding),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        spacing: SpacingSize.large,
+        children: [
+          Text(
             model.title.toUpperCase(),
             style: theme.textTheme.headlineMedium!
                 .copyWith(fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
-        ),
-        AnimatedPadding(
-          duration: Durations.medium1,
-          padding: EdgeInsets.all(padding),
-          child: Text(
+          Text(
             model.description,
             style: theme.textTheme.bodyLarge,
             textAlign: TextAlign.center,
           ),
-        ),
-        AnimatedPadding(
-          duration: Durations.medium1,
-          padding: EdgeInsets.all(padding),
-          child: Wrap(
-            spacing: SpacingSize.medium,
-            runSpacing: SpacingSize.medium,
-            alignment: WrapAlignment.center,
-            children: model.contactItems.map((contactItem) {
-              return _buildContactCard(
-                context,
-                contactItem,
-                urlLauncherUtil,
-                isScreenMedium,
-              );
-            }).toList(),
+          Padding(
+            padding: EdgeInsets.only(bottom: SpacingSize.large),
+            child: Wrap(
+              spacing: isMobileScreen ? SpacingSize.small : SpacingSize.medium,
+              runSpacing:
+                  isMobileScreen ? SpacingSize.small : SpacingSize.medium,
+              alignment: WrapAlignment.center,
+              children: model.contactItems.map((contactItem) {
+                return _buildContactCard(
+                  context,
+                  contactItem,
+                  urlLauncherUtil,
+                  isScreenMedium,
+                  isMobileScreen,
+                );
+              }).toList(),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
@@ -67,14 +66,14 @@ class ContactWidget extends StatelessWidget {
     ContactItem contactItem,
     UrlLauncherUtil urlLauncherUtil,
     bool isScreenMedium,
+    bool isMobileScreen,
   ) {
     final theme = Theme.of(context);
 
-    return AnimatedContainer(
-      duration: Durations.medium1,
-      width: isScreenMedium ? 300 : double.infinity,
+    return SizedBox.fromSize(
+      size: Size(isMobileScreen ? 195 : 300, 180),
       child: Card(
-        elevation: 4,
+        elevation: 0,
         child: InkWell(
           onTap: () => urlLauncherUtil.launchURL(contactItem.url),
           borderRadius: BorderRadius.circular(12),
@@ -82,6 +81,8 @@ class ContactWidget extends StatelessWidget {
             padding: EdgeInsets.all(SpacingSize.medium),
             child: Column(
               mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               spacing: SpacingSize.small,
               children: [
                 _buildIcon(contactItem, theme),

@@ -50,7 +50,7 @@
     "items": [
       {
         "title": "Brasil Card Digital",
-        "description": "A BRASIL CARD, atuando desde 1999 no mercado brasileiro, está presente em todo o território nacional. Oferecemos o cartão Private Label customizado para cada negócio e o cartão de crédito BrasilCard para clientes finais.\n\nAgora com bandeira VISA, o BrasilCard oferece facilidades para compras online e em milhares de estabelecimentos, proporcionando maior poder de compra e fidelizando clientes com segurança.",
+        "description": "A BRASIL CARD, atuando desde 1999 no mercado brasileiro, está presente em todo o território nacional. Oferecemos o cartão Private Label customizado para cada negócio e o cartão de crédito BrasilCard para clientes finais.",
         "logo": "https://play-lh.googleusercontent.com/kqDZAOLduP1akYNUsRPMIFN1AnCck2v2k2phWpPgvMOdMOO_TxIYc31x7Id5gGlgKOI",
         "technologies": [
           "Flutter",
@@ -106,7 +106,7 @@
           "Firebase"
         ],
         "images": [
-          "https://play-lh.googleusercontent.com/GAjT2QVIfZdJIWU5X2n2GGY8HPI9PesA194vXIE-lrCeHn94oBp0mq-Ulkb5rTwthkM",
+          "https://play-lh.googleusercontent.com/tPZK5HpZXwaxrKouU7X-jajx0hhS-RuUlAjXHbcmrY3Pn4qqtaSnHlAy07hiOQlFAQ",
           "https://play-lh.googleusercontent.com/kEKEa0n5shFtALPwe5LGhrVSEzFrh76IJE92rn1gS7AsLpAZ-otlJtV6K0Ui-5By1YM",
           "https://play-lh.googleusercontent.com/CsCCAAmb2_BkDeVi3EvptZLHH7HY0Y2y1_83qcEbkpmw7JSqanXcSmFlgc1L2XpdQDk"
         ],

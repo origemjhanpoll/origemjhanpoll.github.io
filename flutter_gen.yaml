@@ -1,0 +1,16 @@
+flutter:
+  uses-material-design: true
+
+  assets:
+    enabled: true
+    outputs:
+      class_name: Assets
+      package_name: origemjhanpoll_github_io
+      constant_name: assets
+      path: lib/gen/assets.gen.dart
+      uses_part_of: false
+      package_parameter_enabled: false
+      null_safety: true
+    inputs:
+      - assets/images/
+      - assets/svg/ 

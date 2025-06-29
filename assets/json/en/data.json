@@ -50,7 +50,7 @@
         "items": [
             {
                 "title": "Brasil Card Digital",
-                "description": "BRASIL CARD, operating in the Brazilian market since 1999, is present throughout the national territory. We offer the Private Label card customized for each business and the BrasilCard credit card for end customers.\n\nNow with VISA brand, BrasilCard offers facilities for online purchases and in thousands of establishments, providing greater purchasing power and securing customer loyalty.",
+                "description": "BRASIL CARD, operating in the Brazilian market since 1999, is present throughout the national territory. We offer the Private Label card customized for each business and the BrasilCard credit card for end customers.",
                 "logo": "https://play-lh.googleusercontent.com/kqDZAOLduP1akYNUsRPMIFN1AnCck2v2k2phWpPgvMOdMOO_TxIYc31x7Id5gGlgKOI",
                 "technologies": [
                     "Flutter",
@@ -106,7 +106,7 @@
                     "Firebase"
                 ],
                 "images": [
-                    "https://play-lh.googleusercontent.com/GAjT2QVIfZdJIWU5X2n2GGY8HPI9PesA194vXIE-lrCeHn94oBp0mq-Ulkb5rTwthkM",
+                    "https://play-lh.googleusercontent.com/tPZK5HpZXwaxrKouU7X-jajx0hhS-RuUlAjXHbcmrY3Pn4qqtaSnHlAy07hiOQlFAQ",
                     "https://play-lh.googleusercontent.com/kEKEa0n5shFtALPwe5LGhrVSEzFrh76IJE92rn1gS7AsLpAZ-otlJtV6K0Ui-5By1YM",
                     "https://play-lh.googleusercontent.com/CsCCAAmb2_BkDeVi3EvptZLHH7HY0Y2y1_83qcEbkpmw7JSqanXcSmFlgc1L2XpdQDk"
                 ],

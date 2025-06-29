@@ -23,14 +23,33 @@ class $AssetsImagesGen {
 class $AssetsSvgGen {
   const $AssetsSvgGen();
 
+  /// File path: assets/svg/applestore_dark.svg
+  String get applestoreDark => 'assets/svg/applestore_dark.svg';
+
+  /// File path: assets/svg/applestore_light.svg
+  String get applestoreLight => 'assets/svg/applestore_light.svg';
+
   /// File path: assets/svg/icon_pdf.svg
   String get iconPdf => 'assets/svg/icon_pdf.svg';
 
   /// File path: assets/svg/icon_whats_app.svg
   String get iconWhatsApp => 'assets/svg/icon_whats_app.svg';
 
+  /// File path: assets/svg/playstore_dark.svg
+  String get playstoreDark => 'assets/svg/playstore_dark.svg';
+
+  /// File path: assets/svg/playstore_light.svg
+  String get playstoreLight => 'assets/svg/playstore_light.svg';
+
   /// List of all assets
-  List<String> get values => [iconPdf, iconWhatsApp];
+  List<String> get values => [
+    applestoreDark,
+    applestoreLight,
+    iconPdf,
+    iconWhatsApp,
+    playstoreDark,
+    playstoreLight,
+  ];
 }
 
 class Assets {
