@@ -51,7 +51,7 @@
       {
         "title": "Restaurantes Delivery App",
         "description": "Aplicativo mobile feito em Flutter para restaurantes de alto padrão gerenciarem pedidos e fidelizarem clientes sem depender de iFood ou Rappi.",
-        "logo": "https://example.com/logo.png",
+        "logo": "https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg?auto=compress&cs=tinysrgb&w=100",
         "technologies": [
           "Flutter",
           "Firebase",
@@ -75,7 +75,7 @@
       {
         "title": "E-commerce Mobile App",
         "description": "Aplicativo de e-commerce completo com sistema de pagamentos, carrinho de compras e gestão de pedidos. Interface moderna e intuitiva.",
-        "logo": "https://example.com/ecommerce-logo.png",
+        "logo": "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=100",
         "technologies": [
           "Flutter",
           "Dart",
@@ -98,7 +98,7 @@
       {
         "title": "Task Management System",
         "description": "Sistema web de gerenciamento de tarefas com drag-and-drop, notificações em tempo real e colaboração em equipe.",
-        "logo": "https://example.com/task-logo.png",
+        "logo": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=100",
         "technologies": [
           "React",
           "TypeScript",
@@ -119,7 +119,7 @@
       {
         "title": "Fitness Tracking App",
         "description": "Aplicativo de fitness com tracking de exercícios, planos de treino personalizados e integração com wearables.",
-        "logo": "https://example.com/fitness-logo.png",
+        "logo": "https://images.pexels.com/photos/4498290/pexels-photo-4498290.jpeg?auto=compress&cs=tinysrgb&w=100",
         "technologies": [
           "React Native",
           "TypeScript",

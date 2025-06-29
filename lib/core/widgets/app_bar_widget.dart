@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:origemjhanpoll_github_io/core/controllers/theme_controller.dart';
 
-import '../../l10n/app_localizations.dart';
-
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final ValueChanged<int> onPage;
 
@@ -15,17 +13,16 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final theme = Theme.of(context);
-    final localization = AppLocalizations.of(context)!;
 
     final isDarkMode = context.watch<ThemeCubit>().state;
 
-    final localizationTabs = [
-      localization.menuHome,
-      localization.menuAbout,
-      localization.menuExperiences,
-      localization.menuProject,
-      localization.menuArticle,
-      localization.menuContact,
+    final tabs = [
+      'Home',
+      'About',
+      'Experiences',
+      'Projects',
+      'Articles',
+      'Contact',
     ];
 
     return AppBar(
@@ -44,12 +41,11 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: localizationTabs.length,
+          itemCount: tabs.length,
           shrinkWrap: true,
           itemBuilder: (_, index) => TextButton(
             onPressed: () => onPage(index),
-            child: Text(localizationTabs[index],
-                style: theme.textTheme.labelLarge),
+            child: Text(tabs[index], style: theme.textTheme.labelLarge),
           ),
         ),
         IconButton(

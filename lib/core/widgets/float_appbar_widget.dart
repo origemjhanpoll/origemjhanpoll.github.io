@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
 import 'package:origemjhanpoll_github_io/core/controllers/theme_controller.dart';
-import 'package:origemjhanpoll_github_io/l10n/app_localizations.dart';
 
 class ItemTab {
   final String name;
@@ -28,15 +27,14 @@ class _FloatAppbarWidgetState extends State<FloatAppbarWidget> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final localization = AppLocalizations.of(context)!;
     final isDarkMode = context.watch<ThemeCubit>().state;
 
-    final localizationTabs = [
-      ItemTab(icon: Icons.circle, name: localization.menuHome),
-      ItemTab(icon: Icons.circle, name: localization.menuAbout),
-      ItemTab(icon: Icons.circle, name: localization.menuProject),
-      ItemTab(icon: Icons.contact_mail, name: localization.menuContact),
-      // ItemTab(icon: Icons.circle, name: localization.menuArticle),
+    final tabs = [
+      ItemTab(icon: Icons.circle, name: 'Home'),
+      ItemTab(icon: Icons.circle, name: 'About'),
+      ItemTab(icon: Icons.circle, name: 'Projects'),
+      ItemTab(icon: Icons.contact_mail, name: 'Contact'),
+      // ItemTab(icon: Icons.circle, name: 'Articles'),
     ];
 
     return LayoutBuilder(builder: (context, constraints) {
@@ -54,10 +52,10 @@ class _FloatAppbarWidgetState extends State<FloatAppbarWidget> {
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                itemCount: localizationTabs.length,
+                itemCount: tabs.length,
                 shrinkWrap: true,
                 itemBuilder: (_, index) {
-                  final tab = localizationTabs[index];
+                  final tab = tabs[index];
 
                   if (!isScreenMedium) {
                     return IconButton(

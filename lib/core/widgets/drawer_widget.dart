@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:origemjhanpoll_github_io/core/controllers/theme_controller.dart';
 
-import '../../l10n/app_localizations.dart';
-
 class DrawerWidget extends StatelessWidget {
   final ValueChanged<int> onPage;
   const DrawerWidget({super.key, required this.onPage});
@@ -11,7 +9,6 @@ class DrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final localization = AppLocalizations.of(context)!;
 
     final isDarkMode = context.watch<ThemeCubit>().state;
 
@@ -62,8 +59,7 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.home, color: theme.primaryColor),
-            title:
-                Text(localization.menuHome, style: theme.textTheme.labelLarge),
+            title: Text('Home', style: theme.textTheme.labelLarge),
             onTap: () {
               onPage(0);
               Navigator.pop(context);
@@ -71,8 +67,7 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.person, color: theme.primaryColor),
-            title:
-                Text(localization.menuAbout, style: theme.textTheme.labelLarge),
+            title: Text('About', style: theme.textTheme.labelLarge),
             onTap: () {
               onPage(1);
               Navigator.pop(context);
@@ -80,8 +75,7 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.work, color: theme.primaryColor),
-            title: Text(localization.menuExperiences,
-                style: theme.textTheme.labelLarge),
+            title: Text('Experiences', style: theme.textTheme.labelLarge),
             onTap: () {
               onPage(2);
               Navigator.pop(context);
@@ -89,8 +83,7 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.work, color: theme.primaryColor),
-            title: Text(localization.menuProject,
-                style: theme.textTheme.labelLarge),
+            title: Text('Projects', style: theme.textTheme.labelLarge),
             onTap: () {
               onPage(3);
               Navigator.pop(context);
@@ -98,8 +91,7 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.article, color: theme.primaryColor),
-            title: Text(localization.menuArticle,
-                style: theme.textTheme.labelLarge),
+            title: Text('Articles', style: theme.textTheme.labelLarge),
             onTap: () {
               onPage(4);
               Navigator.pop(context);
@@ -107,8 +99,7 @@ class DrawerWidget extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.mail, color: theme.primaryColor),
-            title: Text(localization.menuContact,
-                style: theme.textTheme.labelLarge),
+            title: Text('Contact', style: theme.textTheme.labelLarge),
             onTap: () {
               onPage(5);
               Navigator.pop(context);

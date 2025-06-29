@@ -32,6 +32,7 @@ class ProjectsWidget extends StatelessWidget {
           height: responsiveHeight,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
+            physics: const ClampingScrollPhysics(),
             itemCount: model.items.length,
             itemBuilder: (context, index) {
               final element = model.items[index];
@@ -42,18 +43,36 @@ class ProjectsWidget extends StatelessWidget {
                     padding: EdgeInsets.all(padding),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      spacing: SpacingSize.small,
                       children: [
                         if (element.logo != null)
                           CircleAvatar(
+                            radius: 30,
                             backgroundImage: NetworkImage(element.logo!),
+                            onBackgroundImageError: (exception, stackTrace) {
+                              // Handle image loading error silently
+                            },
+                            child: element.logo == null
+                                ? Icon(
+                                    Icons.business,
+                                    size: 30,
+                                    color: theme.colorScheme.onSurface,
+                                  )
+                                : null,
                           ),
-                        Text(element.title),
+                        Text(
+                          element.title,
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                         ConstrainedBox(
                           constraints:
                               BoxConstraints(maxWidth: screen.width * .3),
                           child: Text(
                             element.description,
                             maxLines: 5,
+                            style: theme.textTheme.bodyMedium,
                           ),
                         )
                       ],
@@ -65,10 +84,25 @@ class ProjectsWidget extends StatelessWidget {
                       child: SizedBox.fromSize(
                         size: Size.fromWidth(375),
                         child: ClipRRect(
-                          borderRadius: BorderRadiusGeometry.circular(18),
+                          borderRadius: BorderRadius.circular(18),
                           child: Image.network(
                             image,
                             fit: BoxFit.fitHeight,
+                            errorBuilder: (context, error, stackTrace) {
+                              return Container(
+                                width: 375,
+                                decoration: BoxDecoration(
+                                  color:
+                                      theme.colorScheme.surfaceContainerHighest,
+                                  borderRadius: BorderRadius.circular(18),
+                                ),
+                                child: Icon(
+                                  Icons.image_not_supported,
+                                  size: 50,
+                                  color: theme.colorScheme.onSurfaceVariant,
+                                ),
+                              );
+                            },
                           ),
                         ),
                       ),
