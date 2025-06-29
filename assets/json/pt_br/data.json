@@ -50,7 +50,7 @@
     "items": [
       {
         "title": "Maestro Mateus",
-        "description": "Sistema de gestão de rotinas para funcionários de uma rede de supermercados. Desenvolvido em Flutter, o Maestro Mateus gerencia tarefas, setores e rotinas diárias dos colaboradores.\n\nPrincipais funcionalidades:\n- Gestão de rotinas por setor\n- Controle de tarefas diárias\n- Perfil do usuário com interface renovada\n- Controle de validade de produtos\n- Sistema de notificações\n- Relatórios de produtividade\n- Integração com sistemas internos\n\nMelhorias recentes:\n• Desempenho aprimorado para navegação mais fluida\n• Login mais rápido e eficiente\n• Melhorias no carregamento das funcionalidades\n• Nova funcionalidade: Saúde Emocional\n\nSolução completa que otimiza a gestão de rotinas e aumenta a eficiência operacional dos funcionários em todos os setores da rede.",
+        "description": "Sistema de gestão de rotinas para funcionários de uma rede de supermercados. Desenvolvido em Flutter, o Maestro Mateus gerencia tarefas, setores e rotinas diárias dos colaboradores.",
         "logo": "https://play-lh.googleusercontent.com/Q6af1uoiGbEzxZk3FQsgmS76s4NgIEy0mvrtr9bdku7QpQyegACRkVJAArGL1PeuOwM",
         "technologies": [
           "React Native",
@@ -82,9 +82,9 @@
           "Codemagic"
         ],
         "images": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/06/0f/d8/060fd880-a785-8340-9c97-b81db016f7ec/563460e3-e50a-4889-a673-9ec31d0c6843_EdCorp---iPhone65Prancheta-1.png/157x0w.webp",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/8d/0e/7f/8d0e7f66-9c45-ad54-c398-46208d469bb5/071ed564-f3df-4950-a47d-5042146d9117_EdCorp---iPhone65Prancheta-2.png/157x0w.webp",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/82/a2/f4/82a2f4de-8299-6ad4-529a-23e9134f147c/6b9e2343-4125-466a-b7a1-39f4bb4aed2f_EdCorp---iPhone65Prancheta-3.png/157x0w.webp"
+          "https://play-lh.googleusercontent.com/Vey5GE62pfmHe9f7yOgfLwg-1ZFVx5CbP0rz5xcJ52DkSwR1GRNBkZkMUFqsDEFW0pU",
+          "https://play-lh.googleusercontent.com/kF08zTJcjcpWcff14M7V6mK2-vCwdAWUi5B_pzVRzeZxF4i7-6K7oIWIz9Q9tGuAuzo",
+          "https://play-lh.googleusercontent.com/Fj4zrwjdBzRjVFG7Vbnnlz-WW9GBlQBRPxp7oRnu2Ttpu-c5j4Rs3OvqLFlNqrEFPtM"
         ],
         "url": "https://www.gupy.io/plataforma-de-educacao-corporativa",
         "github": null,

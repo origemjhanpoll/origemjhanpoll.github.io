@@ -42,6 +42,7 @@ class ProjectsWidget extends StatelessWidget {
                     padding: EdgeInsets.all(padding),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       spacing: SpacingSize.small,
                       children: [
                         if (element.logo != null)
@@ -68,7 +69,6 @@ class ProjectsWidget extends StatelessWidget {
                               BoxConstraints(maxWidth: screen.width * .3),
                           child: Text(
                             element.description,
-                            maxLines: 5,
                             style: theme.textTheme.bodyMedium,
                           ),
                         )
@@ -78,29 +78,25 @@ class ProjectsWidget extends StatelessWidget {
                   ...element.images.map(
                     (image) => Padding(
                       padding: EdgeInsets.only(right: SpacingSize.medium),
-                      child: SizedBox.fromSize(
-                        size: Size.fromWidth(375),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(18),
-                          child: Image.network(
-                            image,
-                            fit: BoxFit.fitHeight,
-                            errorBuilder: (context, error, stackTrace) {
-                              return Container(
-                                width: 375,
-                                decoration: BoxDecoration(
-                                  color:
-                                      theme.colorScheme.surfaceContainerHighest,
-                                  borderRadius: BorderRadius.circular(18),
-                                ),
-                                child: Icon(
-                                  Icons.image_not_supported,
-                                  size: 50,
-                                  color: theme.colorScheme.onSurfaceVariant,
-                                ),
-                              );
-                            },
-                          ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(18),
+                        child: Image.network(
+                          image,
+                          errorBuilder: (context, error, stackTrace) {
+                            return Container(
+                              width: 300,
+                              decoration: BoxDecoration(
+                                color:
+                                    theme.colorScheme.surfaceContainerHighest,
+                                borderRadius: BorderRadius.circular(18),
+                              ),
+                              child: Icon(
+                                Icons.image_not_supported,
+                                size: 50,
+                                color: theme.colorScheme.onSurfaceVariant,
+                              ),
+                            );
+                          },
                         ),
                       ),
                     ),
