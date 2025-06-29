@@ -99,7 +99,7 @@
             },
             {
                 "title": "Maestro Mateus",
-                "description": "Routine management system for employees of a large supermarket chain. Developed in Flutter, Maestro Mateus manages tasks, departments, and daily routines of collaborators.\n\nMain features:\n- Routine management by department\n- Daily task control\n- User profile with renewed interface\n- Product validity control\n- Notification system\n- Productivity reports\n- Integration with internal systems\n\nRecent improvements:\n• Enhanced performance for smoother navigation\n• Faster and more efficient login\n• Improvements in feature loading\n• New feature: Emotional Health\n\nComplete solution that optimizes routine management and increases operational efficiency of employees across all network departments.",
+                "description": "Routine management system for employees of a supermarket chain. Maestro Mateus manages tasks, departments, and daily routines of collaborators.",
                 "logo": "https://play-lh.googleusercontent.com/Q6af1uoiGbEzxZk3FQsgmS76s4NgIEy0mvrtr9bdku7QpQyegACRkVJAArGL1PeuOwM",
                 "technologies": [
                     "React Native",

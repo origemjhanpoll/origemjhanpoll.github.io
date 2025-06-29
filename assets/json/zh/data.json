@@ -99,7 +99,7 @@
             },
             {
                 "title": "Maestro Mateus",
-                "description": "大型连锁超市员工日常管理系统。使用Flutter开发，Maestro Mateus管理员工的任务、部门和日常例行工作。\n\n主要功能：\n- 按部门管理日常事务\n- 日常任务控制\n- 用户界面更新的个人资料\n- 产品有效期控制\n- 通知系统\n- 生产力报告\n- 与内部系统集成\n\n最新改进：\n• 提升性能，实现更流畅的导航\n• 更快更高效的登录\n• 功能加载改进\n• 新功能：情绪健康\n\n完整的解决方案，优化日常管理，提高网络各部门员工的操作效率。",
+                "description": "连锁超市员工日常管理系统。Maestro Mateus管理员工的任务、部门和日常例行工作。",
                 "logo": "https://play-lh.googleusercontent.com/Q6af1uoiGbEzxZk3FQsgmS76s4NgIEy0mvrtr9bdku7QpQyegACRkVJAArGL1PeuOwM",
                 "technologies": [
                     "React Native",

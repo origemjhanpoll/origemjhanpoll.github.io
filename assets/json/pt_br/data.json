@@ -99,7 +99,7 @@
       },
       {
         "title": "Maestro Mateus",
-        "description": "Sistema de gestão de rotinas para funcionários de uma rede de supermercados. Desenvolvido em Flutter, o Maestro Mateus gerencia tarefas, setores e rotinas diárias dos colaboradores.\n\nPrincipais funcionalidades:\n- Gestão de rotinas por setor\n- Controle de tarefas diárias\n- Perfil do usuário com interface renovada\n- Controle de validade de produtos\n- Sistema de notificações\n- Relatórios de produtividade\n- Integração com sistemas internos\n\nMelhorias recentes:\n• Desempenho aprimorado para navegação mais fluida\n• Login mais rápido e eficiente\n• Melhorias no carregamento das funcionalidades\n• Nova funcionalidade: Saúde Emocional\n\nSolução completa que otimiza a gestão de rotinas e aumenta a eficiência operacional dos funcionários em todos os setores da rede.",
+        "description": "Sistema de gestão de rotinas para funcionários de uma rede de supermercados. O Maestro Mateus gerencia tarefas, setores e rotinas diárias dos colaboradores.",
         "logo": "https://play-lh.googleusercontent.com/Q6af1uoiGbEzxZk3FQsgmS76s4NgIEy0mvrtr9bdku7QpQyegACRkVJAArGL1PeuOwM",
         "technologies": [
           "React Native",
