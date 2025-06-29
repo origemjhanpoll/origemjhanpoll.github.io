@@ -73,11 +73,10 @@ class _HomePageState extends State<HomePage> {
             child: BackgroundWidget(color: theme.primaryColor.withAlpha(25)),
           ),
           BlocListener<LanguageCubit, LanguageState>(
-            listener: (context, languageState) {
-              // Recarrega os dados quando o idioma muda
-              context.read<PortifolioCubit>().fetchPortifolio(
-                    language: languageState.languageCode,
-                  );
+            listener: (context, state) {
+              context
+                  .read<PortifolioCubit>()
+                  .fetchPortifolio(language: state.languageCode);
             },
             child: BlocBuilder<PortifolioCubit, PortifolioState>(
               builder: (context, state) {

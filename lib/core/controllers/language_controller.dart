@@ -3,6 +3,20 @@ import 'package:equatable/equatable.dart';
 
 enum Language { english, portuguese, chinese }
 
+class LanguageCubit extends Cubit<LanguageState> {
+  LanguageCubit()
+      : super(const LanguageState(currentLanguage: Language.portuguese));
+
+  void toggleLanguage() {
+    final newLanguage = _nextLanguage(state.currentLanguage);
+    emit(LanguageState(currentLanguage: newLanguage));
+  }
+
+  void setLanguage(Language language) {
+    emit(LanguageState(currentLanguage: language));
+  }
+}
+
 class LanguageState extends Equatable {
   final Language currentLanguage;
 
@@ -34,27 +48,13 @@ class LanguageState extends Equatable {
   }
 }
 
-class LanguageCubit extends Cubit<LanguageState> {
-  LanguageCubit()
-      : super(const LanguageState(currentLanguage: Language.portuguese));
-
-  void toggleLanguage() {
-    final newLanguage = _nextLanguage(state.currentLanguage);
-    emit(LanguageState(currentLanguage: newLanguage));
-  }
-
-  void setLanguage(Language language) {
-    emit(LanguageState(currentLanguage: language));
-  }
-
-  Language _nextLanguage(Language current) {
-    switch (current) {
-      case Language.english:
-        return Language.portuguese;
-      case Language.portuguese:
-        return Language.chinese;
-      case Language.chinese:
-        return Language.english;
-    }
+Language _nextLanguage(Language current) {
+  switch (current) {
+    case Language.english:
+      return Language.portuguese;
+    case Language.portuguese:
+      return Language.chinese;
+    case Language.chinese:
+      return Language.english;
   }
 }

@@ -4,6 +4,7 @@ import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
 import 'package:origemjhanpoll_github_io/core/utils/url_launcher_util.dart';
 import 'package:origemjhanpoll_github_io/feature/models/initial_model.dart';
+import 'package:origemjhanpoll_github_io/gen/assets.gen.dart';
 
 class InitialWidget extends StatelessWidget {
   final InitialModel model;
@@ -27,7 +28,7 @@ class InitialWidget extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: size.height * 0.2,
-            backgroundImage: AssetImage('assets/images/origemjhanpoll.png'),
+            backgroundImage: AssetImage(Assets.images.origemjhanpoll.path),
           ),
           AnimatedDefaultTextStyle(
             duration: Durations.medium1,
@@ -76,7 +77,7 @@ class InitialWidget extends StatelessWidget {
                 onPressed: () =>
                     urlLauncherUtil.launchURL(model.buttons.last.url),
                 icon: SvgPicture.asset(
-                  'assets/svg/icon_whatsapp.svg',
+                  Assets.svg.iconWhatsApp,
                   width: 20.0,
                   colorFilter: ColorFilter.mode(
                       theme.colorScheme.secondary, BlendMode.srcIn),

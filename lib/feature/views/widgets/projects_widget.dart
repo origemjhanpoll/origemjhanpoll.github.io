@@ -13,7 +13,6 @@ class ProjectsWidget extends StatelessWidget {
     final screen = MediaQuery.sizeOf(context);
     final padding = SpacingSize.getPadding(screen.width);
 
-    // Calcula altura responsiva com limites
     final minHeight = 400.0;
     final maxHeight = 812.0;
     final responsiveHeight = (screen.height * 0.85).clamp(minHeight, maxHeight);
@@ -47,11 +46,9 @@ class ProjectsWidget extends StatelessWidget {
                       children: [
                         if (element.logo != null)
                           CircleAvatar(
-                            radius: 30,
+                            radius: 48.0,
                             backgroundImage: NetworkImage(element.logo!),
-                            onBackgroundImageError: (exception, stackTrace) {
-                              // Handle image loading error silently
-                            },
+                            onBackgroundImageError: (exception, stackTrace) {},
                             child: element.logo == null
                                 ? Icon(
                                     Icons.business,
