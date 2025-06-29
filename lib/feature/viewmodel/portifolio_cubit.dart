@@ -7,10 +7,11 @@ class PortifolioCubit extends Cubit<PortifolioState> {
 
   PortifolioCubit(this.remoteService) : super(PortifolioInitial());
 
-  Future<void> fetchPortifolio() async {
+  Future<void> fetchPortifolio({String? language}) async {
     emit(PortifolioLoading());
     try {
-      final data = await remoteService.fetchPortifolio();
+      final data =
+          await remoteService.fetchPortifolio(language: language ?? 'pt_br');
       emit(PortifolioLoaded(data));
     } catch (e) {
       emit(PortifolioError(e.toString()));

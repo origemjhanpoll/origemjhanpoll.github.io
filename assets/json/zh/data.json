@@ -1,0 +1,185 @@
+{
+    "initial": {
+        "name": "你好，我是 Jean Paul",
+        "role": "软件开发者",
+        "description": "我是一名专注于高性能移动应用开发的软件工程师，注重代码整洁和优秀设计。让我们把想法变成现实！",
+        "photo": "path/to/image.jpg",
+        "buttons": [
+            {
+                "text": "我的简历",
+                "url": "https://github.com/origemjhanpoll/origemjhanpoll.github.io/raw/refs/heads/main/assets/resume/Jean%20Paul%20-%20PTBR.pdf"
+            },
+            {
+                "text": "联系我",
+                "url": "https://api.whatsapp.com/send/?phone=5598991391108"
+            }
+        ]
+    },
+    "about": {
+        "title": "关于我",
+        "history_label": "经历",
+        "history": "我专注于移动开发，拥有6年以上为Android、iOS和Web创建强大、直观和安全解决方案的经验。精通Flutter、Dart、React Native、React、JavaScript和TypeScript，并熟悉Firebase、Datadog和Codemagic等工具。擅长创建响应式界面、实现可扩展设计系统，并始终关注用户体验。\n\n在我的职业生涯中，直接参与了多个移动和Web项目的性能提升、代码组织、数据安全和界面组件化。也有丰富的UX/UI、动效设计和Figma、Adobe Suite原型设计经验，善于用动画和微交互提升产品体验。",
+        "technologies_label": "技术",
+        "technologies": [
+            "Flutter",
+            "Dart",
+            "React Native",
+            "TypeScript",
+            "Android",
+            "iOS",
+            "ReactJs",
+            "JavaScript"
+        ],
+        "others_label": "其他",
+        "others": [
+            "Bitbucket",
+            "CI/CD",
+            "Codemagic",
+            "CSS",
+            "Figma",
+            "Firebase",
+            "Git",
+            "Google Cloud",
+            "GraphQL",
+            "HTML",
+            "Jira"
+        ]
+    },
+    "projects": {
+        "title": "项目",
+        "items": [
+            {
+                "title": "餐厅外卖应用",
+                "description": "使用Flutter为高端餐厅开发的移动应用，帮助管理订单并留住客户，无需依赖iFood或Rappi。",
+                "logo": "https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg?auto=compress&cs=tinysrgb&w=100",
+                "technologies": [
+                    "Flutter",
+                    "Firebase",
+                    "Codemagic"
+                ],
+                "images": [
+                    "https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg",
+                    "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg",
+                    "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
+                ],
+                "url": "https://origemjhanpoll.com/delivery-app",
+                "github": "https://github.com/origemjhanpoll/delivery-app",
+                "playstore": "https://play.google.com/store/apps/details?id=com.exemplo.restauranteapp",
+                "appstore": "https://apps.apple.com/app/id0000000000",
+                "year": 2025,
+                "types": [
+                    "移动端",
+                    "Web"
+                ]
+            },
+            {
+                "title": "电商移动应用",
+                "description": "完整的电商应用，包含支付系统、购物车和订单管理。界面现代直观。",
+                "logo": "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=100",
+                "technologies": [
+                    "Flutter",
+                    "Dart",
+                    "Firebase",
+                    "Stripe"
+                ],
+                "images": [
+                    "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg",
+                    "https://images.pexels.com/photos/5632401/pexels-photo-5632401.jpeg"
+                ],
+                "url": "https://origemjhanpoll.com/ecommerce-app",
+                "github": "https://github.com/origemjhanpoll/ecommerce-app",
+                "playstore": "https://play.google.com/store/apps/details?id=com.exemplo.ecommerceapp",
+                "appstore": "https://apps.apple.com/app/id0000000001",
+                "year": 2024,
+                "types": [
+                    "移动端"
+                ]
+            },
+            {
+                "title": "任务管理系统",
+                "description": "基于Web的任务管理系统，支持拖拽、实时通知和团队协作。",
+                "logo": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=100",
+                "technologies": [
+                    "React",
+                    "TypeScript",
+                    "Node.js",
+                    "Socket.io"
+                ],
+                "images": [
+                    "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+                    "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg"
+                ],
+                "url": "https://origemjhanpoll.com/task-management",
+                "github": "https://github.com/origemjhanpoll/task-management",
+                "year": 2024,
+                "types": [
+                    "Web"
+                ]
+            },
+            {
+                "title": "健身追踪应用",
+                "description": "健身应用，支持锻炼追踪、个性化训练计划和可穿戴设备集成。",
+                "logo": "https://images.pexels.com/photos/4498290/pexels-photo-4498290.jpeg?auto=compress&cs=tinysrgb&w=100",
+                "technologies": [
+                    "React Native",
+                    "TypeScript",
+                    "Firebase",
+                    "HealthKit"
+                ],
+                "images": [
+                    "https://images.pexels.com/photos/4498290/pexels-photo-4498290.jpeg",
+                    "https://images.pexels.com/photos/4498291/pexels-photo-4498291.jpeg"
+                ],
+                "url": "https://origemjhanpoll.com/fitness-app",
+                "github": "https://github.com/origemjhanpoll/fitness-app",
+                "playstore": "https://play.google.com/store/apps/details?id=com.exemplo.fitnessapp",
+                "appstore": "https://apps.apple.com/app/id0000000002",
+                "year": 2023,
+                "types": [
+                    "移动端"
+                ]
+            }
+        ]
+    },
+    "contact": {
+        "title": "联系我",
+        "description": "我一直欢迎新的机会和合作。欢迎通过以下任一方式联系我：",
+        "contact_items": [
+            {
+                "title": "电子邮件",
+                "value": "jeanpaul@origemjhanpoll.com",
+                "icon": "email",
+                "url": "mailto:jeanpaul@origemjhanpoll.com",
+                "type": "email"
+            },
+            {
+                "title": "WhatsApp",
+                "value": "+55 (98) 99139-1108",
+                "icon": "whatsapp",
+                "url": "https://api.whatsapp.com/send/?phone=5598991391108",
+                "type": "whatsapp"
+            },
+            {
+                "title": "LinkedIn",
+                "value": "Jean Paul",
+                "icon": "linkedin",
+                "url": "https://www.linkedin.com/in/origemjhanpoll",
+                "type": "linkedin"
+            },
+            {
+                "title": "GitHub",
+                "value": "origemjhanpoll",
+                "icon": "github",
+                "url": "https://github.com/origemjhanpoll",
+                "type": "github"
+            },
+            {
+                "title": "网站",
+                "value": "origemjhanpoll.com",
+                "icon": "website",
+                "url": "https://origemjhanpoll.com",
+                "type": "website"
+            }
+        ]
+    }
+}

@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:origemjhanpoll_github_io/core/constants/screen_size.dart';
 import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
 import 'package:origemjhanpoll_github_io/core/controllers/theme_controller.dart';
+import 'package:origemjhanpoll_github_io/core/controllers/language_controller.dart';
 
 class ItemTab {
   final String name;
@@ -28,6 +29,7 @@ class _FloatAppbarWidgetState extends State<FloatAppbarWidget> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final isDarkMode = context.watch<ThemeCubit>().state;
+    final languageState = context.watch<LanguageCubit>().state;
 
     final tabs = [
       ItemTab(icon: Icons.circle, name: 'Home'),
@@ -72,9 +74,24 @@ class _FloatAppbarWidgetState extends State<FloatAppbarWidget> {
               ),
             ),
             _BlurWidget(
+              fixedSize: Size(48, 48),
+              child: TextButton(
+                onPressed: context.read<LanguageCubit>().toggleLanguage,
+                style: ButtonStyle(
+                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                ),
+                child: Text(
+                  languageState.displayName,
+                  style: theme.textTheme.labelLarge?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            _BlurWidget(
+              fixedSize: Size(48, 48),
               child: IconButton(
                 onPressed: context.read<ThemeCubit>().toggleTheme,
-                padding: EdgeInsets.all(14),
                 icon: Icon(
                   isDarkMode ? Icons.dark_mode : Icons.light_mode,
                 ),
@@ -88,21 +105,35 @@ class _FloatAppbarWidgetState extends State<FloatAppbarWidget> {
 }
 
 class _BlurWidget extends StatelessWidget {
-  const _BlurWidget({required this.child});
+  const _BlurWidget({
+    required this.child,
+    this.fixedSize,
+  });
 
   final Widget child;
+  final Size? fixedSize;
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
+    final blurWidget = ClipRRect(
       borderRadius: BorderRadius.circular(100),
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: 8.0, sigmaY: 8.0),
         child: DecoratedBox(
             decoration:
                 BoxDecoration(color: Colors.blueGrey.withValues(alpha: 0.1)),
-            child: child),
+            child: fixedSize != null ? Center(child: child) : child),
       ),
     );
+
+    if (fixedSize != null) {
+      return SizedBox(
+        width: fixedSize!.width,
+        height: fixedSize!.height,
+        child: blurWidget,
+      );
+    }
+
+    return blurWidget;
   }
 }

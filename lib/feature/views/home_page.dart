@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:origemjhanpoll_github_io/core/constants/spacing_size.dart';
+import 'package:origemjhanpoll_github_io/core/controllers/language_controller.dart';
 import 'package:origemjhanpoll_github_io/core/widgets/background_widget.dart';
 import 'package:origemjhanpoll_github_io/core/widgets/float_appbar_widget.dart';
 import 'package:origemjhanpoll_github_io/feature/viewmodel/portifolio_cubit.dart';
@@ -71,43 +72,51 @@ class _HomePageState extends State<HomePage> {
           RepaintBoundary(
             child: BackgroundWidget(color: theme.primaryColor.withAlpha(25)),
           ),
-          BlocBuilder<PortifolioCubit, PortifolioState>(
-            builder: (context, state) {
-              if (state is PortifolioLoading) {
-                return Center(child: CircularProgressIndicator());
-              } else if (state is PortifolioLoaded) {
-                return CustomScrollView(
-                  controller: scrollController,
-                  slivers: [
-                    SliverFillRemaining(
-                        hasScrollBody: false,
-                        child: InitialWidget(
-                          key: initialKey,
-                          model: state.model.initial,
-                        )),
-                    SliverToBoxAdapter(
-                        child: AboutWidget(
-                      key: aboutKey,
-                      model: state.model.about,
-                    )),
-                    SliverFillRemaining(
-                        hasScrollBody: false,
-                        child: ProjectsWidget(
-                          key: projectsKey,
-                          model: state.model.projects,
-                        )),
-                    SliverToBoxAdapter(
-                        child: ContactWidget(
-                      key: contactKey,
-                      model: state.model.contact,
-                    )),
-                  ],
-                );
-              } else if (state is PortifolioError) {
-                return Center(child: Text('Erro: ${state.message}'));
-              }
-              return LimitedBox();
+          BlocListener<LanguageCubit, LanguageState>(
+            listener: (context, languageState) {
+              // Recarrega os dados quando o idioma muda
+              context.read<PortifolioCubit>().fetchPortifolio(
+                    language: languageState.languageCode,
+                  );
             },
+            child: BlocBuilder<PortifolioCubit, PortifolioState>(
+              builder: (context, state) {
+                if (state is PortifolioLoading) {
+                  return Center(child: CircularProgressIndicator());
+                } else if (state is PortifolioLoaded) {
+                  return CustomScrollView(
+                    controller: scrollController,
+                    slivers: [
+                      SliverFillRemaining(
+                          hasScrollBody: false,
+                          child: InitialWidget(
+                            key: initialKey,
+                            model: state.model.initial,
+                          )),
+                      SliverToBoxAdapter(
+                          child: AboutWidget(
+                        key: aboutKey,
+                        model: state.model.about,
+                      )),
+                      SliverFillRemaining(
+                          hasScrollBody: false,
+                          child: ProjectsWidget(
+                            key: projectsKey,
+                            model: state.model.projects,
+                          )),
+                      SliverToBoxAdapter(
+                          child: ContactWidget(
+                        key: contactKey,
+                        model: state.model.contact,
+                      )),
+                    ],
+                  );
+                } else if (state is PortifolioError) {
+                  return Center(child: Text('Erro: ${state.message}'));
+                }
+                return LimitedBox();
+              },
+            ),
           ),
         ],
       ),
