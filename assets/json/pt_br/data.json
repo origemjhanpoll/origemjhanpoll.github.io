@@ -49,26 +49,27 @@
     "title": "Projetos",
     "items": [
       {
-        "title": "Maestro Mateus",
-        "description": "Sistema de gestão de rotinas para funcionários de uma rede de supermercados. Desenvolvido em Flutter, o Maestro Mateus gerencia tarefas, setores e rotinas diárias dos colaboradores.",
-        "logo": "https://play-lh.googleusercontent.com/Q6af1uoiGbEzxZk3FQsgmS76s4NgIEy0mvrtr9bdku7QpQyegACRkVJAArGL1PeuOwM",
+        "title": "Brasil Card Digital",
+        "description": "A BRASIL CARD, atuando desde 1999 no mercado brasileiro, está presente em todo o território nacional. Oferecemos o cartão Private Label customizado para cada negócio e o cartão de crédito BrasilCard para clientes finais.\n\nAgora com bandeira VISA, o BrasilCard oferece facilidades para compras online e em milhares de estabelecimentos, proporcionando maior poder de compra e fidelizando clientes com segurança.",
+        "logo": "https://play-lh.googleusercontent.com/kqDZAOLduP1akYNUsRPMIFN1AnCck2v2k2phWpPgvMOdMOO_TxIYc31x7Id5gGlgKOI",
         "technologies": [
-          "React Native",
-          "Firebase"
+          "Flutter",
+          "Dart",
+          "Firebase",
+          "Codemagic"
         ],
         "images": [
-          "https://play-lh.googleusercontent.com/GAjT2QVIfZdJIWU5X2n2GGY8HPI9PesA194vXIE-lrCeHn94oBp0mq-Ulkb5rTwthkM",
-          "https://play-lh.googleusercontent.com/kEKEa0n5shFtALPwe5LGhrVSEzFrh76IJE92rn1gS7AsLpAZ-otlJtV6K0Ui-5By1YM",
-          "https://play-lh.googleusercontent.com/CsCCAAmb2_BkDeVi3EvptZLHH7HY0Y2y1_83qcEbkpmw7JSqanXcSmFlgc1L2XpdQDk"
+          "https://play-lh.googleusercontent.com/1tYBASzpRyGctM0kcRCaAwQ3V9Qx_Mf-YVJ_ZhWQfrSi-52dNXHTURLZ2z3tm5WC__au",
+          "https://play-lh.googleusercontent.com/SPMGYAN8H6S2QNmYCUZdNQFi8pdWtXbEiYl-0QyUg1VeQiT9athOiq24SNdsSujQ1A",
+          "https://play-lh.googleusercontent.com/SYhepOiQ556VYdKyqHSuW3CD-hQaBBqdm3a4wxhwQFog3-JCtrxEVQO-JqnsJmg0jVM"
         ],
-        "url": "https://www.linkedin.com/company/pulseoficial/",
+        "url": "https://www.brasilcarddigital.com.br",
         "github": null,
-        "playstore": "https://play.google.com/store/apps/details?id=com.ithappens_piloto_app",
-        "appstore": null,
-        "year": 2019,
+        "playstore": "https://play.google.com/store/apps/details?id=br.com.brasilcard.app_banco_digital",
+        "appstore": "https://apps.apple.com/br/app/brasilcard-digital/id1593431800?platform=iphone",
+        "year": 2025,
         "types": [
-          "Mobile",
-          "Web"
+          "Mobile"
         ]
       },
       {
@@ -97,27 +98,26 @@
         ]
       },
       {
-        "title": "Brasil Card Digital",
-        "description": "A BRASIL CARD, atuando desde 1999 no mercado brasileiro, está presente em todo o território nacional. Oferecemos o cartão Private Label customizado para cada negócio e o cartão de crédito BrasilCard para clientes finais.\n\nAgora com bandeira VISA, o BrasilCard oferece facilidades para compras online e em milhares de estabelecimentos, proporcionando maior poder de compra e fidelizando clientes com segurança.",
-        "logo": "https://play-lh.googleusercontent.com/kqDZAOLduP1akYNUsRPMIFN1AnCck2v2k2phWpPgvMOdMOO_TxIYc31x7Id5gGlgKOI",
+        "title": "Maestro Mateus",
+        "description": "Sistema de gestão de rotinas para funcionários de uma rede de supermercados. Desenvolvido em Flutter, o Maestro Mateus gerencia tarefas, setores e rotinas diárias dos colaboradores.\n\nPrincipais funcionalidades:\n- Gestão de rotinas por setor\n- Controle de tarefas diárias\n- Perfil do usuário com interface renovada\n- Controle de validade de produtos\n- Sistema de notificações\n- Relatórios de produtividade\n- Integração com sistemas internos\n\nMelhorias recentes:\n• Desempenho aprimorado para navegação mais fluida\n• Login mais rápido e eficiente\n• Melhorias no carregamento das funcionalidades\n• Nova funcionalidade: Saúde Emocional\n\nSolução completa que otimiza a gestão de rotinas e aumenta a eficiência operacional dos funcionários em todos os setores da rede.",
+        "logo": "https://play-lh.googleusercontent.com/Q6af1uoiGbEzxZk3FQsgmS76s4NgIEy0mvrtr9bdku7QpQyegACRkVJAArGL1PeuOwM",
         "technologies": [
-          "Flutter",
-          "Dart",
-          "Firebase",
-          "Codemagic"
+          "React Native",
+          "Firebase"
         ],
         "images": [
-          "https://play-lh.googleusercontent.com/1tYBASzpRyGctM0kcRCaAwQ3V9Qx_Mf-YVJ_ZhWQfrSi-52dNXHTURLZ2z3tm5WC__au",
-          "https://play-lh.googleusercontent.com/SPMGYAN8H6S2QNmYCUZdNQFi8pdWtXbEiYl-0QyUg1VeQiT9athOiq24SNdsSujQ1A",
-          "https://play-lh.googleusercontent.com/SYhepOiQ556VYdKyqHSuW3CD-hQaBBqdm3a4wxhwQFog3-JCtrxEVQO-JqnsJmg0jVM"
+          "https://play-lh.googleusercontent.com/GAjT2QVIfZdJIWU5X2n2GGY8HPI9PesA194vXIE-lrCeHn94oBp0mq-Ulkb5rTwthkM",
+          "https://play-lh.googleusercontent.com/kEKEa0n5shFtALPwe5LGhrVSEzFrh76IJE92rn1gS7AsLpAZ-otlJtV6K0Ui-5By1YM",
+          "https://play-lh.googleusercontent.com/CsCCAAmb2_BkDeVi3EvptZLHH7HY0Y2y1_83qcEbkpmw7JSqanXcSmFlgc1L2XpdQDk"
         ],
-        "url": "https://www.brasilcarddigital.com.br",
+        "url": "https://www.linkedin.com/company/pulseoficial/",
         "github": null,
-        "playstore": "https://play.google.com/store/apps/details?id=br.com.brasilcard.app_banco_digital",
-        "appstore": "https://apps.apple.com/br/app/brasilcard-digital/id1593431800?platform=iphone",
-        "year": 2025,
+        "playstore": "https://play.google.com/store/apps/details?id=com.ithappens_piloto_app",
+        "appstore": null,
+        "year": 2019,
         "types": [
-          "Mobile"
+          "Mobile",
+          "Web"
         ]
       }
     ]

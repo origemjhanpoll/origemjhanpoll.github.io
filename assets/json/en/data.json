@@ -49,26 +49,27 @@
         "title": "Projects",
         "items": [
             {
-                "title": "Maestro Mateus",
-                "description": "Routine management system for employees of a large supermarket chain. Developed in Flutter, Maestro Mateus manages tasks, departments, and daily routines of collaborators.\n\nMain features:\n- Routine management by department\n- Daily task control\n- User profile with renewed interface\n- Product validity control\n- Notification system\n- Productivity reports\n- Integration with internal systems\n\nRecent improvements:\n• Enhanced performance for smoother navigation\n• Faster and more efficient login\n• Improvements in feature loading\n• New feature: Emotional Health\n\nComplete solution that optimizes routine management and increases operational efficiency of employees across all network departments.",
-                "logo": "https://play-lh.googleusercontent.com/Q6af1uoiGbEzxZk3FQsgmS76s4NgIEy0mvrtr9bdku7QpQyegACRkVJAArGL1PeuOwM",
+                "title": "Brasil Card Digital",
+                "description": "BRASIL CARD, operating in the Brazilian market since 1999, is present throughout the national territory. We offer the Private Label card customized for each business and the BrasilCard credit card for end customers.\n\nNow with VISA brand, BrasilCard offers facilities for online purchases and in thousands of establishments, providing greater purchasing power and securing customer loyalty.",
+                "logo": "https://play-lh.googleusercontent.com/kqDZAOLduP1akYNUsRPMIFN1AnCck2v2k2phWpPgvMOdMOO_TxIYc31x7Id5gGlgKOI",
                 "technologies": [
-                    "React Native",
-                    "Firebase"
+                    "Flutter",
+                    "Dart",
+                    "Firebase",
+                    "Codemagic"
                 ],
                 "images": [
-                    "https://play-lh.googleusercontent.com/GAjT2QVIfZdJIWU5X2n2GGY8HPI9PesA194vXIE-lrCeHn94oBp0mq-Ulkb5rTwthkM",
-                    "https://play-lh.googleusercontent.com/kEKEa0n5shFtALPwe5LGhrVSEzFrh76IJE92rn1gS7AsLpAZ-otlJtV6K0Ui-5By1YM",
-                    "https://play-lh.googleusercontent.com/CsCCAAmb2_BkDeVi3EvptZLHH7HY0Y2y1_83qcEbkpmw7JSqanXcSmFlgc1L2XpdQDk"
+                    "https://play-lh.googleusercontent.com/1tYBASzpRyGctM0kcRCaAwQ3V9Qx_Mf-YVJ_ZhWQfrSi-52dNXHTURLZ2z3tm5WC__au",
+                    "https://play-lh.googleusercontent.com/SPMGYAN8H6S2QNmYCUZdNQFi8pdWtXbEiYl-0QyUg1VeQiT9athOiq24SNdsSujQ1A",
+                    "https://play-lh.googleusercontent.com/SYhepOiQ556VYdKyqHSuW3CD-hQaBBqdm3a4wxhwQFog3-JCtrxEVQO-JqnsJmg0jVM"
                 ],
-                "url": "https://www.linkedin.com/company/pulseoficial/",
+                "url": "https://www.brasilcarddigital.com.br",
                 "github": null,
-                "playstore": "https://play.google.com/store/apps/details?id=com.ithappens_piloto_app",
-                "appstore": null,
-                "year": 2019,
+                "playstore": "https://play.google.com/store/apps/details?id=br.com.brasilcard.app_banco_digital",
+                "appstore": "https://apps.apple.com/br/app/brasilcard-digital/id1593431800?platform=iphone",
+                "year": 2025,
                 "types": [
-                    "Mobile",
-                    "Web"
+                    "Mobile"
                 ]
             },
             {
@@ -97,27 +98,26 @@
                 ]
             },
             {
-                "title": "Brasil Card Digital",
-                "description": "BRASIL CARD, operating in the Brazilian market since 1999, is present throughout the national territory. We offer the Private Label card customized for each business and the BrasilCard credit card for end customers.\n\nNow with VISA brand, BrasilCard offers facilities for online purchases and in thousands of establishments, providing greater purchasing power and securing customer loyalty.",
-                "logo": "https://play-lh.googleusercontent.com/kqDZAOLduP1akYNUsRPMIFN1AnCck2v2k2phWpPgvMOdMOO_TxIYc31x7Id5gGlgKOI",
+                "title": "Maestro Mateus",
+                "description": "Routine management system for employees of a large supermarket chain. Developed in Flutter, Maestro Mateus manages tasks, departments, and daily routines of collaborators.\n\nMain features:\n- Routine management by department\n- Daily task control\n- User profile with renewed interface\n- Product validity control\n- Notification system\n- Productivity reports\n- Integration with internal systems\n\nRecent improvements:\n• Enhanced performance for smoother navigation\n• Faster and more efficient login\n• Improvements in feature loading\n• New feature: Emotional Health\n\nComplete solution that optimizes routine management and increases operational efficiency of employees across all network departments.",
+                "logo": "https://play-lh.googleusercontent.com/Q6af1uoiGbEzxZk3FQsgmS76s4NgIEy0mvrtr9bdku7QpQyegACRkVJAArGL1PeuOwM",
                 "technologies": [
-                    "Flutter",
-                    "Dart",
-                    "Firebase",
-                    "Codemagic"
+                    "React Native",
+                    "Firebase"
                 ],
                 "images": [
-                    "https://play-lh.googleusercontent.com/1tYBASzpRyGctM0kcRCaAwQ3V9Qx_Mf-YVJ_ZhWQfrSi-52dNXHTURLZ2z3tm5WC__au",
-                    "https://play-lh.googleusercontent.com/SPMGYAN8H6S2QNmYCUZdNQFi8pdWtXbEiYl-0QyUg1VeQiT9athOiq24SNdsSujQ1A",
-                    "https://play-lh.googleusercontent.com/SYhepOiQ556VYdKyqHSuW3CD-hQaBBqdm3a4wxhwQFog3-JCtrxEVQO-JqnsJmg0jVM"
+                    "https://play-lh.googleusercontent.com/GAjT2QVIfZdJIWU5X2n2GGY8HPI9PesA194vXIE-lrCeHn94oBp0mq-Ulkb5rTwthkM",
+                    "https://play-lh.googleusercontent.com/kEKEa0n5shFtALPwe5LGhrVSEzFrh76IJE92rn1gS7AsLpAZ-otlJtV6K0Ui-5By1YM",
+                    "https://play-lh.googleusercontent.com/CsCCAAmb2_BkDeVi3EvptZLHH7HY0Y2y1_83qcEbkpmw7JSqanXcSmFlgc1L2XpdQDk"
                 ],
-                "url": "https://www.brasilcarddigital.com.br",
+                "url": "https://www.linkedin.com/company/pulseoficial/",
                 "github": null,
-                "playstore": "https://play.google.com/store/apps/details?id=br.com.brasilcard.app_banco_digital",
-                "appstore": "https://apps.apple.com/br/app/brasilcard-digital/id1593431800?platform=iphone",
-                "year": 2025,
+                "playstore": "https://play.google.com/store/apps/details?id=com.ithappens_piloto_app",
+                "appstore": null,
+                "year": 2019,
                 "types": [
-                    "Mobile"
+                    "Mobile",
+                    "Web"
                 ]
             }
         ]
