@@ -147,9 +147,9 @@
         "contact_items": [
             {
                 "title": "Email",
-                "value": "jeanpaul@origemjhanpoll.com",
+                "value": "origemjhanpoll@gmail.com",
                 "icon": "email",
-                "url": "mailto:jeanpaul@origemjhanpoll.com",
+                "url": "mailto:origemjhanpoll@gmail.com",
                 "type": "email"
             },
             {
@@ -161,7 +161,7 @@
             },
             {
                 "title": "LinkedIn",
-                "value": "Jean Paul",
+                "value": "origemjhanpoll",
                 "icon": "linkedin",
                 "url": "https://www.linkedin.com/in/origemjhanpoll",
                 "type": "linkedin"
@@ -172,13 +172,6 @@
                 "icon": "github",
                 "url": "https://github.com/origemjhanpoll",
                 "type": "github"
-            },
-            {
-                "title": "Website",
-                "value": "origemjhanpoll.com",
-                "icon": "website",
-                "url": "https://origemjhanpoll.com",
-                "type": "website"
             }
         ]
     }

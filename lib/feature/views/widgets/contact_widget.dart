@@ -143,12 +143,6 @@ class ContactWidget extends StatelessWidget {
           size: iconSize,
           color: theme.colorScheme.primary,
         );
-      case ContactType.website:
-        return Icon(
-          Icons.language,
-          size: iconSize,
-          color: theme.colorScheme.primary,
-        );
     }
   }
 }

@@ -91,5 +91,4 @@ enum ContactType {
   whatsapp,
   linkedin,
   github,
-  website,
 }

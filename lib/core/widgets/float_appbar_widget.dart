@@ -68,28 +68,31 @@ class _FloatAppbarWidgetState extends State<FloatAppbarWidget> {
                   }
                   return TextButton(
                     onPressed: () => widget.onPage(index),
-                    child: Text(tab.name, style: theme.textTheme.labelLarge),
+                    child: Text(tab.name.toUpperCase(),
+                        style: theme.textTheme.labelLarge!
+                            .copyWith(fontWeight: FontWeight.w200)),
                   );
                 },
               ),
             ),
             _BlurWidget(
-              fixedSize: Size(48, 48),
-              child: TextButton(
+              fixedSize: Size.square(48.0),
+              child: IconButton(
                 onPressed: context.read<LanguageCubit>().toggleLanguage,
                 style: ButtonStyle(
+                  splashFactory: NoSplash.splashFactory,
                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 ),
-                child: Text(
+                icon: Text(
                   languageState.displayName,
                   style: theme.textTheme.labelLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
             ),
             _BlurWidget(
-              fixedSize: Size(48, 48),
+              fixedSize: Size.square(48.0),
               child: IconButton(
                 onPressed: context.read<ThemeCubit>().toggleTheme,
                 icon: Icon(
