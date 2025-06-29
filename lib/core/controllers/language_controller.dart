@@ -39,11 +39,11 @@ class LanguageState extends Equatable {
   String get displayName {
     switch (currentLanguage) {
       case Language.english:
-        return 'EN';
+        return '🇺🇸';
       case Language.portuguese:
-        return 'PT';
+        return '🇧🇷';
       case Language.chinese:
-        return 'CN';
+        return '🇨🇳';
     }
   }
 }

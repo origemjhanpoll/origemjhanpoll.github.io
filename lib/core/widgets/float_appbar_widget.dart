@@ -85,7 +85,7 @@ class _FloatAppbarWidgetState extends State<FloatAppbarWidget> {
                 icon: Text(
                   languageState.displayName,
                   style: theme.textTheme.labelLarge?.copyWith(
-                    fontWeight: FontWeight.w500,
+                    fontSize: 18.0,
                   ),
                 ),
               ),
